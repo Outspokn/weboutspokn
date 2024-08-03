@@ -1,0 +1,135 @@
+.header {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-right: 80px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.updated {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.searchBar input {
+  padding: 12px 20px 12px 40px;
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 50px;
+  font-size: 1rem;
+  background-color: #e9ecef;
+}
+
+.searchBar .searchIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: black;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.categoryButton {
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.categoryButton:hover,
+.categoryButton.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.icon.twitter {
+  background-color: #e9f2f9;
+  color: #1da1f2;
+}
+
+.icon.youtube {
+  background-color: #f9e9e9;
+  color: #ff0000;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon.twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.icon.youtube:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
