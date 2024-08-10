@@ -13,7 +13,7 @@ const slides = [
     description:
       "Artificial Intelligence Has Been Advancing Beyond What Humans Have Imagined For Decades And Will Dominate Humans In The Coming Years, But The Question Is, Why Will It Happen Like...",
     author: "Saraj Kolhyseg",
-    authorImage: "/assets/lady.jpg",
+    authorImage: "/assets/sliderAuthor.jpg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const slides = [
     description:
       "Exploring the potential advancements in AI technology and how it will shape the world.",
     author: "Jane Doe",
-    authorImage: "/assets/lady.jpg",
+    authorImage: "/assets/sliderAuthor.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const slides = [
     description:
       "How artificial intelligence is becoming an integral part of our daily routines.",
     author: "John Smith",
-    authorImage: "/assets/lady.jpg",
+    authorImage: "/assets/sliderAuthor.jpg",
   },
 ];
 
@@ -67,7 +67,7 @@ const Slider = () => {
           <SwiperSlide key={i} className={styles.slider}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/assets/lightblue.jpg"
+                src="/assets/sliderBackground.jpg"
                 alt="img-bck"
                 layout="fill"
                 objectFit="cover"
