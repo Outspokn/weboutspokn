@@ -1,0 +1,117 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  margin-bottom: 20px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.mainPost {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.postImage {
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.postDetails {
+  padding: 20px;
+}
+.postContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 1rem;
+  color: #666;
+}
+
+.postDetails h3 {
+  margin-bottom: 10px;
+}
+
+.sidePosts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidePost {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.sideImageWrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.sidePostImage {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sidePostDetails {
+  display: flex;
+  flex-direction: column;
+}
+.sidePostContent {
+  display: flex;
+}
+
+.readTime {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.sidePost h4 {
+  margin: 0;
+  font-size: 1rem;
+}
