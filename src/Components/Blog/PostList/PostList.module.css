@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cardWrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.pagination .active {
+  background: #0070f3;
+  color: white;
+  border-radius: 4px;
+}
+
+.pagination .ellipsis {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination .navButton {
+  background: #ddd;
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.pagination .navButton:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+}
