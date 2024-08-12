@@ -90,6 +90,23 @@ const LatestPost = () => {
               <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
             </div>
           </div>
+          <div className={styles.sidePost}>
+            <div className={styles.sideImageWrapper}>
+              <Image
+                src="/assets/blog1.jpg"
+                alt="Side Post Image"
+                className={styles.sidePostImage}
+                fill
+              />
+            </div>
+            <div className={styles.sidePostDetails}>
+              <div className={styles.sidePostContent}>
+                <span className={styles.tag}>Product News</span>
+                <span className={styles.readTime}>15 min read</span>
+              </div>
+              <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
+            </div>
+          </div>
         </div>
       </div>
     </div>

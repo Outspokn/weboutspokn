@@ -19,6 +19,7 @@ const WhoIsOutspokn = () => {
             <Image
               src="/assets/capterra.jpg"
               alt="Capterra Logo"
+              objectFit="contain"
               width={100}
               height={40}
             />
@@ -29,6 +30,7 @@ const WhoIsOutspokn = () => {
             <Image
               src="/assets/trustpilot.jpg"
               alt="Trustpilot Logo"
+              objectFit="contain"
               width={100}
               height={40}
             />

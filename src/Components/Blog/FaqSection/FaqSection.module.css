@@ -1,7 +1,6 @@
 .faqContainer {
-  max-width: 1150px;
-  margin: 0 auto;
-  padding: 0 20px;
+  padding: 40px 100px;
+
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -13,14 +12,18 @@
   margin-bottom: 20px;
 }
 
-.faqHeader h2 {
-  font-size: 24px;
+.faqHeader h3 {
+  font-size: 32px;
+  color: var(--primary-color);
 }
-
+.description {
+  color: var(--light-font-desc);
+}
 .helpCenterButton {
   background-color: white;
-  border: 1px solid black;
-  padding: 8px 16px;
+  border: 2px solid var(--light-font-desc);
+  padding: 10px 20px;
+  color: var(--light-font-desc);
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
@@ -31,10 +34,10 @@
 }
 
 .faqItem {
-  border: 1px solid #ccc;
+  border: 1px solid #e3e3e3;
   border-radius: 10px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 18px 20px;
 }
 
 .faqQuestion {
@@ -43,7 +46,11 @@
   align-items: center;
   cursor: pointer;
 }
-
+.faqQuestion span {
+  font-size: 18px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
 .iconContainer {
   font-size: 16px;
 }
@@ -51,6 +58,7 @@
 .faqAnswer {
   margin-top: 15px;
   color: #666;
-  font-size: 14px;
+
+  font-size: 16px;
   font-weight: 500;
 }

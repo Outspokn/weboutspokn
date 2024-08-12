@@ -1,12 +1,11 @@
 .header {
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: 60px 100px 40px 100px;
   margin-top: 2rem;
   position: relative;
 }
 
 .headerContent {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -18,9 +17,9 @@
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #343a40;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary-color);
   margin: 0;
 }
 
@@ -32,7 +31,7 @@
 
 .description {
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--desc-font-color);
   margin-bottom: 20px;
   line-height: 1.5;
 }
@@ -60,10 +59,10 @@
 .searchBar input {
   padding: 12px 20px 12px 40px;
   width: 100%;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--desc-font-color);
   border-radius: 50px;
   font-size: 1rem;
-  background-color: #e9ecef;
+  background-color: var(--background-color-light);
 }
 
 .searchBar .searchIcon {
@@ -91,11 +90,12 @@
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
   white-space: nowrap;
+  color: var(--desc-font-color);
 }
 
 .categoryButton:hover,
 .categoryButton.active {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: #fff;
 }
 

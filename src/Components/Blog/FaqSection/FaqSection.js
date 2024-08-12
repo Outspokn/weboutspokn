@@ -36,7 +36,7 @@ const FaqSection = () => {
         <h3>Uncertain? Let us provide you with the information you need</h3>
         <button className={styles.helpCenterButton}>Visit help center</button>
       </div>
-      <p>
+      <p className={styles.description}>
         Our websites had a list of questions and answers that aim to provide
         clarity on a particular subject.
         <br />

@@ -72,9 +72,10 @@ const Slider = () => {
                 layout="fill"
                 objectFit="cover"
               />
+              <div className={styles.overlay}></div>
             </div>
             <div className={styles.slideProfile}>
-              <div className={styles.imgWrapper}>
+              <div className={styles.imgWrapperProfile}>
                 <Image
                   src={slide.authorImage}
                   width={35}
@@ -87,8 +88,10 @@ const Slider = () => {
                 <h4 className={styles.slideName}>{slide.author}</h4>
               </div>
             </div>
-            <h3 className={styles.title}>{slide.title}</h3>
-            <p className={styles.description}>{slide.description}</p>
+            <div className={styles.textWrapper}>
+              <h3 className={styles.title}>{slide.title}</h3>
+              <p className={styles.description}>{slide.description}</p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

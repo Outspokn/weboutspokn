@@ -1,12 +1,12 @@
 .subscribeSection {
-  background-color: #0a3d62;
+  background-color: var(--primary-color);
   color: #fff;
   display: flex;
+  border-radius: 12px;
   align-items: center;
   padding: 60px;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 20px;
+
+  margin: 20px 100px 60px 100px;
 }
 
 .container {

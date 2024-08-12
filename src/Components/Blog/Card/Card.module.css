@@ -1,8 +1,8 @@
 .card {
   background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
   text-align: center;
   margin: 8px;
   width: 100%;
@@ -25,17 +25,20 @@
   position: absolute;
   bottom: 8px;
   left: 50%;
+  width: max-content;
+
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   background: white;
   color: black;
-  padding: 4px 8px;
-  border-radius: 20px;
+  padding: 4px 12px 4px 5px;
+  border-radius: 25px;
 }
 
 .authorBadge span {
   font-size: 14px;
+  color: #909090;
 }
 
 .authorImage {
@@ -54,9 +57,13 @@
   margin-top: 16px;
   gap: 8px;
 }
-
+.cardFooter span {
+  font-weight: 500;
+  color: var(--light-font-desc);
+}
 .icon {
   margin-right: 4px;
+  color: var(--primary-color);
 }
 
 .verticalLine {
@@ -68,21 +75,39 @@
 
 .readMore {
   background-color: white;
-  color: black;
+  color: var(--primary-color);
   border: none;
-  padding: 10px 20px;
+  font-weight: 600;
+  width: 100%;
+  padding: 13px 20px;
   cursor: pointer;
   border-radius: 4px;
   margin-top: 16px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
   border-radius: 20px;
 }
-
+.content {
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+.content h3 {
+  font-weight: 800;
+  text-align: left;
+  color: var(--primary-color);
+}
+.readMore:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  /* color: var(--secondary-color); */
+}
 .description {
   position: relative;
+  text-align: left;
+  color: var(--light-font-desc);
 }
 
 .description::after {
