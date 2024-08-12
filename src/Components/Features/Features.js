@@ -59,8 +59,8 @@ const Features = () => {
             height={29}
             width={34}
             src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/supervised-icon.png"
-            title="Fluent with Ease"
-            desc="Engage in daily practice to significantly improve your English skills and become fluent with confidence and ease!"
+            title="Instant Translation"
+            desc="Enhance your learning with instant translations in over 100 languages, making English mastery accessible wherever you are."
           />
         </div>
       </div>
