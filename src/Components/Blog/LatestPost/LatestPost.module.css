@@ -118,3 +118,89 @@
   margin: 0;
   font-size: 1rem;
 }
+
+@media (max-width: 1281px) {
+  .container {
+    padding: 30px 80px;
+  }
+  .header h2 {
+    font-size: 1.8rem;
+  }
+  .posts {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 60px;
+  }
+  .header h2 {
+    font-size: 1.6rem;
+  }
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 961px) {
+  .container {
+    padding: 20px 40px;
+  }
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .mainPost {
+    padding: 15px;
+  }
+  .sidePosts {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 641px) {
+  .container {
+    padding: 20px 20px;
+  }
+  .header h2 {
+    font-size: 1.4rem;
+  }
+  .posts {
+    gap: 15px;
+  }
+  .sidePost {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 481px) {
+  .container {
+    padding: 10px;
+  }
+  .header h2 {
+    font-size: 1.2rem;
+  }
+  .header p {
+    font-size: 0.9rem;
+  }
+  .posts {
+    gap: 10px;
+  }
+  .sidePost {
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+  }
+  .sideImageWrapper {
+    width: 100%;
+    height: 150px;
+  }
+  .sidePost h4 {
+    font-size: 0.9rem;
+  }
+}
