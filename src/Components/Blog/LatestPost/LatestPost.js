@@ -51,7 +51,6 @@ const LatestPost = () => {
                 <span className={styles.tag}>Product News</span>
                 <span className={styles.readTime}>7 min read</span>
               </div>
-
               <h4>NEW! Introducing Homeworks to Assessment Library</h4>
             </div>
           </div>
@@ -69,7 +68,6 @@ const LatestPost = () => {
                 <span className={styles.tag}>Project Management</span>
                 <span className={styles.readTime}>17 min read</span>
               </div>
-
               <h4>What is Scope Creep? Common Causes & How to Avoid Them</h4>
             </div>
           </div>
