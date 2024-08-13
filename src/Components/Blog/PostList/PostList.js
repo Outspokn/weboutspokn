@@ -117,15 +117,20 @@ const data = [
 
 const PostList = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [displayedItems, setDisplayedItems] = useState(data.slice(0, 6));
   const [showMiddlePages, setShowMiddlePages] = useState(false);
   const itemsPerPage = 6;
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
-    setShowMiddlePages(false);
-  };
+    const startIndex = (page - 1) * itemsPerPage;
+    const newItems = data.slice(startIndex, startIndex + itemsPerPage);
 
-  const displayedItems = data.slice(0, currentPage * itemsPerPage);
+    if (newItems.length > 0) {
+      setDisplayedItems(newItems);
+    }
+
+    setCurrentPage(page);
+  };
 
   const getPageNumbers = () => {
     if (showMiddlePages) {

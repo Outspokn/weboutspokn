@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-flow: column;
-
   justify-content: center;
   padding: 40px 100px;
 }
@@ -10,11 +9,13 @@
   max-width: 1200px;
   width: 100%;
 }
+
 .heading {
   font-weight: 800;
   color: var(--primary-color);
   text-align: left;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -66,4 +67,95 @@
 .pagination .navButton:disabled {
   background: #f0f0f0;
   cursor: not-allowed;
+}
+
+@media (max-width: 1281px) {
+  .container {
+    padding: 30px 80px;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 60px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 961px) {
+  .container {
+    padding: 20px 40px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .pagination button {
+    padding: 7px 10px;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 641px) {
+  .container {
+    padding: 20px 20px;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .pagination button {
+    padding: 6px 8px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 481px) {
+  .container {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .pagination button {
+    padding: 5px 6px;
+    margin: 0 1px;
+  }
 }
