@@ -1,5 +1,5 @@
 .swiperContainer {
-  margin: 20px 100px;
+  margin: 0 60px 20px 60px;
 }
 
 .slider {
@@ -49,6 +49,7 @@
   height: 35px;
   margin-right: 10px;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -57,7 +58,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .slideProfileContent {
@@ -81,8 +82,7 @@
 }
 
 .title {
-  font-size: 25px;
-  margin-bottom: 10px;
+  font-size: 28px;
   font-weight: 700;
   color: white;
 }
@@ -96,7 +96,7 @@
 
 @media (max-width: 1280px) {
   .swiperContainer {
-    margin: 20px 80px;
+    margin-top: 0;
   }
 
   .title {
@@ -111,7 +111,7 @@
 
 @media (max-width: 1024px) {
   .swiperContainer {
-    margin: 20px 60px;
+    margin-top: 0;
   }
 
   .slider {
@@ -135,7 +135,7 @@
 
 @media (max-width: 961px) {
   .swiperContainer {
-    margin: 20px 40px;
+    margin-top: 0;
   }
 
   .slider {
@@ -155,7 +155,7 @@
 
 @media (max-width: 641px) {
   .swiperContainer {
-    margin: 20px 20px;
+    margin-top: 0;
   }
 
   .slider {
@@ -164,7 +164,7 @@
   }
 
   .title {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .description {
@@ -184,7 +184,7 @@
   }
 
   .title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .description {
