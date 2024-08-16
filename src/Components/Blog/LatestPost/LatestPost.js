@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./LatestPost.module.css";
 import Image from "next/image";
-
+import { FaReadme } from "react-icons/fa";
 const LatestPost = () => {
   return (
     <div className={styles.container}>
@@ -30,7 +30,7 @@ const LatestPost = () => {
               <span className={styles.date}>Aug 5, 2024</span>
             </div>
             <h3>How to Maximize Your Agency Profit Margins</h3>
-            <p>
+            <p className={styles.desc}>
               Whether you choose to track your time via paper timesheets,
               spreadsheets, a swipe-card system..
             </p>
@@ -49,7 +49,9 @@ const LatestPost = () => {
             <div className={styles.sidePostDetails}>
               <div className={styles.sidePostContent}>
                 <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>7 min read</span>
+                <span className={styles.readTime}>
+                  <FaReadme className={styles.readIcon} />7 min read
+                </span>
               </div>
               <h4>NEW! Introducing Homeworks to Assessment Library</h4>
             </div>

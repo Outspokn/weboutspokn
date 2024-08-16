@@ -46,30 +46,40 @@
 
 .inputWrapper {
   position: relative;
-  width: 300px;
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
   margin-right: 10px;
+  padding: 8px 10px;
 }
 
 .icon {
-  position: absolute;
+  /* position: absolute;
   left: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
   color: #fff;
   font-size: 20px;
 }
 
 .subscription input {
-  padding: 15px 15px 15px 40px;
-  border-radius: 5px;
+  /* padding: 15px 15px 15px 40px;
+  border-radius: 5px; */
   border: none;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background-color: transparent !important;
+  /* width: 100%;
+  background: rgba(255, 255, 255, 0.2); */
   color: #fff;
 }
 
 .subscription input::placeholder {
   color: #fff;
+  font-size: 12px;
+}
+.subscription input:active {
+  border: 0;
+  outline: 0;
 }
 
 .subscription button {
@@ -99,10 +109,6 @@
 
   .rightContent h4 {
     font-size: 0.9rem;
-    margin-left: 10px;
-  }
-
-  .subscription input {
     margin-left: 10px;
   }
 
@@ -146,7 +152,7 @@
 
   .rightContent h4 {
     font-size: 0.7rem;
-    margin-left:12px;
+    margin-left: 12px;
   }
 
   .subscription {
@@ -163,9 +169,8 @@
   .subscription button {
     margin-top: 10px;
     margin-left: 0;
-    width:50%;
-    margin-left:10px;
-
+    width: 50%;
+    margin-left: 10px;
   }
 }
 
@@ -193,10 +198,10 @@
   }
 
   .subscription button {
-    padding: 12px 25px;
+    padding: 6px 25px;
     margin-top: 10px;
     margin-left: 10px;
-    width: 50%;
+    width: 54%;
   }
 }
 
@@ -205,9 +210,16 @@
     padding: 15px;
     margin: 15px 10px 20px 10px;
   }
-
+  .rightContent {
+    gap: 10px;
+  }
+  .subscription {
+    align-items: flex-start;
+    gap: 10px;
+  }
   .leftContent h1 {
     font-size: 1.1rem;
+    margin-bottom: 10px;
   }
 
   .leftContent p {
@@ -216,19 +228,23 @@
 
   .rightContent h4 {
     font-size: 0.8rem;
-    margin-left: 10px;
+    margin: 0;
   }
 
   .subscription input {
-    padding: 10px 15px 10px 35px;
+    padding: 0;
   }
-
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
   .subscription button {
-    padding: 9px 12px;
+    padding: 6px 25px;
     font-size: 0.8rem;
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 50%;
+    width: 52%;
+    margin: 0;
   }
 
   @media (max-width: 320px) {

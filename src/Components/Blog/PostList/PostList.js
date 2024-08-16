@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "../Card/Card";
 import styles from "./PostList.module.css";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const data = [
   {
@@ -157,7 +158,7 @@ const PostList = () => {
             disabled={currentPage === 1}
             className={styles.navButton}
           >
-            &lt;
+            <MdKeyboardArrowLeft className={styles.navIcon} />
           </button>
           {getPageNumbers().map((number, index) =>
             number === "..." ? (
@@ -183,7 +184,7 @@ const PostList = () => {
             disabled={currentPage === 9}
             className={styles.navButton}
           >
-            &gt;
+            <MdKeyboardArrowRight className={styles.navIcon} />
           </button>
         </div>
       </div>

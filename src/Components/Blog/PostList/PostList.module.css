@@ -15,6 +15,7 @@
   color: var(--primary-color);
   margin-bottom: 10px;
   margin-left: 12px;
+  font-weight: 800;
 }
 
 .grid {
@@ -36,7 +37,7 @@
   margin: 0 5px;
   padding: 10px 15px;
   border: none;
-  background: #ddd;
+  background: transparent;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 7px;
@@ -57,16 +58,18 @@
 }
 
 .pagination .navButton {
-  background: #ddd;
+  background: transparent;
   cursor: pointer;
   border: none;
   padding: 10px 15px;
   transition: background-color 0.3s ease;
   border-radius: 4px;
 }
-
+.navIcon {
+  font-size: 25px;
+}
 .pagination .navButton:disabled {
-  background: #f0f0f0;
+  background: transparent;
   cursor: not-allowed;
 }
 
@@ -147,20 +150,32 @@
 
 @media (max-width: 481px) {
   .container {
-    padding: 10px;
+    padding: 20px;
   }
 
   .heading h2 {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-left: 0;
+    margin-bottom: 20px;
   }
-
+  .navIcon {
+    font-size: 16px;
+  }
   .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 20px;
   }
 
+  .pagination {
+    gap: 3px;
+  }
+  .pagination .active {
+    padding: 5px 9px;
+    border-radius: 6px;
+  }
   .pagination button {
-    padding: 5px 6px;
-    margin: 0 1px;
+    padding: 5px 9px;
   }
 }

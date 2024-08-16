@@ -2,7 +2,7 @@
   background-color: #ffffff;
   padding: 60px 100px 20px 100px;
   margin-top: 3rem;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -156,7 +156,7 @@
 @media (max-width: 1024px) {
   .header {
     padding: 60px 60px 40px 60px;
-    margin-bottom: 25px; 
+    margin-bottom: 25px;
   }
 
   .title {
@@ -209,14 +209,19 @@
     margin: 5px 0;
   }
 }
-
+@media (max-width: 861px) {
+  .header {
+    padding: 60px 60px 20px 60px;
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 641px) {
   .header {
     padding: 40px 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
   }
-  
-  .socialIcons{
+
+  .socialIcons {
     display: none;
   }
 
@@ -224,8 +229,8 @@
     font-size: 1.8rem;
   }
 
-  .description{
-    display:none;
+  .description {
+    display: none;
   }
 
   .searchBar {
@@ -238,21 +243,28 @@
 }
 
 @media (max-width: 481px) {
-
   .header {
-    padding: 40px 20px;
-    margin-bottom: 15px;
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 0px;
   }
-  
+
   .title {
     font-size: 1.6rem;
+    text-align: center;
+  }
+  .titleContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  .categories {
+    align-items: center;
+    justify-content: center;
+  }
+  .description {
+    display: none;
   }
 
-  .description{
-    display:none;
-  }
-
-  .socialIcons{
+  .socialIcons {
     display: none;
   }
 

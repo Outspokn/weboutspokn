@@ -18,11 +18,16 @@ const Card = ({ data }) => {
         <h3>{data?.title}</h3>
         <p className={styles.description}>{data?.description}</p>
         <div className={styles.cardFooter}>
-          <FaCalendarAlt className={styles.icon} />
-          <span>{data?.date}</span>
+          <span className={styles.inSpanWrap}>
+            <FaCalendarAlt className={styles.icon} />
+            <span>{data?.date}</span>
+          </span>
           <span className={styles.verticalLine}></span>
-          <FaUserAlt className={styles.icon} />
-          <span>{data?.author}</span>
+          <span className={styles.inSpanWrap}>
+            <FaUserAlt className={styles.icon} />
+
+            <span>{data?.author}</span>
+          </span>
         </div>
         <button className={styles.readMore}>Read More</button>
       </div>
