@@ -31,12 +31,21 @@ const Navbar = () => {
           fill
         />
       </div>
-      <div className={styles.googlePlayStore}>
-        <Image
-          src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
-          alt="Download from play store"
-          fill
-        />
+      <div className={styles.PlayStore}>
+        <div className={styles.googlePlayStore}>
+          <Image
+            src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
+            alt="Download from play store"
+            fill
+          />
+        </div>
+        <div className={styles.googlePlayStore}>
+          <Image
+            src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/appStore_new.png"
+            alt="Download from app store"
+            fill
+          />
+        </div>
       </div>
     </div>
   );

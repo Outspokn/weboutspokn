@@ -13,12 +13,21 @@ const ThirdSection = () => {
         <p className={styles.Content}>
           Accelerate your english learning by downloading the outspokn app now
         </p>
-        <div className={styles.googlePlayStore}>
-          <Image
-            src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/get-it-on-google-play-logo-white.png"
-            alt="Download from play store"
-            fill
-          />
+        <div className={styles.PlayStore}>
+          <div className={styles.googlePlayStore}>
+            <Image
+              src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/get-it-on-google-play-logo-white.png"
+              alt="Download from play store"
+              fill
+            />
+          </div>
+          <div className={styles.googlePlayStore}>
+            <Image
+              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/AppStore_white.png"
+              alt="Download from app store"
+              fill
+            />
+          </div>
         </div>
       </div>
 
