@@ -142,7 +142,9 @@ const PostList = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>All Blog</h2>
+      <div className={styles.heading}>
+        <h2>All Blog</h2>
+      </div>
       <div className={styles.cardWrapper}>
         <div className={styles.grid}>
           {displayedItems.map((item) => (

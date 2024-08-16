@@ -64,6 +64,7 @@
 .icon {
   margin-right: 4px;
   color: var(--primary-color);
+  font-size: 14px;
 }
 
 .verticalLine {
