@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-// Dynamically import lottie-react to ensure it only loads on the client side
 const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
 });
