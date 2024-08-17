@@ -68,7 +68,10 @@ const LatestPost = () => {
             <div className={styles.sidePostDetails}>
               <div className={styles.sidePostContent}>
                 <span className={styles.tag}>Project Management</span>
-                <span className={styles.readTime}>17 min read</span>
+                <span className={styles.readTime}>
+                  <FaReadme className={styles.readIcon} />
+                  17 min read
+                </span>
               </div>
               <h4>What is Scope Creep? Common Causes & How to Avoid Them</h4>
             </div>
@@ -85,7 +88,10 @@ const LatestPost = () => {
             <div className={styles.sidePostDetails}>
               <div className={styles.sidePostContent}>
                 <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>15 min read</span>
+                <span className={styles.readTime}>
+                  <FaReadme className={styles.readIcon} />
+                  15 min read
+                </span>
               </div>
               <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
             </div>
@@ -102,7 +108,10 @@ const LatestPost = () => {
             <div className={styles.sidePostDetails}>
               <div className={styles.sidePostContent}>
                 <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>15 min read</span>
+                <span className={styles.readTime}>
+                  <FaReadme className={styles.readIcon} />
+                  15 min read
+                </span>
               </div>
               <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
             </div>
