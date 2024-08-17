@@ -20,8 +20,9 @@
   flex: 1;
 }
 
-.leftContent h1 {
+.leftContent h2 {
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .leftContent p {
@@ -48,28 +49,22 @@
   position: relative;
   display: flex;
   align-items: center;
-
   background: rgba(255, 255, 255, 0.2);
   margin-right: 10px;
-  padding: 8px 10px;
+  padding: 10px 10px;
+  margin: 0;
+  gap: 10px;
+  border-radius: 6px;
 }
 
 .icon {
-  /* position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%); */
   color: #fff;
   font-size: 20px;
 }
 
 .subscription input {
-  /* padding: 15px 15px 15px 40px;
-  border-radius: 5px; */
   border: none;
   background-color: transparent !important;
-  /* width: 100%;
-  background: rgba(255, 255, 255, 0.2); */
   color: #fff;
 }
 
@@ -91,6 +86,12 @@
   cursor: pointer;
   font-weight: bold;
   margin-left: 10px;
+  font-size: 0.8rem;
+  padding: 10px 30px;
+  width: 60%;
+  gap: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
 }
 
 @media (max-width: 1281px) {
@@ -99,7 +100,7 @@
     margin: 20px 60px 40px 60px;
   }
 
-  .leftContent h1 {
+  .leftContent h2 {
     font-size: 1.8rem;
   }
 
@@ -109,11 +110,30 @@
 
   .rightContent h4 {
     font-size: 0.9rem;
-    margin-left: 10px;
+    margin-left: 2px;
   }
 
+  .subscription {
+    gap: 10px;
+  }
   .icon {
     left: 20px;
+  }
+
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 50%;
+    gap: 10px;
+    border-radius: 15px;
+    margin-left: 2px;
   }
 }
 
@@ -123,7 +143,7 @@
     margin: 20px 40px 40px 40px;
   }
 
-  .leftContent h1 {
+  .leftContent h2 {
     font-size: 1.6rem;
   }
 
@@ -133,6 +153,31 @@
 
   .rightContent h4 {
     font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
+  .subscription {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
+    margin-top: 10px;
   }
 }
 
@@ -142,7 +187,7 @@
     margin: 20px 30px 40px 30px;
   }
 
-  .leftContent h1 {
+  .leftContent h2 {
     font-size: 1.4rem;
   }
 
@@ -152,7 +197,7 @@
 
   .rightContent h4 {
     font-size: 0.7rem;
-    margin-left: 12px;
+    margin-left: 5px;
   }
 
   .subscription {
@@ -161,16 +206,22 @@
   }
 
   .inputWrapper {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 10px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
   }
 
   .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
     margin-top: 10px;
-    margin-left: 0;
-    width: 50%;
-    margin-left: 10px;
   }
 }
 
@@ -180,7 +231,7 @@
     margin: 20px 20px 30px 20px;
   }
 
-  .leftContent h1 {
+  .leftContent h2 {
     font-size: 1.2rem;
   }
 
@@ -190,34 +241,44 @@
 
   .rightContent h4 {
     font-size: 0.6rem;
-    margin-left: 12px;
+    margin-left: 5px;
   }
 
   .subscription input {
-    padding: 12px 15px 12px 40px;
+    padding: 0;
+  }
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
   }
 
   .subscription button {
-    padding: 6px 25px;
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 54%;
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
   }
 }
-
 @media (max-width: 481px) {
   .subscribeSection {
     padding: 15px;
     margin: 15px 10px 20px 10px;
   }
   .rightContent {
+    margin-left: 5px;
     gap: 10px;
   }
   .subscription {
     align-items: flex-start;
     gap: 10px;
   }
-  .leftContent h1 {
+  .leftContent h2 {
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
@@ -243,7 +304,7 @@
   .subscription button {
     padding: 6px 25px;
     font-size: 0.8rem;
-    width: 52%;
+    width: 50%;
     margin: 0;
   }
 
@@ -253,7 +314,7 @@
       margin: 10px 5px 15px 5px;
     }
 
-    .leftContent h1 {
+    .leftContent h2 {
       font-size: 1rem;
     }
 

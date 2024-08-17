@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  padding: 40px 100px;
+  padding: 40px 200px;
 }
 
 .cardWrapper {
@@ -76,6 +76,10 @@
 @media (max-width: 1281px) {
   .container {
     padding: 30px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .heading h2 {
@@ -91,6 +95,10 @@
 @media (max-width: 1024px) {
   .container {
     padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .heading h2 {
