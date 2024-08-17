@@ -11,7 +11,7 @@ const slides = [
     id: 1,
     title: "Artificial Intelligence Beyond Imaginations",
     description:
-      "Artificial Intelligence Has Been Advancing Beyond What Humans Have Imagined For Decades And Will Dominate Humans In The Coming Years, But The Question Is, Why Will It Happen Like...",
+      "AI has been advancing rapidly and could soon surpass humans—why is this likely?",
     author: "Saraj Kolhyseg",
     authorImage: "/assets/sliderAuthor.jpg",
   },

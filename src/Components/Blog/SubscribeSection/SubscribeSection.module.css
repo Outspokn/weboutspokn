@@ -66,6 +66,7 @@
   border: none;
   background-color: transparent !important;
   color: #fff;
+  width: 200px;
 }
 
 .subscription input::placeholder {
@@ -294,6 +295,7 @@
 
   .subscription input {
     padding: 0;
+    width:100px
   }
   .inputWrapper {
     margin: 0;
@@ -302,7 +304,7 @@
     border-radius: 6px;
   }
   .subscription button {
-    padding: 6px 25px;
+    padding: 6px 20px;
     font-size: 0.8rem;
     width: 50%;
     margin: 0;
