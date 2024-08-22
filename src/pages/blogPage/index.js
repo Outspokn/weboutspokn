@@ -7,7 +7,7 @@ const index = () => {
   return (
     <div>
       <Navbar />
-npm run devops      <Header />
+      <Header />
       <MainContent />
     </div>
   );
