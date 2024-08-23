@@ -1,10 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import { ImTwitter, ImYoutube, ImSearch } from "react-icons/im";
 import Link from "next/link";
 
+const articles = [
+  {
+    id: 1,
+    title: "Understanding React",
+    summary: "A deep dive into React and its core concepts.",
+    category: "Technology",
+  },
+  {
+    id: 2,
+    title: "Best Manufacturing Practices",
+    summary: "Exploring best practices in manufacturing.",
+    category: "Manufacturing",
+  },
+  {
+    id: 3,
+    title: "The Future of Sports",
+    summary: "How technology is shaping the future of sports.",
+    category: "Sport",
+  },
+];
+
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredArticles, setFilteredArticles] = useState(articles);
+
   const categories = [
     "All",
     "Manufacturing",
@@ -14,6 +38,27 @@ const Header = () => {
     "Programming",
     "Engineering",
   ];
+
+  useEffect(() => {
+    filterArticles();
+  }, [searchTerm, activeCategory]);
+
+  const filterArticles = () => {
+    let filtered = articles;
+
+    if (activeCategory !== "All") {
+      filtered = filtered.filter(
+        (article) => article.category === activeCategory
+      );
+    }
+
+    if (searchTerm) {
+      filtered = filtered.filter((article) =>
+        article.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    setFilteredArticles(filtered);
+  };
 
   return (
     <header className={styles.header}>
@@ -47,7 +92,14 @@ const Header = () => {
         <div className={styles.searchContainer}>
           <div className={styles.searchBar}>
             <ImSearch className={styles.searchIcon} />
-            <input type="text" placeholder="Search..." />
+            <input
+              type="text"
+              placeholder="Search... "
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+              }}
+            />
           </div>
           <div className={styles.categories}>
             {categories.map((category) => (
