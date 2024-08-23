@@ -1,0 +1,183 @@
+---
+title: Serialize and Deserialize an N-ary Tree | Skillslash
+desc: "In this blog we discussed trees as we started from binary trees and then shifted to N-ary trees"
+slug: home
+date: "Oct 04, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Author"
+readTime: "4 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Shuffle-and Serialize-Deserialize-Every-N-ary-Tree.webp"
+h1: "Shuffle and Serialize-Deserialize Every N-ary Tree"
+id: "serialize-deserialize-n-ary-tree"
+tableData:
+  [
+    Introduction,
+    Serializing and Deserializing,
+    Binary Tree,
+    Storing A General Binary Tree,
+    Serialize N-ary Tree,
+    Output,
+    Let's Come To The Logic and Algorithm behind It,
+    Code,
+    Wrapping up,
+  ]
+---
+
+## Introduction
+
+A tree forms an integral part of [**Data Structures**](https://www.geeksforgeeks.org/data-structures/) and is of course a very important topic for all Computer Science related streams. So, what is a tree? Tree is a way to organize data. It is a hierarchical and non-linear data structure which consists of nodes in a way that each of the nodes of the tree stores a value and a list of references to other child nodes. A binary tree is a tree where each parent node has at most 2 children and an N-ary tree contains at most N children at each tree node. There are no designated right and left children in an N-ary tree; it is hence illustrated by storing an array or a child pointer list along with every parent node.
+
+### Serializing and Deserializing
+
+Serializing a tree implies storing the tree in an array or a file while maintaining the tree's structure exactly. This is done so that it can be later restored. Whereas deserializing a tree implies retrieving or reading the tree back from the array or the file that is maintaining the tree's structure exactly. The main aim here is to store an 'end of children' marker along with every node. The diagram below illustrates serialization where ')' is used as the 'end of children' marker.
+
+![Serialize and Deserialize an N-ary Tree](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/serialize-deserialize-n-ary-tree-1-04-oct-22.webp)
+
+### Binary Tree
+
+Let us first look at the solutions and approaches to **serialize deserialize binary tree** as that is how **tree serialization** can be made simpler and we can then move on to studying about how to **serialize and deserialize N-ary trees**.
+
+- If the tree given is a Binary Search Tree then it can be stored either by storing preorder or by a postorder traversal. This is sufficient for storing the structure information.
+- If the given Binary tree is a Complete Tree then all its levels are completely filled except the leaf nodes which are at the last level. Binary heaps are known as Binary Trees. Here, the traversal of level order is sufficient enough for storing the tree. The first node is called the root node in any tree and the next two nodes are the nodes of the next level, and further,the next four nodes are the nodes of the second level and it goes on in a similar way.
+- During **tree serialization** if the tree is Binary Full Tree then this tree consists of nodes where each one of the nodes have either 0 or 2 children and nothing in between. Such **binary tree serialization** is easy as every internal node has exactly 2 children and it can be simply stored by preorder traversal and a bit can be stored with every node for indicating if the node is an internal or a leaf node.
+
+### Storing A General Binary Tree
+
+For storing both inorder and preorder traversals for a general binary tree is an effortless solution to this. But this solution occupies space twice the size of the original binary tree. Hence we need methods to save space as it is an important resource. We can achieve this by storing the preorder traversal and a marker for the null pointers. This solution needs n+1 marker for n keys which further may be better than the simple effortless solution discussed above where the keys are stored twice. This is more optimal in situations where the keys are big or contain huge data items in them or have big associated data along with them.
+
+### Can This Solution Be Further Optimized?
+
+Yes, this solution can be of course further optimized! That too in many ways. On having a closer look at the serialized trees discussed above, we can notice that all the leaf nodes requisites for two markers. Therefore, a simple optimization for this would be to store a separate bit with every node for indicating if the node is either internal or external. Thus it is not necessary to store two markers along with each and every leaf node since the leaves can be identified by the extra bit. Even after this there is still a requirement for a marker for internal nodes with just one child in the binary tree. Also, this should always be remembered that there are invariably more leaf nodes than the internal nodes in a binary tree as the leaf nodes count is the number of internal nodes with degree 2 plus 1, hence this type of optimization is suitable.
+
+### Serialize N-ary Tree
+
+As it is already discussed above, an N-ary tree does not have any designated right or left child and thus 'end of children' marker can be stored along with every node. For performing serialization and deserialization for an N-ary tree we need the following as inputs:
+
+- An N-ary tree, of course, is to be created with the help of a function by inserting a new node along with data in that particular node.
+- The code here has N=3.
+- The inserted data are 28, 22, 2, 7, 8, 13, 12, 19, 25 and 24 consecutively given for the tree's node.
+- Then the output will be as follows:
+
+### Output :
+
+The elements of created tree : 28 22 2 7 8 13 12 19 25 24
+
+The elements of tree in serialized form : 28 22 2 -1 -1 -1 7 -1 -1 -1 -1 8 13 -1 -1 -1 -1 -1 12 19 -1 -1 -1 25 -1 -1 -1 24 -1 -1 -1
+
+The retrieved tree from array after deserialization : 28 22 2 7 8 13 12 19 25 24
+
+![Serialize and Deserialize an N-ary Tree](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/serialize-deserialize-n-ary-tree-2-04-oct-22.webp)
+
+### Let's Come To The Logic and Algorithm behind It
+
+1. Create an N-ary tree and a pointer to store the address of the root node in it.
+2. Traverse the tree and display the elements of the tree created.
+3. Serialize the tree by storing the elements of the tree in an array along with a marker for indicating the leaf node of the tree.
+
+4. At the beginning, the value of the root node is supposed to be inserted or stored in an array and then the data value of all the children nodes of the root node are to be inserted into the array gradually with the help of a for loop.
+5. On encountering a leaf node, -1 should be inserted as a marker into the array for indicating the null value in the node.
+
+6. Now, the serialized form of the tree is displayed.
+7. Deserialize the tree from the array by constructing the tree as done previously from the serialized form of the tree in the array.
+
+8. For performing this, a root node is to be created at first along with the data value which is taken from the first element of an array and then a child node is to be created and then the data value is to be inserted from the element of the array into the node with the help of a for loop. This continues until it reaches the valueof -1.
+9. If the element encountered in the array is -1, then null is returned to the pointer of the node. The same occurs on encountering all the elements of the array.
+
+10. Now traverse and display the tree after retrieving it by deserialization.
+
+The code for the above input and output implemented in the same logic and algorithm is illustrated below.
+
+### Code:
+
+```c
+#include"stdio.h"
+#include"stdlib.h"
+#define N 3
+struct node
+{
+    int info;
+    struct node *child[N];
+};
+struct node *Root=NULL,*dRoot=NULL;
+int dIndex=0,sIndex=0;
+struct node* createNode(int data)          	//Function to create a new node
+{
+    struct node * root;
+    root=(struct node*)malloc(sizeof(struct node));
+    root->info=data;
+    for(int k=0; k<N; k++)
+        root->child[k]=NULL;
+    return root;
+}
+struct node * createTree()                	//Function to create Tree
+{
+    struct node * root;
+    root=createNode(28);
+    root->child[0]=createNode(22);
+    root->child[1]=createNode(8);
+    root->child[2]=createNode(12);
+    root->child[0]->child[0]=createNode(2);
+    root->child[0]->child[1]=createNode(7);
+    root->child[1]->child[0]=createNode(13);
+    root->child[2]->child[0]=createNode(19);
+    root->child[2]->child[1]=createNode(25);
+    root->child[2]->child[2]=createNode(24);
+    return root;
+}
+void serialize(struct node* root,int arr[])  	//Function to serialize Tree
+{
+    if(root==NULL)
+    {
+        arr[sIndex]=-1;
+        sIndex++;
+        return;
+    }
+    arr[sIndex]=root->info;
+    sIndex++;
+    for(int k=0; k<N; k++)
+        serialize(root->child[k],arr);
+}
+struct node* deserialize(struct node * root,int arr[]) //Function for deserialization
+{
+    if(arr[dIndex]==(-1) || dIndex==sIndex-1)
+    {
+        dIndex++;
+        return NULL;
+    }
+    root=createNode(arr[dIndex]);
+    dIndex++;
+    for(int k=0; k<N; k++)
+    {
+        root->child[k]=deserialize(root->child[k],arr);
+    }
+    return root;
+}
+void Travers(struct node* root)     	//Function to traverse Tree
+{
+    if(root==NULL)
+        return;
+    printf(" %d",root->info);
+    for(int k=0; k<N; k++)
+        Travers(root->child[k]);
+}
+void main() {
+    int array[50];
+    Root=createTree();               	//Creating Tree and address of root node returns to Root pointer
+    printf("The elements of created tree : ");
+    Travers(Root);                  	//Displaying the tree by traversing
+    serialize(Root,array);          	//Serialize the tree
+    printf("\nThe elements of tree in serialized form : ");
+    for(int j=0; j<sIndex; j++)
+        printf("%d ",array[j]);        	//Displaying the Tree in serialized form
+    printf(" \nThe elements of tree in deserialized form : ");
+    dRoot=deserialize(dRoot,array);	//Deserializing
+    Travers(dRoot);                	//Displaying the Tree after retrieving after deserialization
+}
+
+```
+
+### Wrapping up
+
+In this article we discussed trees as we started from binary trees and then shifted to N-ary trees. The understanding of solving the problems of serializing and deserializing different types of binary trees was important before jumping into the solution for the same problem but implementation in an N-ary tree. Further we discussed the inputs necessary for **serializing and deserializing an N-ary tree** and then looked at the expected output. We then analyzed the applied logic and algorithm for the same and then like the cherry on top of a cake we finished with an illustration of the code required to solve the problem. For more information and updates about data structures and technology related articles, refer to the [**Skillslash**](https://skillslash.com/)blogs and [**Full-Stack Developer Courses**](https://skillslash.com/full-stack-developer-course-in-bangalore). We promise to guide you through your career path and give **100% placement guarantee.** Dive carefree into a career of technology and of course, of your choice.

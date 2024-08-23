@@ -1,0 +1,174 @@
+---
+title: Advancing In Advanced Algorithms With Coin Collection- Skillslash
+desc: "In this article our main objective was to understand and solve the coin collection problem and solve it using the best technique "
+slug: home
+date: "Oct 20, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Author"
+readTime: "5 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Advancing-In-Advanced-Algorithms-With-Coin-Collection-20-nov-2022-header.webp"
+h1: "Advancing In Advanced Algorithms With Coin Collection"
+id: "advancing-in-advanced-algorithms-with-coin-collection"
+tableData:
+  [
+    Introduction,
+    Algorithm Design Techniques,
+    Problem Statement of Coin Dynamic Programming,
+    Solution to Dynamic Programming Coins,
+    Greedy Strategy,
+    Coin Change Dynamic Programming,
+    Sub Problem,
+    Dynamic Programming,
+    Code Implementation in C++,
+    Conclusion,
+  ]
+---
+
+## Introduction
+
+It is commonly known that Data Structures and Algorithm analysis is a basic subject in all the fields and careers related to Computer Science, but what comes further is Advanced Algorithms. This is considered one of the most challenging parts while studying but then it forms the core of Computer Science since the main algorithm techniques to solve all the real world problems are taught here.
+
+This article is mainly about the coin collecting problem dynamic programming, but before jumping into coins problem dynamic programming we need to learn about the steps to problem solving and then about the Algorithm design techniques.
+
+Stages to problem solving:
+
+1. Identify and define the problem.
+2. Generate possible solutions.
+3. Evaluate Alternatives.
+4. Decide on a Solution.
+5. Implement the solution.
+6. Evaluate the outcome.
+
+![Advancing In Advanced Algorithms With Coin Collection](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Advancing-In-Advanced-Algorithms-With-Coin-Collection-20-nov-2022-info1.webp)
+
+This is performed with the following four problem solving tools:
+
+1. Flow Chart
+2. Algorithm
+3. Pseudocode
+4. Program
+
+### Algorithm Design Techniques
+
+There are various algorithm design techniques to choose from to find the best solution to the problem. Different algorithms have different space and time constraints and complities and may also give different results for the same problem. The later part depends upon the programmer to which algorithm to choose for the best and appropriate solution required. The different design techniques are:
+
+1. _Brute Force_
+
+It is a direct and straightforward approach for solving a problem which is based on the statements of the problem and the concept definitions directly. It takes up a lot of time and space.
+
+2. _Divide and Conquer_
+
+This works in a stepwise manner where at first the given problem is divided into many subproblems of the same type and of approximately equal size.
+
+Then these subproblems are solved recursively. And then the solutions of the subproblems are combined to find the solution to the original problem.
+
+3. _Decrease and Conquer_
+
+This technique is concepted on the exploitation of the relationship between a solution to a given instance of the problem and a solution to the smaller instance of the same.
+
+4. _Dynamic Programming_
+
+This technique is applied for solving the problems which consist of overlapping subproblems. Such subproblems typically arise from a recurrence relating to the given problem's solution to the solutions of its smaller subproblems. Here, each of the smaller subproblems are solved only once and the results of all of them are tabled from which the solution to the original problem can be then acquired.
+
+5. _Greedy Approach_
+
+Here, a solution is constructed through a sequence of steps where each step expands a partially constructed solution until reaching the complete solution of the main problem. On proceeding and performing each step, the choice must be : feasible, the best local choice and irrevocable.
+
+6. _Backtracking Algorithm_
+
+The main idea of this technique is to build solutions of a single component at a time and evaluate such partially built solutions as follows:
+
+- If the partially built solution can be further developed by considering the constraints of the problem then it is done by taking the first remaining option which is legitimate for the next component.
+- If there are no legitimate options for the next component then no alternatives for any component which is remaining is to be considered and then the algorithm backtracks to replacing the last component of the partially built solution with its next option.
+
+7. _Branch and Bound Algorithm_
+
+It is similar to the backtracking technique differs as it requires two additional items:
+
+- A way to provide for each and every node in the constructed space tree.
+- A bound on the best value of the objective function on any solution that is possible to be obtained on adding components further to the partially built solution which is represented by the node value of the best solution encountered so far.
+
+### Problem Statement of Coin Dynamic Programming
+
+The dynamic programming coin problem is stated as below:
+
+A rectangular grid is given where each cell contains some coins. You are present in the first row and you wish to shift to the last row with an aim of collecting the maximum number of coins on the way.
+
+The moves which are allowed are: down, left diagonal down and right diagonal down. You are also not allowed to step out of the rectangle you are present in. Calculate and find out the maximum number of coins that can be collected.
+
+**Note-** You can start from any point on the first row and end at any point on the last row. Each entry in the grid is considered positive, i.e. greater than 0.
+
+### Solution to Dynamic Programming Coins
+
+Since it is allowed to start from any point on the first row and end at any point on the last row with an objective to collect as many coins as possible it creates a dilemma to choose either greedy strategy which considers the local maximum, or dynamic programming coin change that considers the global maximum. Here, a complete search can be applied but that would be very exhaustive as there would be a large and unmanageable number of overlapping subproblems which will make the solution tiresome.
+
+### Greedy Strategy
+
+Here, the strategy is to be started from the point on the first row along with the maximum coins and then shift to the point on the next row out of the three points that is either down or left diagonal down or right diagonal down. Continuing this procedure further until reaching the last row. But there is a problem with using this strategy as seen in the example below.
+
+![Advancing In Advanced Algorithms With Coin Collection](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Advancing-In-Advanced-Algorithms-With-Coin-Collection-20-nov-2022-info2.webp)
+
+### Coin Change Dynamic Programming
+
+Implementing the same problem using dynamic programming before which it is required to analyze the sub problems in this case.
+
+#### Sub Problem
+
+Assume that a matrix S is given with r rows and c columns and as mentioned before, each entry is a positive integer. Let Sij be the element in the ith row and jth column. The strategy is proceeded in the following way:
+
+- Considering **Si,j** as the first element in the ith row, then it could have either come from **Si-1,j** or **Si-1,j+1 .**
+- When **Si,j** is the last element of the ith row, then it could have either come from **Si-1,j** or **Si-1,j-1 .**
+- Otherwise, **Si,j** could have come from either **Si-1,j** or **Si-1,j+1** or **Si-1,j+1.**
+
+![Advancing In Advanced Algorithms With Coin Collection](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Advancing-In-Advanced-Algorithms-With-Coin-Collection-20-nov-2022-info3.webp)
+
+#### Dynamic Programming
+
+At first, create a 2- dimensional matrix dp of dimensions r\*c, where r = number of rows and c= number of columns. Initialize the first row of dp at the beginning with the first row of S i.e. **dp[0][i]=S[0] [i]** ∀ 0≤i≤c-1 **.** Then the later rows will be solved according to the analyzed sub-problem. Thus, the following steps are performed:
+
+- **dp[i][j]=max(dp[i-1][j] , dp[i-1][j+1])+S[i][j]** for the first element in the ith row.
+- **dp[i][j]=max(dp[i-1][j] , dp[i-1][j-1])+S[i][j]** for the last element in the ith row.
+- **dp[i][j]=max(dp[i-1][j] , dp[i-1][j-1] , dp[i-1][j+1])+S[i][j]** for the rest of the elements.
+
+After performing these, the maximum entry from the last row of dp gives the required answer. The Time and space complexities of the above solution are **O(|no. of rows|\*|no. of columns|).** The following is an example:
+
+![Advancing In Advanced Algorithms With Coin Collection](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Advancing-In-Advanced-Algorithms-With-Coin-Collection-20-nov-2022-info4.webp)
+
+### Code Implementation in C++
+
+```c++
+ #include \<bits/stdc++.h\>using namespace std;
+ int s[102][102],dp[102][102];
+ // 2d matrix
+ for s and dpint main(){int h,w;
+ // h is no. of rows and w is no. of columns cin\>\>h\>\>w;
+ for(int i=0;i\<h;i++){for(int j=0;j\<w;j++){ cin\>\>s[i][j];}}
+ for(int i=0;i\<w;i++)dp[0][i]=s[0][i];
+ // initialising first row
+ for(int i=1;i\<h;i++)
+ {
+  for(int j=0;j\<w;j++)
+  {if(j==0)
+  {dp[i][j]=max(dp[i-1][j],dp[i-1][j+1])+s[i][j];
+  // case where element is first in row
+  }else if(j==w-1)
+  {dp[i][j]=max(dp[i-1][j],dp[i-1][j-1])+s[i][j];
+  // case where element is last in row
+  }else
+  {dp[i][j]=max(dp[i-1][j],max(dp[i-1][j-1],dp[i-1][j+1]))+s[i][j];
+  // all the rest elements
+  }
+  }
+  }/\*for(int i=0;i\<h;i++){for(int j=0;j\<w;j++){cout\<\<dp[i][j]\<\<" ";}cout\<\<"\n";}\*/int maxx=-1;
+  for(int i=0;i\<w;i++){if(maxx\<dp[h-1][i])
+  // finding maximum among last row of
+  dpmaxx=dp[h-1][i];
+  }cout\<\<maxx\<\<"\n";
+  return 0;}
+```
+
+### Conclusion
+
+In this article our main objective was to understand and solve the coin collection problem and solve it using the best technique which, here, is the dynamic programming algorithm. We started with discussing the problem solving stages and then about the different problem solving tools and went through all of the algorithm design techniques. Further, the main coin collection problem was stated and solved using two approaches of greedy and dynamic programming. For pursuing dynamic programming we had to divide the problem into subproblems and then solve to get the final result. This was also illustrated with a C++ code at the end. For a deeper look and understanding of these concepts refer to more of [**Skillslash**](https://skillslash.com/) [**blogs**](https://en.wikipedia.org/wiki/Blog)which will clear all your technical concepts from time to timeandSkillslash[**Full Stack Developer Course In Bangalore**](https://skillslash.com/full-stack-developer-course-in-bangalore)to learn further and earn a **Globally acknowledged certification** in this field of study **,** where our faculties who are expertised in these core subjects guide and help you to achieve your desired aim. We provide a **100% placement guarantee** for all the people who are there on a career journey with us along with [**Data structures and algorithms cours** e](https://skillslash.com/data-structures-&-algorithm-system-design)which is very much required in this competitive world.

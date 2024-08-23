@@ -1,0 +1,125 @@
+---
+title: The Highlight of an Interview at Facebook | Interleave List
+desc: "This blog is to aid you to crack an interview with such top companies and has the main focus on discussing the famous interleave list question of facebook"
+slug: home
+date: "Sep 19, 2022"
+tag: "Interview Question"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+author: "Skillslash"
+position: "Author"
+readTime: "3 mins"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/highlights-of-Facebook-interview-questions-19th-sept-22-blog-header.webp"
+h1: "The Highlight of an Interview at Facebook: Interleave List"
+id: "highlight-of-an-interview-at-facebook"
+tableData:
+  [
+    Introduction,
+    All About the Interview,
+    Why are Facebook interviews unique?,
+    Code using Python,
+    The code in Java using the same logic,
+    Wrapping Up,
+  ]
+---
+
+## Introduction
+
+When you are an awesome Full Stack Developer and you dream of bagging a job at a renowned company like [**Facebook**](https://www.facebook.com/) you have to be the best as you should be ready to compete with people from all around the globe which brings it to your interest to know about the Facebook interview questions. Facebook is one of the top companies in the technological world and has a workforce of over 52,000 and still growing. What makes Facebook so appealing is the company's growth-based culture with fast promotion employee tracks, excellent working benefits and environment, and extremely beautiful and heavy salaries that not every company can match upto.
+
+But the competition to get a job here is arduous, and of course, Facebook is looking for the top candidates to be hired. The interview questions in Facebook are based on areas are your cultural background, general knowledge, ability to grow and build within constraints, and adept coding skills and these are to be looked upon seriously.
+
+This article is to aid you to crack an interview with such top companies and has the main focus on discussing the famous interleave list question of facebook which everyone must be familiar with and aware of if you are dreaming to get a job here at Facebook. So be ready to be prepared for everything you ought to achieve as you need to know what lies ahead. The confidence you carry in an interview depends upon your preparation.
+
+## All About the Interview
+
+Let us first have a look at the outline of an interview at Facebook. The total process from the submission of resume to the screening and job offer takes approximately 1.5 to 2 months. This process is divided into many parts, in other words, the complete interview process has 6 to 7 interviews. This includes a pre-screening process at the beginning which lasts for 20 minutes, a technical phone interview for 50 minutes which also includes a few coding questions, so be prepared for it! Finally there are more 4-5 interviews which are conducted on site and each of these lasts for 45 minutes.
+
+Elaborating more about the on-site interview, at Facebook, these interviews are divided further into three sections.
+
+1. The Ninja portion where you are asked to solve 2 coding interviews with the help of a whiteboard.
+2. The Pirate portion consists of 2 interviews related to system design.
+3. Finally, the Jedi portion consists of an interview to know about your cultural and behavioral background.
+
+The coding questions in a facebook interview focuses on your generalist knowledge on data structures, algorithms and time complexity. Your knowledge on computer architecture and organization along with system design is also tested.
+
+Employees hired by Facebook usually are at level E3 for entry level software roles with E9 behind the height of levels. The entry level manager role is considered of E5. Facebook has a central hiring team of Oculus, Facebook Groups, and WhatsApp.
+
+The programming languages you should be well-versed in to crack a job interview at Facebook are Java, C++, Python, Ruby, and Perl.
+
+![Facebook Interview Questions](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Facebook-interview-question-middle-logo-19th-sept-22-blog.webp)
+
+### Why are Facebook interviews unique?
+
+- All these questions and the interview frame is the same for any level you are interviewing for regardless of your experience or educational background. This makes it a system-designed interview.
+- Interviewers are paired in facebook during an interview on the basis of the positions they have held or with the directly working individuals with the position they are interviewing for. Thus, the interview here is structured.
+- The five core values on the basis of which your abilities are evaluated at a facebook interview are: Move Fast, Be Bold, Focus on Impact, Be Open, and Build Social Value. Thus, your core values and behavior is tested.
+
+Coming to to main topic of discussion,
+
+Interleave list of lists in Java
+
+Example:
+
+input=[[1,2,3], [9,0], [5], [-4,-5,-2,-3,-1]];
+
+output=[1,9,5,-4,2,0,-5,3,-2,-3,-1]
+
+### Code using Python:
+
+```Python
+max = 3listofList = [[1, 2, 3], [9, 5], [-1], [12,90,3] ];
+oplist =[];
+for i in range(0,max):
+  for list in listofList:
+    if (i \< len(list)):oplist.append(list[i])print oplist |
+
+```
+
+## The code in Java using the same logic:
+
+```Java
+import java.util.\*;
+import java.lang.\*;
+import java.io.\*;
+import java.util.Arrays;
+import java.util.List;
+class Ideone{
+  private static void interleaveLists(List\<List\<Integer\>\> ll){
+    if(ll == null)return;int listLength = 0;
+    int total = 0;
+    for(List\<Integer\> list : ll){
+      if(list == null)
+      continue;
+      listLength = Math.max(list.size(), listLength);
+      total += list.size();
+      }
+      int[]
+      result = new int[total];
+      int index = 0;
+      for(int i = 0; i \< listLength; ++i){
+        for(List\<Integer\> list : ll){
+          if(list == null)continue;
+          if(i \< list.size()){
+            result[index++] = list.get(i);System.out.println(list.get(i));
+            }
+          }
+        }
+      for( int x :result){
+        System.out.println(x);
+        }
+        }
+        public static \<Integer\> List\<Integer\> twoDArrayToList(int [][] twoDArray) {
+          List list = new ArrayList();
+          for (int [] array : twoDArray) {
+            list.add(Arrays.asList(array));}return list;
+          }
+        public static void main (String[] args) throws java.lang.Exception{
+          int [][] arr = {{1, 2, 3}, {9, 0}, {5}, {-4, -5, -2, -3, -1,5,2}};
+          List\<List\<Integer\>\> ll = twoDArrayToList(arr);interleaveLists(ll);
+          }
+      }
+```
+
+### Wrapping Up
+
+This article discusses the important points on cracking a facebook interview and on the screening processes involved. At last, we also discussed a very important Facebook leadership interview question which is the Interleave List. Knowledge about all these is very essential and to stay updated refer to more [_ **Skillslash** _](https://skillslash.com/) courses like [_ **Data Science Course** _](https://skillslash.com/data-science-course-in-bangalore) and [_ **Full Stack Developer Course** _](https://skillslash.com/full-stack-developer-course-in-bangalore). Our experienced faculties will guide you through every step for you to reach your goals and more, with a 100% placement guarantee.

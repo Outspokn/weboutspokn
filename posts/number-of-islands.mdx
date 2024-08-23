@@ -1,0 +1,119 @@
+---
+title: When Number Of Islands Come In Interviews | Skillslash
+desc: "In this article our main objective was to gain a clear understanding of the famous interview question of Number of Islands."
+slug: home
+date: "Nov 14, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+position: "Author"
+readTime: "4 mins"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Number of Islands-01.png"
+h1: "When Number Of Islands Come In Interviews"
+id: "number-of-islands"
+tableData:
+  [
+    Introduction,
+    All About Breadth First Search,
+    All About Depth First Search,
+    Differences Between BFS and DFS,
+    Number of Islands BFS/ DFS,
+    Problem Statement,
+    Solution,
+    BFS Solution,
+    Code Implementation In C++ Using BFS,
+    DFS Solution,
+    Code Implementation In C++ Using DFS,
+    Conclusion,
+  ]
+---
+
+## Introduction
+
+In the field of Computer Science tree traversal plays a very important role in Data Structures and Algorithms. This article mainly discusses the famous interview question "Number of Islands" for which a deep knowledge on **number of islands breadth first search** and **number of islands depth first search** is very crucial which begins from understanding the study of trees and tree traversal. Tree traversal is a form of graph traversal and indicates the process of visiting each and every node of the tree data structure exactly once.
+
+The two most popular algorithms for tree traversal are breadth first search (BFS) and depth first search (DFS). Both these algorithms end after visiting all the nodes or vertices and edges of a graph. Their difference lies in the way they perform their traversal. So, let us know about both these algorithms first and then decide upon which is more suitable: **number of islands BFS** or **number of islands DFS** , for this particular purpose.
+
+**All About Breadth First Search**
+
+It is an algorithm which is, of course, used for traversing a graph data or a searching tree or any other data structure. This algorithm visits and marks all the key nodes efficiently in a graph in a precise breadthwise fashion.
+
+- Here a single node is selected as the initial or the source point in the given graph and then all the nodes adjacent to the selected node are visited.
+- Once the starting node is visited and marked by the algorithm, it then moves towards the next unvisited nodes and analyses them one by one.
+- After all the nodes are visited, they are marked.
+- This iterative process continues until all the nodes of the graph have been successfully visited and marked.
+
+**All About Depth First Search**
+
+It is an algorithm for traversing graphs or trees or finding data in them in a depth-ward manner. The algorithm begins executing at the root node and explores each and every branch of the graph or tree before it starts with backtracking. It uses a stack data structure for remembering the visited nodes for getting to the subsequent vertex, and to start a search, whenever a dead-end is encountered during any iteration.
+
+**Differences Between BFS and DFS**
+
+- BFS is a vertex-based algorithm for finding the shortest path in the given graph whereas DFS is an edge-based algorithm as the vertices along the edge are explored first from the first node to the last node.
+- BFS uses queue data structure whereas DFS uses stack data structure for the traversal.
+- BFS does not use the concept of backtracking but DFS uses backtracking for traversing to all the unvisited nodes.
+- BFS finds the shortest path having the minimum number of edges for traversing from the source to the sink or destination vertex. In DFS a greater number of edges are required for traversing from the source vertex to the destination.
+- BFS is comparatively slower than DFS.
+- BFS is not memory efficient as it requires more memory than DFS.
+- BFS traversal is optimal for the vertices which are needed to be searched closer to the source vertex. DFS traversal is optimal for the ones where the solution vertex lies away from the source vertex.
+
+**Number of Islands BFS/ DFS**
+
+Before we dive into the problem directly, let us know about a few of the associated terms.
+
+- A **connected component** is a subgraph of an undirected graph where every two vertices are connected to each other by one or more paths, and which is connected to no other vertices outside the subgraph.
+- A graph which has all its vertices connected with each other has exactly one connected component consisting of the whole graph is known as a **strongly connected graph.**
+- Island in this problem is a group of connected 1s.
+
+**Problem Statement**
+
+A 2D grid is given which contains the values of either 0 or 1 where 1 represents land and 0 represents water. The total number of islands are to be calculated in the given grid. An island is present when there are more than one 1s in either of the directions of up, down, right, left or diagonal.
+
+**Note:** movement in any direction is allowed, i.e., at most 8 ways to travel from a cell.
+
+![Number of Islands](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/no-of-comoponetns-13-11-2022.jpeg)
+
+**Solution**
+
+These are the types of questions where there is a necessity for counting the number of components and the number of elements in each element to get the solution. For this, we have two methods: Breadth First Search(BFS) and Depth First Search(DFS).
+
+At first, the total number of components are to be calculated and checked if the components contain more than one element. If the component contains more than one element then it is either counted or ignored.
+
+Also, to keep a track of all the visited places in the given grid we need to maintain a visited matrix. This will ensure to avoid over-counting. The time and space complexities of both the algorithms of BFS and DFS are **O(|no. of rows|\*|no. of columns|).** An example for counting a component or not is illustrated below.
+
+![Number of Islands](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/components-more-than-1-13-11-2022.jpeg
+
+**BFS Solution**
+
+The BFS algorithm can be applied on each component for solving this problem. During each BFS call, a component or a subgraph is visited and then the next un-visited components are called upon. The number of calls to BFS() provides the number of connected components. Here, a cell in a 2D matrix is connected to 8 neighbors. Hence, unlike the standard BFS(), where all the adjacent vertices are processed, only 8 neighbors are processed. A track of all the visited 1s are kept so that they are not visited again.
+
+**Code Implementation In C++ Using BFS**
+
+| #include \<bits/stdc++.h\>#define mp(a,b) make_pair(a,b)#define pp pair\<int ,int \>#define ff first#define ss secondusing namespace std;
+int m[102][102],vis[102][102];
+int dx[]={1,1,0,-1,-1,-1, 0, 1};int dy[]={0,1,1, 1, 0,-1,-1,-1}; // possible movement directions
+int countOfIsland,r,c;
+bool check(int i,int j){ // check whether a point is inside a grid or notreturn (0\<=i && i\<r && 0\<=j && j\<c);}
+void bfs(int i,int j){ // Working of bfs:countOfIsland++; // count the start node of a componentvis[i][j]=1; // make it visitedqueue\<pair\<int ,int \> \> q; // create a queue andq.push(mp(i,j)); // and add the start node to itwhile(!q.empty()){ // Now till the queue is not empty, dopp u=q.front(); // store and pop the first entry from the queueq.pop();for(int i=0;i\<8;i++){ // Now for all its 8 neighbours,int x=u.ff+dx[i],y=u.ss+dy[i]; if(check(x,y) && !vis[x][y] && m[x][y]==1){ // check whether they are 1 and not visitedcountOfIsland++; // if they are then increase the count,vis[x][y]=1; // make them visited andq.push(mp(x,y)); // add them to queue}}}}
+
+int main(){ cin\>\>r\>\>c;for(int i=0;i\<r;i++){for(int j=0;j\<c;j++)cin\>\>m[i][j];}int numIsland=0;for(int i=0;i\<r;i++){for(int j=0;j\<c;j++){if(!vis[i][j] && m[i][j]==1){countOfIsland=0;bfs(i,j);//cout\<\<ct\<\<"\n";if(countOfIsland\>1)numIsland++; // count the components with no. of elements greater than 1}} }
+cout\<\<numIsland;return 0;} |
+
+**DFS Solution**
+
+The solution to this problem can also be achieved by applying DFS() traversal on each component. Here, in each DFS() call, a component or a subgraph is visited. DFS is called upon on encountering the next un-visited component. The number of connected components are given from the number of calls made to DFS(). A cell in a 2D matrix is possible to be connected to 8 neighbors. Hence, unlike the standard DFS() where adjacent vertices are recursively called, only 8 neighbors are recursively called. Also, a track of all the visited 1s are kept here too to avoid re-visiting the same point.
+
+**Code Implementation In C++ Using DFS**
+
+| #include \<bits/stdc++.h\>using namespace std;
+int m[102][102],vis[102][102];
+int dx[]={1,1,0,-1,-1,-1, 0, 1};int dy[]={0,1,1, 1, 0,-1,-1,-1}; // possible direction movements
+int countOfIsland,r,c;
+bool check(int i,int j){ // check whether a point is inside a grid or notreturn (0\<=i && i\<r && 0\<=j && j\<c);}
+void dfs(int i,int j){ // Working of dfs :countOfIsland++; // update the count of newly discovered 1vis[i][j]=1; // make it visitedfor(int k=0;k\<8;k++){ // Now for all its neighbouring 8 cells,int x=i+dx[k],y=j+dy[k]; if(check(x,y) && !vis[x][y] && m[x][y]==1){ // check whether they are 1 and not visited till now//cout\<\<x\<\<" "\<\<y\<\<endl;dfs(x,y); // if thats the case then run dfs on them}}}
+int main(){ cin\>\>r\>\>c;for(int i=0;i\<r;i++){for(int j=0;j\<c;j++)cin\>\>m[i][j];}int numIsland=0;for(int i=0;i\<r;i++){for(int j=0;j\<c;j++){if(!vis[i][j] && m[i][j]==1){countOfIsland=0;//cout\<\<i\<\<" "\<\<j\<\<"\n";dfs(i,j);//cout\<\<ct\<\<"\n";if(countOfIsland\>1)numIsland++; // count the components with elements greater than 1}} }
+cout\<\<numIsland;return 0;} |
+
+**Conclusion**
+
+In this article our main objective was to gain a clear understanding of the famous interview question of Number of Islands using both the algorithms of Breadth First Search and Depth First Search. We started with the discussion of the common terminologies of trees and traversals, BFS, DFS and the difference between them, and then we came to the main problem and its solution illustrated in codes of C++ for both the algorithms. Stay tuned for more such [**Skillslash blogs**](https://blog.skillslash.com/) which will enhance your knowledge in the field of computer science. And if you are interested in earning a **Globally acknowledged certification** , then you have come to the right destination as [_ **Skillslash** _](https://skillslash.com/)[_ **Full Stack Developer Course** _](https://skillslash.com/full-stack-developer-course-in-bangalore)offer you that along with unlimited **job referrals.** We also provide and present to you our **domain training and functional specialization** which will give a powerful boost to your career and you can confidently live your dreams as we know they are worth the effort.

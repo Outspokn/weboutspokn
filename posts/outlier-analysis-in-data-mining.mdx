@@ -1,0 +1,103 @@
+---
+title: Outlier Analysis In Data Mining | Outliers In Data Mining – Skillslash
+desc: "In this article we have discussed what is outliers in data mining and what is outlier analysis in data mining."
+slug: home
+date: "Aug 22, 2022"
+tag: "AI and Machine Learning"
+author: "Skillslash"
+position: "Author"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+readTime: "2 mins"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Data-Mining.webp"
+h1: "An Integral Part of Data Mining - Outliers"
+id: "outlier-analysis-in-data-mining"
+tableData:
+  [
+    Introduction,
+    Outliers and Noise,
+    Classifying Outliers,
+    Outlier Detection Techniques,
+    Conclusion,
+  ]
+---
+
+## Introduction
+
+The [**data mining**](https://www.techtarget.com/searchbusinessanalytics/definition/data-mining#:~:text=Data%20mining%20is%20the%20process,make%20more%2Dinformed%20business%20decisions.) job requires the prediction of information that the data holds during the process of data analysis. During this, some deviations in data trends are observed which are called outliers. Let us first know about data mining. It is basically an exercise to sort and identify patterns and make connections from a huge data set to solve the problems. It helps in predicting future trends. So, _what are outliers in data mining_? Outliers are also data objects but behave distinctively from the rest of the data objects. The first definition of outliers was given by Grubbs in 1969. We should also have knowledge about _outlier analysis in data mining tutorials point_ and the _types of outliers in data mining_.
+
+## Outliers and Noise
+
+Outliers are not the same as noise as noises are the random errors or variances in a measured variable, whereas outliers are considered as not belonging to the same set of data objects because they are caused due to incorrect entry or computational or execution error. Also, it is wise to remove the noise before outlier detection.
+
+## Classifying Outliers
+
+From a broader sense, Outliers are classified as:
+
+_Univariate Outliers_, where only one dimension of space is considered (occurs in the feature space).
+
+_Multivariate Outliers,_ which occur in a feature space of many dimensions.
+
+Further, discussing the types of outliers, they are of the three following types:
+
+1. **Point or Global Outliers:**
+
+The most elementary form of outliers is this. These are the few points in a dataset that are strongly deviating from the rest of the data points and are therefore located far away from the data distribution or cluster.
+
+![Data Mining](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/data-mining-graph-blog1.webp)
+
+2. **Contextual or Conditional Outliers:**
+
+They appear within a specific context or condition when the data deviates greatly of course but in other conditions, the data may show normal behavior which makes it very necessary for the context to be specified in the problem statement. The two types of attributes of the objects of data are contextual, which defines the context, and behavioral, which defines the objects' characteristics.
+
+![Data Mining](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/data-mining-graph-blog-img-2.webp)
+
+3. **Collective outliers:**
+
+These types of outliers deviate from the rest of the dataset by forming a cluster away from the rest of the dataset. They arise when there are anomalous behaviors of data points collectively.
+
+![Data Mining](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/data-mining-graph-blog-img-3.webp)
+
+## Outlier Detection Techniques
+
+The different techniques and approaches to detect all these above-mentioned outliers are discussed below:
+
+1. **Sorting**
+
+What makes it one of the simplest ways of detecting outliers in data mining is the fact that it entails data sorting according to each of their magnitudes during data manipulation. The data belonging to either the higher or lower range can be considered outliers.
+
+2. **Graphing**
+
+This method requires plotting all the data in a graph using either a histogram, scatter plot, or drop box to detect the outliers which let the user visualize the data diverging from the dataset.
+
+- Histogram is favorable for bulk data observation.
+- With the degree of association of two numerical values, a scatter plot becomes preferable.
+
+3. **Z-score for detecting outliers**
+
+The Gaussian distribution is assumed in this method to identify how much the data points deviate from the mean of the sample by calculating the standard deviations of the points.
+
+- To calculate the Z-score for an observation, take the raw then subtract the mean, and then divide by the standard deviation.
+- Sometimes, transformations are applied like scaling the data when the Gaussian distribution is not applied. Libraries of Python consisting of in-built functions like Scikit-Learn and Scipy have an easy implementation of transformations.
+- A positive value of Z-score indicates the object lying above the mean whereas a negative value of Z-score indicates the object deviating from below the mean with the particular value of standard deviation.
+- A standard threshold is used for the calculation of the Z-score. It is unusual for the value to be far away from the value of zero. Such unusual deviations from zero help us determine the outliers.
+- In the case of a parametric distribution in a feature space of low dimensions, Z-score happens to be a robust method for removing outliers from a dataset.
+
+4. **Dbscan**
+
+This method is a clustering approach and also referred to as the _Density-Based Spatial Clustering_ of Applications with Noise. Clustering methods happen to be convenient for better visualization and understanding of data. It can be used to represent the relationships existing between the features and the trends in the dataset graphically. The cluster identified in a feature space through this method is a set of points connected through 'density'. An outlier is a point that is not present in any cluster and is not 'density connected' by other points. Two properties are to be satisfied when a cluster is defined: the points should be density connected mutually, and a point that is density reachable by any other points of a cluster, then the point will be part of the cluster.
+
+5. **Isolation Forests**
+
+This is one of the best methods which works on the application of binary trees. Here, the outlier points are few in number and also deviate far enough to be distinguished clearly. This method has an algorithm to get any feature and to do any random splitting of the value that lies between the minimum and the maximum range of values, comparing which the predictions are made. Later after that, a forest is built up each and every observation in the set. According to the algorithm, the illustration 'path length' is established as '_splittings'._
+
+An outlier is supposed to have a shorter path length than the other observations in the dataset. The approaches for outlier analysis in data mining can also be grouped into statistical methods, a supervised method for outlier detection which includes graphing and Z-score techniques involving the use of training sets of data with instances for identifying classes within the data, and the unsupervised method for outlier detection like Grubbs test, where there are no labeled instances, but the predictions are based on the assumed dataset with a majority of normal instances.
+
+6. **Using the Interquartile Range to Create Outlier Fences**
+
+An outlier boxplot is a variation of the skeletal boxplot whose whiskers extend to the greatest distant observation within 1.5 X IQR from the quartiles. Possible near outliers are identified as observations further than 1.5 x IQR from the quartiles. The interquartile range shows how the data is spread about the median.
+
+Using the Interquartile Rule to Find Outliers: The interquartile range can be used to detect outliers.
+
+## Conclusion
+
+In this article we have discussed what _is outliers in data mining_ and _what is outlier analysis in data mining._ Outliers are usually discarded for predicting wrong information during data analysis. Yet there are certain scenarios where outlier detection becomes important, for example, detection of fraud. Either way, detecting outliers is quite significant in data mining. In this article we discussed the several methods to determine the outliers of different types. Data mining is an integral part of our digital lives and outliers are a major part of it. For a deeper learning you can check out our [**Skillslash**](https://skillslash.com/), [**Data Science Course in Bangalore**](https://skillslash.com/data-science-course-in-bangalore/), [**Full Stack Developer Course in Bangalore**](https://skillslash.com/full-stack-developer-course-in-bangalore) and other courses too. As we provide you with the best of coaching and a wonderful learning experience with 100% placement guarantee.

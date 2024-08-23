@@ -1,0 +1,139 @@
+---
+title: Hotel Booking Application Design - Hotel Booking LLD – Skillslash
+desc: "In This Blog, we will discuss System Design, by Designing an LLD For Hotel Booking applications and system design of hotel reservation systems."
+slug: home
+date: "Aug 9, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Seo Writer"
+readTime: "2 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-02.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/hotel-management.webp"
+h1: "Is Hotel Booking LLD as Simple as in the Applications?"
+id: "Hotel-Booking-Application-Design"
+tableData:
+  [
+    Planning and Sorting out The Skeleton,
+    Square Hotel Booking System Design,
+    Hotel Booking Program in Java,
+    Conclusion,
+  ]
+---
+
+import Image from "next/img";
+
+You must wonder how the hotel booking applications work. How does the _hotel booking application design_ finds us the best options after comparing every competing hotel room prices & offers and provide us with the best results? After all, what happens in the back end of such _square hotel booking system design_ applications? There are several hotel reservation systems such as OYO, Trivago, Hotels.com, and several more websites and applications which consider various aspects of the _System Design hotel reservation system_ we might be familiar with. There are several tasks that need to be carried out by these high-level system design and hotel reservation systems like price comparison, booking required rooms, availability, ratings, payment, etc. which are finely designed to go hand in hand along with hotel booking low-level designs for every sub-system.
+
+First, let us know what an LLD is. _Low-level design_ (LLD) is an internal component level logical design process that can be utilized for designing data structures, performance algorithms, source code, and the necessary software architecture through a step by step refinement procedure. Now it can be clearly understood as to why we should be knowing about the working of LLD. Let us now analyze the challenges for this LLD and how these _hotel booking low-level designs_ of such particular systems are created.
+
+## Planning and Sorting out The Skeleton
+
+Let us consider the task of the reservation of a room for a particular system. A popular design pattern that is deployed for such applications is[ Object Relational Mapping](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) (ORM) which is a class structure used on the basis of how we have used the database structure. This pattern favors rationality between the data and the design. We require to understand the database schema to proceed further with either LLD or DLD. Also, we need to consider the following database tables:
+● Guests (which can only be booked when the user is booking the same)
+● Room (the particular type of room the user chooses to book)
+
+● Hotel (the rooms should belong to a respective hotel)
+
+● Reservation (the reservations need to be tracked down and stored as well)
+
+● Payment, that can be made through several modes or in certain ways like partial, complete, or, with or without an advance.
+
+Let us now see what each of these fields should have in them as their elements and make a database using SQL as we need to store all the information in a tabular form for our benefits of finding the information in an organised way. Later, you can find that somehow all fields are interconnected to each other through either one or many of each of their elements.
+
+### 1. **User or Guest:**
+
+If we dig into the details of the "user" database description, we would find various details under the name user_id, like first name, last name, location, and phone number each of which corresponds to a certain data type.
+
+fig. 1
+
+<Image
+  src="https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-1-user-or-guest.webp"
+  width="749"
+  height="400"
+  alt="user or guest"
+  layout="intrinsic"
+/>
+
+### 2. **Room:**
+
+Similarly, we have the room database which can be classified as per the room type or its capacity along with the facilities it consists of, like heater, wifi, air conditioner, etc. It can also hold information like if the room is sea facing, or has a hilltop view, etc.
+
+**fig. 2**
+
+<Image
+  src="https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-2-room.webp"
+  width="249"
+  height="300"
+  alt="user or guest"
+  layout="intrinsic"
+/>
+
+### 3. **Hotel:**
+
+Then the hotel database can consist of its location and the owner's details. It needs to have a list of the type of rooms the hotel consists of and it needs to make sure the rooms belong to their respective hotels and also store the information of the rooms which are booked or occupied or unreserved.
+fig. 3
+![Hotel](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-2-hotel.webp)
+###4. **Reservation:**
+
+Further, the reservation database would be a combination of the information entered by the user mentioning check-in and check-out timings and payment details, and also the room type. Designing a checklist for all the payment transactions can be done by following the normalization rule for SQL as it has to be associated with the revervation_id so that all the transactions made by the user come under this domain.
+** fig. 4**
+![reservation](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-4-reseversation.webp)
+
+### 5. Transaction:
+
+For all the payment transactions done by the user is now to be stored along with the amount linked to the transaction_id. This should also store the type of method used for payment by the user be it cash, card, UPI, etc. or if there is any offer or coupon code applicable with the terms and conditions.
+fig. 5
+![Transaction](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-5-payment.webp)
+
+### 6. Payment:
+
+For this to be recorded appropriately, each tuple is required to make a connection between booking_id with the analogous transaction_id.
+fig. 6
+![Payment](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-5-payment.webp)
+
+### Square Hotel Booking System Design
+
+We can make a _hotel management system project design_ decision to hold the transaction updates in the form of a list or a separate table linked with the reservation database with multiple tuples for each payment transaction. The separate table linked with the reservation database is an application of the _Normalization rule_ for SQL though the list way reduces the additional query processing. It is preferable to use the tabular method. The transaction table holds the information about the amount being transferred. Lastly, the payment database connects the payments made with the associated transaction as mentioned above. The application can be made further user-friendly by accepting cancellations depending on certain terms and conditions.
+
+The flowchart represented in the figure below is to be noted with the help of the following schema:
+
+● reservation -> user (1:1)
+
+● room -> hotel (many:1)
+
+● reservation -> payment (1: many)
+
+● payment -> transaction (1:1)
+
+● reservation -> room (1: many)
+
+● reservation -> hotel (1:1)
+
+● reservation -> room type (1: many)
+
+● reservation -> room type rooms (1:1)
+
+fig. 7
+![Hotel-booking](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fig-7-booking.webp)
+
+## Hotel Booking Program in Java
+
+If we wish to prepare an Object Oriented Programming design for an online _hotel booking program in Java_, one needs to create certain classes and attributes which would hold information with the corresponding datatype.
+
+● We shall introduce a class ‘user’ which shall hold the user's Information like user_id, name, date of birth, mobile number, email ID, gender and other such personal information.
+
+● Then there would be a class ‘Room’ that shall hold information like the room_id, hotel_id, room's type and availability.
+
+● Then the class ‘hotel’ shall hold information like the list of rooms, address, facilities provided and other such information regarding the hotel.
+
+● Further, the ‘booking’ class would hold information about the user, the hotel, list of rooms, payment status, and booking time and duration.
+
+● The class ‘address’ would hold the address of the hotel.
+
+● Lastly, there shall be a class ‘duration’ to hold information about the time of stay required for the booking.
+
+Each of these classes shall hold the data with the specified data types which can be manipulated as per the response demanded from the user's end. The access should also be given to the manager or any other higher or reserved authority so that the hotel information can be updated like prices, more pictures, or facilities. This is just a basic algorithm for the application, on desired, more elements can be added and linked to make it as user-friendly as possible.
+
+### Conclusion
+
+The above article portrays what happens at the backend of any hotel booking application. Everything here is done to make a website or application as appealing as possible. We discussed the challenges and necessities to be kept in mind for the system LLD, then a skeleton to plan an application out, and lastly a Java algorithm to give the application a complete outlook. Whether or not you belong to the Computer Science field, you must know these trends and updates such as LLD applications and Java. For deeper learning or if you want to express your ideas in a canvas of application you could refer to[ Skillslash](https://skillslash.com/) courses and workshops to stay updated and broaden your horizon of thinking and implementing.

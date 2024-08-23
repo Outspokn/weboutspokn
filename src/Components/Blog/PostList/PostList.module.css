@@ -2,11 +2,10 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  padding: 40px 200px;
+  padding: 40px 100px;
 }
 
 .cardWrapper {
-  max-width: 1200px;
   width: 100%;
 }
 
@@ -20,8 +19,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+  grid-template-columns: 33% 33% 33%;
+  gap: 8px;
   margin-bottom: 20px;
 }
 

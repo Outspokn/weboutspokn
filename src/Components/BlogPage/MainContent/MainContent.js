@@ -10,13 +10,14 @@ const MainContent = () => {
       <main className={styles.main}>
         <article className={styles.article}>
           <div className={styles.articleHeader}>
-            <Image
-              src="/assets/blog3.png"
-              alt="Travel Image"
-              width={700}
-              height={400}
-              className={styles.articleImage}
-            />
+            <div className={styles.imgWrapper}>
+              <Image
+                src="/assets/blog3.png"
+                alt="Travel Image"
+                fill
+                className={styles.articleImage}
+              />
+            </div>
             <div className={styles.articleContentContainer}>
               <div className={styles.articleContent}>
                 <div className={styles.iconTextContainer}>
@@ -29,37 +30,40 @@ const MainContent = () => {
                     <span className={styles.text}>People saw</span>
                   </div>
                 </div>
-                <span className={styles.category}>Travel</span>
-                <span className={styles.date}>20 Aug 2024</span>
-                <h1 className={styles.title}>
-                  Five easy way how you can travel cheap and safe
-                </h1>
-                <p className={styles.text}>
-                  <span className={styles.firstLetter}>T</span>raveling is more
-                  than just a break from routine—it's a transformative
-                  experience that broadens your perspective, fuels creativity,
-                  and fosters personal growth. As you explore new cultures and
-                  environments, you gain a deeper understanding of the world and
-                  yourself. Each journey is a step outside your comfort zone,
-                  offering opportunities to learn, connect, and create lasting
-                  memories. Whether you're seeking adventure or relaxation,
-                  travel enriches your life, making it not just useful and
-                  interesting, but essential for a well-rounded, fulfilling
-                  life.
-                </p>
+                <div className={styles.blogWrap}>
+                  <span className={styles.category}>Travel</span>
+                  <span className={styles.date}>20 Aug 2024</span>
+                  <h1 className={styles.title}>
+                    Five easy way how you can travel cheap and safe
+                  </h1>
+                  <p className={styles.text}>
+                    <span className={styles.firstLetter}>T</span>raveling is
+                    more than just a break from routine—it's a transformative
+                    experience that broadens your perspective, fuels creativity,
+                    and fosters personal growth. As you explore new cultures and
+                    environments, you gain a deeper understanding of the world
+                    and yourself. Each journey is a step outside your comfort
+                    zone, offering opportunities to learn, connect, and create
+                    lasting memories. Whether you're seeking adventure or
+                    relaxation, travel enriches your life, making it not just
+                    useful and interesting, but essential for a well-rounded,
+                    fulfilling life.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </article>
         <aside className={styles.sidebar}>
           <div className={styles.card}>
-            <Image
-              src="/assets/blog4.jpg"
-              alt="Best Place"
-              width={250}
-              height={150}
-              className={styles.cardImage}
-            />
+            <div className={styles.imgWrapperSide}>
+              <Image
+                src="/assets/blog4.jpg"
+                alt="Best Place"
+                fill
+                className={styles.cardImage}
+              />
+            </div>
             <div className={styles.cardContent}>
               <div className={styles.info}>
                 <h4>Place</h4>

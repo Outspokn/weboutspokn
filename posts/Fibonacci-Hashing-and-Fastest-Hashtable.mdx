@@ -1,0 +1,88 @@
+---
+title: Fibonacci Series from Nature to Hashing | Fastest Hashtable
+desc: "In this Blog, you learn about Fibonacci hashing and the fastest hashtable. Let us first of all look at what is hashing."
+slug: home
+date: "Aug 12, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Seo Writer"
+readTime: "4 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-02.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fibbonaci-series-header.webp"
+h1: "Fibonacci Series from Nature to Hashing, is it the Fastest Hashtable?"
+id: "Fibonacci-Hashing-and-Fastest-Hashtable"
+tableData:
+  [
+    Introduction,
+    About hashing methods,
+    What's the concept behind Fibonacci Hashing?,
+    Well what's Fibonacci Hashing?,
+    Problems faced by Integer Modulo method,
+    Why Fibonacci Hashing?,
+    How Fibonacci Hashing solves the problems?,
+    Final Words,
+  ]
+---
+
+## Introduction
+
+Before jumping into _fibonacci hashing_ and the _fastest hashtable_ let us first of all look at what is hashing and what is its significance in the programming domain? Hashing is a technique to store data in the form of a key and its values converted in the form of indices of an array.
+
+Further, we learn what a [**hashtable**](https://en.wikipedia.org/wiki/Hash_table#:~:text=A%20hash%20table%20uses%20a,the%20corresponding%20value%20is%20stored.) is. Hashtables store data in an associative manner and data is stored in the form of arrays. Each element in the array has a distinct index value. Hashtables provide us the convenience of locating the required data effectively. Locating the data and the elements of the hashtable is easy and fast since we can do so by identifying the respective indices. Insertion and deletion of data in the hashtables are carried out by the method of hashing.
+
+### About hashing methods
+
+Now that we have the basic knowledge of Hashing and Hashtables, it brings us to our main topic of discussion, _Fibonacci Hashing_. Rich Geldreich called it "Knuth's multiplicative method." Integer Modulo and Fibonacci Hashing are the two major hashing methods identified and used. The _Fibonacci Hashing block_ happens to be far more effective than the Integer Modulo method but is seldom seen to be used or taught. _Fibonacci Optimization method_ is considered more time and space expensive for some reason. Integer Modulo is mostly taught in universities which may be considered good in theory but turns out to be terrible in practice and makes it hard for people to use the method since it is unnecessarily slow and often leads to even more problems.
+
+### What's the concept behind Fibonacci Hashing?
+
+So let us understand the working of _Fibonacci Hashing best practices_. Fibonacci series is a number series in which a particular term is the sum of two of its previous terms. It is observed in nature that plenty of naturally occurring elements of nature have applications of the Fibonacci series in them for their proper functioning. The most famous example of this is the occurrence of petals of flowers or leaves in plants to acquire an adequate amount of sunlight. Each subsequent number of the Fibonacci series follows the concept of the Golden Ratio whose value is accepted and observed to be 1.61.
+
+_Fibonacci\_\_method examples_ can be better described as taking the observed object in the form of a circle and further making divisions of it as per the value provided or the value which needs to be predicted on a circle. So, if we have to take 8 sections then we can consider a step around the circle to be 360֩/8. Similarly, we can predict the other number of possibilities then we can again take it on a circle, 360֩ divided by the number of possibilities and the spacing required. Using the golden ratio, we can arrange elements to appear randomly distributed without any clusters in which structures appear to be overlapping.
+
+![Fibonacci-series](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/fibbonaci-series.webp)
+
+### Well, what's Fibonacci Hashing?
+
+Now let us visualize the application of Fibonacci Hashing in hashtables. For a large hashtable with 1024 slots, we would require to map an arbitrarily large hash value into that range.
+
+- We shall map a full 64-bit range of numbers for which we shall multiply the incoming hash value with 264/Φ≈ 11400714819323198485 multiplying with which will overflow out of which we can take a few bits for distribution.
+- This would encompass the whole 64-bit range in an effective pattern, giving us an even distribution across the whole range from 0 to 264.
+- Once we run our required commands after the particular arrangement of our data, we will obtain an even distribution where every number is far removed from the previous and the succeeding number.
+- If we increase our input by one, we shall observe a huge jump in our output hence giving us a good hash function. This would help us to map a large range of number into a smaller range with adequate spacing.
+
+If we run a full hash function analysis on this, we shall find that it doesn't make a great hash function. It's not terrible since we will quickly find patterns.
+
+### Problems faced by Integer Modulo method
+
+Another major _fastest file hash_ method inculcated by programmers is the integer modulo method but it often causes even more problems. The integer modulo method happens to be very slow and input data cannot be evenly distributed to avoid collisions. It can cause problems while making patterns as per the inputs. It would be very tedious to map huge patterns with values like 264. It would make complicated hash functions more difficult to run.
+
+Moreover, if we provide a hash function of our own, we would need to know every bit of it in detail to track down such a cumbersome process carried out by the integer modulo method.
+
+### Why Fibonacci Hashing?
+
+The Fibonacci hashing method helps us structure our data faster than the other methods. In a constant state of competition, of course, everyone would look for faster alternatives. When we are looking for faster hashtables, we come across google::dense*hash_map which is considered to be the \_fastest hashtable* even though it uses the integer modulo method, though a faster version of it. But this _fastest hashtable benchmark_ comes with its own set of problems.
+
+- It cannot implement certain hash functions for which we need to be very careful while working on google::dense_hash_map.
+- It also has a problem of prioritising keys and their values since it stores everything in a form of a single array giving equal importance to key and its values.
+
+This makes it difficult for us to locate a particular data we are looking for or even while appending data through densely occupied slots. On the whole, this _fastest string hash_ method becomes very cumbersome and time-consuming and programmers are looking for faster alternatives since time is a valuable resource. Fibonacci Hashing is a fair alternative for programmers to consider.
+
+### How Fibonacci Hashing solves the problems?
+
+Fibonacci Hashing becomes an effective solution to the problems faced by programmers.
+
+- It is really fast as it is an integer multiplication followed by a shift saving crucial time of programmers.
+- Even though Fibonacci hashing seems to take up a lot of space to visualize the whole concept, it arranges the data adequately and more conveniently for programmers to locate the data easily.
+- It also makes it convenient to run the hash functions.
+- It mixes up input patterns and gives us never-ending storage of data without forming any clusters as well as avoids wastage of space. It's like you're getting a second hashing step for free after the first hash function finishes.
+
+If the first hash function is actually just the identity function, then this gives you at least a little bit of mixing that you wouldn't otherwise get. Sounds very commodious for programmers!
+
+The simple problem of mapping a large number to a small number would make one of the slowest operations in the hash table but the only alternative to solve this was the "power of two binary and" version which discards bits from the _fastest hash functions_ and can lead to more problems.
+
+Therefore, you get options that are either slow and safe, or fast and losing bits and on not being careful there are chances of getting potentially many hash collisions. For example, there is a method called 'fastrange' that is very similar to Fibonacci hashing but exaggerates patterns where Fibonacci hashing breaks up patterns. It's the same speed as Fibonacci hashing, but it is not so reliable as some of the patterns in the hash function seem unfamiliar which might be unfavorable for the work to be performed. Also, with fastrange some of the simple patterns get exaggerated to be huge problems.
+
+### Final Words
+
+Despite all its problems, it is being used in Tensorflow, because everybody is desperate for a faster solution to the problem of mapping a large number into a small range. We are still exploring faster and more appropriate methods in the digital world for making the storage of data more modular, faster, and advanced. Better application of Fibonacci hashing and other methods which can be explored should be utilized for increasing the convenience of programmers and advancing the programming techniques. If you want to know more about hashing methods and work further on how you can develop your own method which can be faster and more efficient, get a deeper knowledge from the available [**Skillslash**](https://skillslash.com/) courses and the regular workshops conducted by us, whether or not you belong to the Computer Science background or not. Our [**Full Stack Developer course in Bangalore**](https://skillslash.com/full-stack-developer-course-in-bangalore) and [**Data Science Course in Bangalore**](https://skillslash.com/data-science-course-in-bangalore/) will provide you with the best of knowledge and training with **100% placement guarantee.**
