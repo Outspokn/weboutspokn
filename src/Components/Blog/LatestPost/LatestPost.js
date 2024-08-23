@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./LatestPost.module.css";
 import Image from "next/image";
 import { FaReadme } from "react-icons/fa";
+import Link from "next/link";
 const LatestPost = () => {
   return (
     <div className={styles.container}>
@@ -14,16 +15,18 @@ const LatestPost = () => {
       </div>
       <div className={styles.posts}>
         <div className={styles.mainPost}>
-          <div className={styles.imageContainer}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src="/assets/blog.jpg"
-                alt="Post Image"
-                className={styles.postImage}
-                fill
-              />
+          <Link href="/blogPage" className={styles.imageLink}>
+            <div className={styles.imageContainer}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src="/assets/blog.jpg"
+                  alt="Post Image"
+                  className={styles.postImage}
+                  fill
+                />
+              </div>
             </div>
-          </div>
+          </Link>
           <div className={styles.postDetails}>
             <div className={styles.postContent}>
               <span className={styles.tag}>Business Growth</span>
