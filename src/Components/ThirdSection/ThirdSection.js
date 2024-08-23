@@ -24,7 +24,7 @@ const ThirdSection = () => {
           <div className={styles.googlePlayStore}>
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/AppStore_white.png"
-              alt="Download from app store"
+              alt="Download from App store"
               fill
             />
           </div>
