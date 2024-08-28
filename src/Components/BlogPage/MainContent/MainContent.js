@@ -21,13 +21,13 @@ const MainContent = () => {
             <div className={styles.articleContentContainer}>
               <div className={styles.articleContent}>
                 <div className={styles.iconTextContainer}>
-                  <div className={styles.iconContainer}>
-                    <IoBookmark className={styles.icon} />
-                    <FaShare className={styles.icon} />
+                  <div className={styles.articleIconContainer}>
+                    <IoBookmark className={styles.articleIcon} />
+                    <FaShare className={styles.articleIcon} />
                   </div>
-                  <div className={styles.textGroup}>
-                    <span className={styles.views}>25 123</span>
-                    <span className={styles.text}>People saw</span>
+                  <div className={styles.articleTextGroup}>
+                    <span className={styles.articleViews}>25 123</span>
+                    <span className={styles.articleText}>People saw</span>
                   </div>
                 </div>
                 <div className={styles.blogWrap}>
