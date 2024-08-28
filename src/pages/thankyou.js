@@ -7,7 +7,7 @@ import ValidUserPage from "@/Components/ThankYou/ValidUserPage";
 const ThankYou = () => {
   const router = useRouter();
   const { id } = router.query; // Get the id from query parameters
-  const [isValidUser, setIsValidUser] = useState(false); // null, true, or false
+  const [isValidUser, setIsValidUser] = useState(true); // null, true, or false
   const [os, setOs] = useState("");
 
   useEffect(() => {
@@ -48,7 +48,11 @@ const ThankYou = () => {
   //   }, [id]);
 
   if (isValidUser === null) {
-    return <div className={styles.loading}>Loading...</div>; // Or some other loading indicator
+    return (
+      <div className={styles.loadingWrap}>
+        <div className={styles.loader}></div>
+      </div>
+    ); // Or some other loading indicator
   }
 
   if (!isValidUser) {

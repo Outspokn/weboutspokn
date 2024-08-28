@@ -20,6 +20,12 @@
   width: 180px;
   height: 41px;
 }
+.PlayStore {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+ 
+}
 .googlePlayStore {
   position: relative;
   width: 126px;

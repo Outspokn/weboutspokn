@@ -44,6 +44,13 @@ const Header = ({ lottieUrl }) => {
               priority
             />
           </div>
+          <div className={styles.googlePlayStore}>
+            <Image
+              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/appStore_new.png"
+              alt="Download from app store"
+              fill
+            />
+          </div>
         </div>
       </div>
       <div className={styles.headerRight}>

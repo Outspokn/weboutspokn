@@ -32,7 +32,7 @@ const Login = () => {
         <button className={styles.googleBtn} onClick={handleLogin}>
           <FcGoogle style={{ fontSize: "25px" }} /> Continue With Google
         </button>
-        {id && <p>Center ID: {id}</p>}{" "}
+
         {/* Optionally display the ID on the page */}
       </div>
     </div>
