@@ -59,7 +59,20 @@
     bottom: -60px;
     left: 30px;
   }
+    .headerHeading {
+      font-size: 50px;
+      line-height: 60px;
+    }
+        .headerContent {
+          
+          font-size: 18px;
+        }
 }
+@media (min-width: 1650px) {
+.headerbg {
+    padding: 50px 300px;
+  }
+  }
 @media (max-width: 481px) {
   .headerbg {
     padding: 80px 20px;
@@ -79,8 +92,9 @@
   .headerHeading {
     color: var(--primary-color);
     font-size: 42px;
+    width: 100%;
     font-weight: 800;
-    line-height: 50px;
+    line-height: 48px;
   }
   .headerContent {
     font-size: 18px;

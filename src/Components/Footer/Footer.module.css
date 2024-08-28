@@ -5,6 +5,11 @@
   flex-flow: column;
   gap: 10px;
 }
+@media (min-width: 1650px) {
+  .footer {
+    padding: 40px 300px;
+  }
+}
 .footer p {
   color: black;
 }

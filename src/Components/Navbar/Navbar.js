@@ -26,9 +26,10 @@ const Navbar = () => {
     >
       <div className={styles.imgWrapper}>
         <Image
-          src="https://outspokn-fr.s3.us-east-2.amazonaws.com/Outspokn-web/Outspokn-logo-new.png"
+          src="https://outspoknweb.s3.us-east-2.amazonaws.com/Outspokn-logo-new.png"
           alt="outspoknlogo"
           fill
+          priority
         />
       </div>
       <div className={styles.PlayStore}>

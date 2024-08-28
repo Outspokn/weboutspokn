@@ -41,6 +41,7 @@ const Header = ({ lottieUrl }) => {
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
               alt="Download from play store"
               fill
+              priority
             />
           </div>
           <div className={styles.googlePlayStore}>
@@ -58,6 +59,7 @@ const Header = ({ lottieUrl }) => {
             src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/HeaderMobile.png"
             alt="Header Image"
             fill
+            priority
           />
         </div>
         <div className={styles.lottieAnimation}>
