@@ -6,68 +6,40 @@ import ValidUserPage from "@/Components/ThankYou/ValidUserPage";
 
 const ThankYou = () => {
   const router = useRouter();
-  const { id } = router.query; // Get the id from query parameters
-  const [isValidUser, setIsValidUser] = useState(true); // null, true, or false
-  const [os, setOs] = useState("");
+  const { id } = router.query;
+  const [isValidUser, setIsValidUser] = useState(null);
 
   useEffect(() => {
-    // Function to detect the operating system
-    function detectOS() {
-      const platform = window.navigator.platform.toLowerCase();
-      if (platform.includes("mac")) return "MacOS";
-      if (platform.includes("win")) return "Windows";
-      if (platform.includes("linux")) return "Linux";
-      if (/android/i.test(platform)) return "Android";
-      if (/iphone|ipad|ipod/i.test(platform)) return "iOS";
-      return "unknown";
+    const key = localStorage.getItem("authKey");
+    if (key) {
+      const keyObj = JSON.parse(key);
+      if (new Date().getTime() > keyObj.validUntil) {
+        localStorage.removeItem("authKey");
+        setIsValidUser(false);
+      } else {
+        setIsValidUser(true);
+      }
+    } else {
+      setIsValidUser(false);
     }
-
-    setOs(detectOS());
   }, []);
 
-  //   useEffect(() => {
-  //     const verifyUser = async () => {
-  //       if (id) {
-  //         try {
-  //           // Example: API call to verify the user
-  //           const response = await fetch(`/api/verify?id=${id}`);
-  //           const data = await response.json();
-  //           if (data.success) {
-  //             setIsValidUser(true);
-  //           } else {
-  //             setIsValidUser(false);
-  //           }
-  //         } catch (error) {
-  //           console.error("Failed to verify user:", error);
-  //           setIsValidUser(false);
-  //         }
-  //       }
-  //     };
-
-  //     verifyUser();
-  //   }, [id]);
-
   if (isValidUser === null) {
-    return (
-      <div className={styles.loadingWrap}>
-        <div className={styles.loader}></div>
-      </div>
-    ); // Or some other loading indicator
+    return <div>Loading...</div>;
   }
-
   if (!isValidUser) {
     return (
       <div className={styles.inavalidWrapper}>
         <Navbar />
-        <ValidUserPage valid={false} os={os} />
+        <ValidUserPage valid={false} />
       </div>
     );
   }
 
   return (
-    <div className={styles.thankWrapper}>
+    <div>
       <Navbar />
-      <ValidUserPage valid={true} os={os} />
+      <ValidUserPage valid={true} />
     </div>
   );
 };

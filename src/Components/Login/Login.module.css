@@ -44,4 +44,7 @@
   .heading {
     font-size: 24px;
   }
+  .desc {
+    text-align: center;
+  }
 }
