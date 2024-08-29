@@ -11,6 +11,8 @@ const Login = () => {
   const { id } = router.query;
   const [isValid, setIsValid] = useState(null);
   const [showThankyou, setShowThankyou] = useState(false);
+  const [InstituteName, setInstituteName] = useState(null);
+  const [username, setUserName] = useState(null);
 
   useEffect(() => {
     console.log("Center ID:", id);
@@ -27,8 +29,11 @@ const Login = () => {
           }
         );
         const checkStatus = await apiResponse.json();
+        console.log(checkStatus, "cehck the auth");
+
         if (checkStatus.status === true) {
           setIsValid(true);
+          setInstituteName(checkStatus.data.center_name);
           checkAuthState(); // Check auth state only after ID verification is successful
         } else {
           setIsValid(false);
@@ -60,7 +65,7 @@ const Login = () => {
     try {
       const result = await signInWithGoogle();
       console.log("User Data:", result.user);
-
+      setUserName(result.user);
       const apiResponse = await fetch(
         `https://api.outspokn.ai/users/register_center_user/`,
         {
@@ -80,6 +85,7 @@ const Login = () => {
       if (apiResponse.ok) {
         const key = { validUntil: new Date().getTime() + 30 * 60 * 1000 };
         localStorage.setItem("authKey", JSON.stringify(key));
+        localStorage.setItem("intituteName", JSON.stringify(key));
         setShowThankyou(true);
         console.log(setShowThankyou);
       }
@@ -97,13 +103,15 @@ const Login = () => {
   }
 
   if (showThankyou) {
-    return <ValidUserPage valid={true} />;
+    return (
+      <ValidUserPage valid={true} name={InstituteName} username={username} />
+    );
   }
 
   return (
     <div className={styles.loginWrapper}>
       <div className={styles.loginBox}>
-        <h1 className={styles.heading}>Signup for Skillslash Institute</h1>
+        <h1 className={styles.heading}>Signup for {InstituteName}</h1>
         <p className={styles.desc}>Learn English faster using conversations</p>
         <button className={styles.googleBtn} onClick={handleLogin}>
           <FcGoogle style={{ fontSize: "25px" }} /> Continue With Google
