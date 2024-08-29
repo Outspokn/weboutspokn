@@ -7,10 +7,10 @@
   margin-top: 30px;
   margin-bottom: 50px;
 }
-@media (min-width: 1650px) {
-  .bg {
-    padding: 100px 300px;
-  }
+.PlayStore {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 .Left {
   display: flex;

@@ -54,7 +54,11 @@
     height: 30px;
   }
   .imgWrapper {
-    width: 130px;
+    width: 140px;
     height: 32px;
+  }
+  .googlePlayStore {
+    width: 100px;
+    height: 30px;
   }
 }
