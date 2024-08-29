@@ -37,11 +37,25 @@
   background-color: var(--primary-color);
   color: white;
 }
+.invalidWrapper {
+  margin-top: 80px;
+  padding: 40px;
+  display: flex;
+  font-size: 30px;
+  color: var(--primary-color);
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 481px) {
   .loginWrapper {
     padding: 20px;
   }
   .heading {
     font-size: 24px;
+  }
+  .desc {
+    text-align: center;
   }
 }

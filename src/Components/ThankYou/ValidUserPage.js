@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./ValidUserPage.module.css";
 import Image from "next/image";
 
-const ValidUserPage = ({ valid, os }) => {
+const ValidUserPage = ({ valid, name }) => {
   return valid ? (
     <div className={styles.validWrapper}>
       <div className={styles.leftside}>
         <h1>
-          Welcome <span>Somnath</span> from <span>Skillslash</span> Institute
+          Welcome <span>Somnath</span> from {name}
         </h1>
         <p className={styles.desc}>
           Enhance your English by chatting with Outspokn on any topic—sports,
