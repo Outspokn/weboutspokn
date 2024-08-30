@@ -13,6 +13,7 @@ const Login = () => {
   const [showThankyou, setShowThankyou] = useState(false);
   const [InstituteName, setInstituteName] = useState(null);
   const [username, setUserName] = useState(null);
+  const [message, SetMessage] = useState(null);
 
   useEffect(() => {
     console.log("Center ID:", id);
@@ -81,7 +82,7 @@ const Login = () => {
       );
       const check = await apiResponse.json();
       console.log(apiResponse, check, "from login");
-
+      SetMessage(check.message);
       if (apiResponse.ok) {
         const key = { validUntil: new Date().getTime() + 30 * 60 * 1000 };
         localStorage.setItem("authKey", JSON.stringify(key));
@@ -104,7 +105,12 @@ const Login = () => {
 
   if (showThankyou) {
     return (
-      <ValidUserPage valid={true} name={InstituteName} username={username} />
+      <ValidUserPage
+        valid={true}
+        name={InstituteName}
+        username={username}
+        message={message}
+      />
     );
   }
 

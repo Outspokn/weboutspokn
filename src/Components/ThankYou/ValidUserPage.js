@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./ValidUserPage.module.css";
 import Image from "next/image";
 
-const ValidUserPage = ({ valid, name, username }) => {
+const ValidUserPage = ({ valid, name, username, message }) => {
   console.log(username);
   return valid ? (
     <div className={styles.validWrapper}>
@@ -10,6 +10,7 @@ const ValidUserPage = ({ valid, name, username }) => {
         <h1>
           Welcome <span>{username}</span> from {name}
         </h1>
+        <p>{message}</p>
         <p className={styles.desc}>
           Enhance your English by chatting with Outspokn on any topic—sports,
           tech, business, fashion, or your latest book or show. Outspokn is
