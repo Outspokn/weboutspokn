@@ -64,8 +64,8 @@ const Login = () => {
 
     try {
       const result = await signInWithGoogle();
-      console.log("User Data:", result.user);
-      setUserName(result.user);
+      console.log("User Data:", result.user.displayName);
+      setUserName(result.user.displayName);
       const apiResponse = await fetch(
         `https://api.outspokn.ai/users/register_center_user/`,
         {

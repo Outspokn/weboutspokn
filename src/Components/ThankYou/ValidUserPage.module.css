@@ -71,3 +71,24 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 481px) {
+  .validWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 20px 30px 20px;
+    padding: 30px 50px;
+  }
+  .rightSide {
+     background-image: none;
+  }
+  .headerImg {
+    margin-top: 50px;
+  }
+}
+  @media (max-width: 1281px) {
+    .validWrapper {
+      display: grid;
+      grid-template-columns: 55% 44%;
+    }
+   
+}
