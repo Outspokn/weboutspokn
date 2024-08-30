@@ -6,42 +6,26 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 
-const slides = [
-  {
-    id: 1,
-    title: "Artificial Intelligence Beyond Imaginations",
-    description:
-      "AI has been advancing rapidly and could soon surpass humans—why is this likely?",
-    author: "Saraj Kolhyseg",
-    authorImage: "/assets/sliderAuthor.jpg",
-  },
-  {
-    id: 2,
-    title: "The Future of AI",
-    description:
-      "Exploring the potential advancements in AI technology and how it will shape the world.",
-    author: "Jane Doe",
-    authorImage: "/assets/sliderAuthor.jpg",
-  },
-  {
-    id: 3,
-    title: "AI in Everyday Life",
-    description:
-      "How artificial intelligence is becoming an integral part of our daily routines.",
-    author: "John Smith",
-    authorImage: "/assets/sliderAuthor.jpg",
-  },
-];
-
-const Slider = () => {
+const Slider = ({ posts }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderPosts = posts.slice(0, 3);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setCurrentSlide((prev) =>
+        prev === sliderPosts?.length - 1 ? 0 : prev + 1
+      );
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [sliderPosts?.length]);
+
+  const truncateText = (text, limit) => {
+    if (text.length > limit) {
+      return text.slice(0, limit) + "...";
+    }
+    return text;
+  };
 
   return (
     <div className={styles.swiperContainer}>
@@ -62,12 +46,13 @@ const Slider = () => {
           200: { slidesPerView: 1, spaceBetween: 10 },
         }}
       >
-        {slides.map((slide, i) => (
+        {sliderPosts?.map((post, i) => (
           <SwiperSlide key={i} className={styles.slider}>
             <div className={styles.imageWrapper}>
               <Image
+                // src={post.headerImg}
                 src="/assets/sliderBackground.jpg"
-                alt="img-bck"
+                alt={post.title}
                 layout="fill"
                 objectFit="cover"
               />
@@ -76,20 +61,23 @@ const Slider = () => {
             <div className={styles.slideProfile}>
               <div className={styles.imgWrapperProfile}>
                 <Image
-                  src={slide.authorImage}
+                  // src={post.avatar}
+                  src="/assets/sliderAuthor.jpg"
                   width={35}
                   height={35}
-                  alt={slide.author}
+                  alt={post.author}
                   style={{ borderRadius: "50%" }}
                 />
               </div>
               <div className={styles.slideProfileContent}>
-                <h4 className={styles.slideName}>{slide.author}</h4>
+                <h4 className={styles.slideName}>{post.author}</h4>
               </div>
             </div>
             <div className={styles.textWrapper}>
-              <h3 className={styles.title}>{slide.title}</h3>
-              <p className={styles.description}>{slide.description}</p>
+              <h3 className={styles.title}>{post.title}</h3>
+              <p className={styles.description}>
+                {truncateText(post.desc, 203)}
+              </p>
             </div>
           </SwiperSlide>
         ))}

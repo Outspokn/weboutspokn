@@ -7,14 +7,17 @@ import SubscribeSection from "@/Components/Blog/SubscribeSection/SubscribeSectio
 import WhoIsOutspokn from "@/Components/Blog/WhoIsOutspokn/WhoIsOutspokn";
 import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
+import { getSortedPostsData } from "@/lib/blogPost/post";
+import { sortByDate } from "@/utilis";
 import React from "react";
 
-const index = () => {
+const index = ({ allPostsData }) => {
+
   return (
     <div>
       <Navbar />
       <Header />
-      <Slider />
+      <Slider posts={allPostsData} />
       <LatestPost />
       <PostList />
       <WhoIsOutspokn />
@@ -26,3 +29,13 @@ const index = () => {
 };
 
 export default index;
+export async function getStaticProps(_context) {
+  const allPostsData = getSortedPostsData();
+  const sortedPosts = allPostsData.sort(sortByDate);
+
+  return {
+    props: {
+      allPostsData: sortedPosts,
+    },
+  };
+}
