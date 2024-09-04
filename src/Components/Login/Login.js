@@ -85,7 +85,7 @@ const Login = () => {
       SetMessage(check.message);
       if (apiResponse.ok) {
         const key = { validUntil: new Date().getTime() + 10 * 1000 };
-        localStorage.setItem("authKey", JSON.stringify(key));
+        // localStorage.setItem("authKey", JSON.stringify(key));
         localStorage.setItem("intituteName", JSON.stringify(key));
         setShowThankyou(true);
         console.log(setShowThankyou);
