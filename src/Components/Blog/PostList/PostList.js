@@ -1,157 +1,82 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "../Card/Card";
 import styles from "./PostList.module.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-const data = [
-  {
-    id: 1,
-    title: "How Do Phones With Thermal Cameras Work?",
-    description:
-      "All the articles and content of today's site have been updated and you can freely add your new articles and content.",
-    date: "2021/08/29",
-    viewers: "10K Viewers",
-    author: "Marvin McKinney",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 2,
-    title: "What Is Virtual Reality And Why Is It So Important?",
-    description:
-      "Virtual Reality (VR) is considered as important technology, giving scope for a great leap for adverse fields.",
-    date: "2022/09/23",
-    viewers: "10K Viewers",
-    author: "Brooklyn Simmo",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 3,
-    title: "Fantasy Robots Were Made Of Low-Alloy Materials",
-    description:
-      "Low-alloy steels belong to the group of ferrous materials containing alloying elements in less than stainless steels.",
-    date: "2021/07/29",
-    viewers: "10K Viewers",
-    author: "Ronald Richards",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 4,
-    title: "How Do Phones With Thermal Cameras Work?",
-    description:
-      "All the articles and content of today's site have been updated and you can freely add your new articles and content.",
-    date: "2021/08/29",
-    viewers: "10K Viewers",
-    author: "Marvin McKinney",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 5,
-    title: "What Is Virtual Reality And Why Is It So Important?",
-    description:
-      "Virtual Reality (VR) is considered as important technology, giving scope for a great leap for adverse fields.",
-    date: "2022/09/23",
-    viewers: "10K Viewers",
-    author: "Brooklyn Simmo",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 6,
-    title: "Fantasy Robots Were Made Of Low-Alloy Materials",
-    description:
-      "Low-alloy steels belong to the group of ferrous materials containing alloying elements in less than stainless steels.",
-    date: "2021/07/29",
-    viewers: "10K Viewers",
-    author: "Ronald Richards",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 7,
-    title: "How Do Phones With Thermal Cameras Work?",
-    description:
-      "All the articles and content of today's site have been updated and you can freely add your new articles and content.",
-    date: "2021/08/29",
-    viewers: "10K Viewers",
-    author: "Marvin McKinney",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 8,
-    title: "What Is Virtual Reality And Why Is It So Important?",
-    description:
-      "Virtual Reality (VR) is considered as important technology, giving scope for a great leap for adverse fields.",
-    date: "2022/09/23",
-    viewers: "10K Viewers",
-    author: "Brooklyn Simmo",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 9,
-    title: "Fantasy Robots Were Made Of Low-Alloy Materials",
-    description:
-      "Low-alloy steels belong to the group of ferrous materials containing alloying elements in less than stainless steels.",
-    date: "2021/07/29",
-    viewers: "10K Viewers",
-    author: "Ronald Richards",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-  {
-    id: 10,
-    title: "How Do Phones With Thermal Cameras Work?",
-    description:
-      "All the articles and content of today's site have been updated and you can freely add your new articles and content.",
-    date: "2021/08/29",
-    viewers: "10K Viewers",
-    author: "Marvin McKinney",
-    image: "/assets/blog2.jpg",
-    authorImage: "/assets/author.jpg",
-  },
-];
-
-const PostList = () => {
+const PostList = ({ posts }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [displayedItems, setDisplayedItems] = useState(data.slice(0, 6));
-  const [showMiddlePages, setShowMiddlePages] = useState(false);
+  const [showAllPages, setShowAllPages] = useState(false);
   const itemsPerPage = 6;
+  const totalPages = Math.ceil(posts.length / itemsPerPage);
+
+  const displayedItems = posts.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [posts]);
 
   const handlePageChange = (page) => {
-    const startIndex = (page - 1) * itemsPerPage;
-    const newItems = data.slice(startIndex, startIndex + itemsPerPage);
-
-    if (newItems.length > 0) {
-      setDisplayedItems(newItems);
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
     }
-
-    setCurrentPage(page);
   };
 
   const getPageNumbers = () => {
-    if (showMiddlePages) {
-      return [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const pageNumbers = [];
+    if (showAllPages) {
+      for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(i);
+      }
     } else {
-      return [1, 2, 3, "...", 8, 9];
+      if (totalPages <= 5) {
+        for (let i = 1; i <= totalPages; i++) {
+          pageNumbers.push(i);
+        }
+      } else {
+        if (currentPage < 3) {
+          pageNumbers.push(1, 2, 3, "...", totalPages);
+        } else if (currentPage > totalPages - 2) {
+          pageNumbers.push(
+            1,
+            "...",
+            totalPages - 2,
+            totalPages - 1,
+            totalPages
+          );
+        } else {
+          pageNumbers.push(
+            1,
+            "...",
+            currentPage - 1,
+            currentPage,
+            currentPage + 1,
+            "...",
+            totalPages
+          );
+        }
+      }
     }
+    return pageNumbers;
   };
+
+  if (posts.length <= 1) return null;
 
   return (
     <div className={styles.container}>
       <div className={styles.heading}>
-        <h2>All Blog</h2>
+        <h2>All Blog Posts</h2>
       </div>
+
       <div className={styles.cardWrapper}>
         <div className={styles.grid}>
           {displayedItems.map((item) => (
-            <Card key={item.id} data={item} />
+            <Card key={item.id} post={item} />
           ))}
         </div>
+
         <div className={styles.pagination}>
           <button
             onClick={() => handlePageChange(currentPage - 1)}
@@ -160,18 +85,19 @@ const PostList = () => {
           >
             <MdKeyboardArrowLeft className={styles.navIcon} />
           </button>
+
           {getPageNumbers().map((number, index) =>
             number === "..." ? (
               <button
-                key={index}
-                onClick={() => setShowMiddlePages(true)}
+                key={`ellipsis-${index}`}
+                onClick={() => setShowAllPages(true)}
                 className={styles.ellipsis}
               >
                 {number}
               </button>
             ) : (
               <button
-                key={number}
+                key={`page-${number}`}
                 onClick={() => handlePageChange(number)}
                 className={number === currentPage ? styles.active : ""}
               >
@@ -179,9 +105,10 @@ const PostList = () => {
               </button>
             )
           )}
+
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === 9}
+            disabled={currentPage === totalPages}
             className={styles.navButton}
           >
             <MdKeyboardArrowRight className={styles.navIcon} />
