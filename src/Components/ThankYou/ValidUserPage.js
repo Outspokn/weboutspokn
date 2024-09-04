@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./ValidUserPage.module.css";
 import Image from "next/image";
 
-const ValidUserPage = ({ valid, name }) => {
+const ValidUserPage = ({ valid, name, username }) => {
   return valid ? (
     <div className={styles.validWrapper}>
       <div className={styles.leftside}>
         <h1>
-          Welcome <span>Somnath</span> from {name}
+          Welcome <span>{username}</span> from {name}
         </h1>
         <p className={styles.desc}>
           Enhance your English by chatting with Outspokn on any topic—sports,
@@ -39,8 +39,8 @@ const ValidUserPage = ({ valid, name }) => {
             style={{ cursor: "pointer" }}
             src="https://outspoknweb.s3.us-east-2.amazonaws.com/androidQr.png"
             alt="qr for download"
-            width={140}
-            height={140}
+            width={130}
+            height={130}
           />
         </div>
       </div>
