@@ -163,7 +163,7 @@
     width: 100vw;
   }
   .firstFooter {
-    gap: 30px;
+    gap: 0px;
     grid-template-columns: 50% 40%;
   }
   .fPages h5,

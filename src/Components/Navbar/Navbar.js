@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,12 +26,14 @@ const Navbar = () => {
       className={`${styles.navWrapper} ${isScrolled ? styles.scrolled : ""}`}
     >
       <div className={styles.imgWrapper}>
-        <Image
-          src="https://outspoknweb.s3.us-east-2.amazonaws.com/Outspokn-logo-new.png"
-          alt="outspoknlogo"
-          fill
-          priority
-        />
+        <Link href="/" style={{ cursor: "pointer" }}>
+          <Image
+            src="https://outspoknweb.s3.us-east-2.amazonaws.com/Outspokn-logo-new.png"
+            alt="outspoknlogo"
+            fill
+            priority
+          />
+        </Link>
       </div>
       <div className={styles.PlayStore}>
         <div className={styles.googlePlayStore}>

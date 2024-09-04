@@ -47,6 +47,19 @@
 }
 @media (max-width: 481px) {
   .navWrapper {
-    padding: 0px 20px;
+    height: auto;
+    padding: 9px 20px;
+  }
+  .googlePlayStore {
+    width: 100px;
+    height: 30px;
+  }
+  .imgWrapper {
+    width: 140px;
+    height: 32px;
+  }
+  .googlePlayStore {
+    width: 100px;
+    height: 30px;
   }
 }
