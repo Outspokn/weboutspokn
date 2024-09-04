@@ -9,17 +9,36 @@ import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
 import { getSortedPostsData } from "@/lib/blogPost/post";
 import { sortByDate } from "@/utilis";
-import React from "react";
+import React, { useState } from "react";
 
-const index = ({ allPostsData }) => {
+const Index = ({ allPostsData }) => {
+  const [filteredPosts, setFilteredPosts] = useState([]);
+
+  const handleFilter = (filtered) => {
+    setFilteredPosts(filtered);
+  };
+
+  const initialLatestPosts =
+    filteredPosts.length > 0
+      ? filteredPosts.slice(0, 5)
+      : allPostsData.slice(0, 5);
+
+  const remainingPosts = filteredPosts.length > 5 ? filteredPosts.slice(5) : [];
 
   return (
     <div>
       <Navbar />
-      <Header />
-      <Slider posts={allPostsData} />
-      <LatestPost />
-      <PostList />
+      <Header posts={allPostsData} onFilter={handleFilter} />
+      <Slider posts={allPostsData.slice(0, 3)} />
+      <LatestPost
+        posts={
+          filteredPosts.length > 0 && filteredPosts.length <= 5
+            ? filteredPosts
+            : initialLatestPosts
+        }
+      />
+      {remainingPosts.length > 0 && <PostList posts={remainingPosts} />}
+
       <WhoIsOutspokn />
       <FaqSection />
       <SubscribeSection />
@@ -28,7 +47,8 @@ const index = ({ allPostsData }) => {
   );
 };
 
-export default index;
+export default Index;
+
 export async function getStaticProps(_context) {
   const allPostsData = getSortedPostsData();
   const sortedPosts = allPostsData.sort(sortByDate);

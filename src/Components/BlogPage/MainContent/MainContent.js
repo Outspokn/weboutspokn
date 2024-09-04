@@ -3,8 +3,11 @@ import styles from "./MainContent.module.css";
 import { IoBookmark } from "react-icons/io5";
 import { FaShare } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
-const MainContent = () => {
+const MainContent = ({ post, relatedPosts }) => {
+  if (!post) return <p>Post not found!</p>;
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -12,9 +15,10 @@ const MainContent = () => {
           <div className={styles.articleHeader}>
             <div className={styles.imgWrapper}>
               <Image
-                src="/assets/blog3.png"
-                alt="Travel Image"
-                fill
+                src={post.imageSrc || "/assets/blog3.png"}
+                alt={post.title}
+                width={600}
+                height={400}
                 className={styles.articleImage}
               />
             </div>
@@ -26,28 +30,22 @@ const MainContent = () => {
                     <FaShare className={styles.articleIcon} />
                   </div>
                   <div className={styles.articleTextGroup}>
-                    <span className={styles.articleViews}>25 123</span>
+                    <span className={styles.articleViews}>{post.views}</span>
                     <span className={styles.articleText}>People saw</span>
                   </div>
                 </div>
                 <div className={styles.blogWrap}>
-                  <span className={styles.category}>Travel</span>
-                  <span className={styles.date}>20 Aug 2024</span>
-                  <h1 className={styles.title}>
-                    Five easy way how you can travel cheap and safe
-                  </h1>
+                  <div className={styles.articleTxt}>
+                    <span className={styles.category}>{post.tag}</span>
+                    <span className={styles.date}>{post.date}</span>
+                  </div>
+
+                  <h1 className={styles.title}>{post.title}</h1>
                   <p className={styles.text}>
-                    <span className={styles.firstLetter}>T</span>raveling is
-                    more than just a break from routine—it's a transformative
-                    experience that broadens your perspective, fuels creativity,
-                    and fosters personal growth. As you explore new cultures and
-                    environments, you gain a deeper understanding of the world
-                    and yourself. Each journey is a step outside your comfort
-                    zone, offering opportunities to learn, connect, and create
-                    lasting memories. Whether you're seeking adventure or
-                    relaxation, travel enriches your life, making it not just
-                    useful and interesting, but essential for a well-rounded,
-                    fulfilling life.
+                    <span className={styles.firstLetter}>
+                      {post.desc?.charAt(0) || ""}
+                    </span>
+                    {post.desc?.slice(1) || "Content not available."}
                   </p>
                 </div>
               </div>
@@ -55,97 +53,39 @@ const MainContent = () => {
           </div>
         </article>
         <aside className={styles.sidebar}>
-          <div className={styles.card}>
-            <div className={styles.imgWrapperSide}>
-              <Image
-                src="/assets/blog4.jpg"
-                alt="Best Place"
-                fill
-                className={styles.cardImage}
-              />
+          {relatedPosts.map((relatedPost, index) => (
+            <div className={styles.card} key={index}>
+              <Link href={`/blogPage/${relatedPost.id}`}>
+                <div className={styles.imgWrapperSide}>
+                  <Image
+                    src={relatedPost.imageSrc || "/assets/blog4.jpg"}
+                    alt={relatedPost.title}
+                    width={250}
+                    height={150}
+                    className={styles.cardImage}
+                  />
+                </div>
+                <div className={styles.cardContent}>
+                  <div className={styles.info}>
+                    <h4 className={styles.relatedPostTag}>{relatedPost.tag}</h4>
+                    <span>{relatedPost.date}</span>
+                  </div>
+                  <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
+
+                  <div className={styles.stats}>
+                    <div className={styles.textGroup}>
+                      <span className={styles.views}>{relatedPost.views}</span>
+                      <span className={styles.text}>People saw</span>
+                    </div>
+                    <div className={styles.iconContainer}>
+                      <IoBookmark className={styles.icon} />
+                      <FaShare className={styles.icon} />
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
-            <div className={styles.cardContent}>
-              <div className={styles.info}>
-                <h4>Place</h4>
-                <span>24 Aug 2024</span>
-              </div>
-              <h3>Tahiti is place paradise in the earth</h3>
-              <p>
-                Tahiti is the largest island in French Polynesia, the South
-                Pacific archipelogo
-              </p>
-              <div className={styles.stats}>
-                <div className={styles.textGroup}>
-                  <span className={styles.views}>25 123</span>
-                  <span className={styles.text}>People saw</span>
-                </div>
-                <div className={styles.iconContainer}>
-                  <IoBookmark className={styles.icon} />
-                  <FaShare className={styles.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <Image
-              src="/assets/blog4.jpg"
-              alt="Best Place"
-              width={250}
-              height={150}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardContent}>
-              <div className={styles.info}>
-                <h4>Place</h4>
-                <span>24 Aug 2024</span>
-              </div>
-              <h3>Tahiti is place paradise in the earth</h3>
-              <p>
-                Tahiti is the largest island in French Polynesia, the South
-                Pacific archipelogo
-              </p>
-              <div className={styles.stats}>
-                <div className={styles.textGroup}>
-                  <span className={styles.views}>25 123</span>
-                  <span className={styles.text}>People saw</span>
-                </div>
-                <div className={styles.iconContainer}>
-                  <IoBookmark className={styles.icon} />
-                  <FaShare className={styles.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.card}>
-            <Image
-              src="/assets/blog4.jpg"
-              alt="Best Place"
-              width={250}
-              height={150}
-              className={styles.cardImage}
-            />
-            <div className={styles.cardContent}>
-              <div className={styles.info}>
-                <h4>Place</h4>
-                <span>24 Aug 2024</span>
-              </div>
-              <h3>Tahiti is place paradise in the earth</h3>
-              <p>
-                Tahiti is the largest island in French Polynesia, the South
-                Pacific archipelogo
-              </p>
-              <div className={styles.stats}>
-                <div className={styles.textGroup}>
-                  <span className={styles.views}>25 123</span>
-                  <span className={styles.text}>People saw</span>
-                </div>
-                <div className={styles.iconContainer}>
-                  <IoBookmark className={styles.icon} />
-                  <FaShare className={styles.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </aside>
       </main>
     </div>

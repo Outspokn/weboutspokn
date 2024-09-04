@@ -1,36 +1,67 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import styles from "./Header.module.css";
 
-const Header = () => {
-  const navItems = [
-    "Articles",
-    "Tutorials",
-    "Interview Questions",
-    "Free Courses",
-    "Videos",
-    "Projects",
-    "Career Guide",
+const Header = ({ tags }) => {
+  const router = useRouter();
+  const { tag } = router.query;
+
+  const excludedTags = [
+    "Business Analytics",
+    "Interview Question",
+    "Career",
+    "Other",
   ];
+
+  const filteredTags = tags?.filter((t) => !excludedTags.includes(t));
+  const [selectedTag, setSelectedTag] = useState("");
+
+  useEffect(() => {
+    if (tag) {
+      setSelectedTag(tag);
+    }
+  }, [tag]);
+
+  const handleTagChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedTag(selectedValue);
+
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, tag: selectedValue },
+    });
+  };
+
+  const handleNavItemClick = (item) => {
+    setSelectedTag(item);
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, tag: item },
+    });
+  };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
         <div className={styles.dropdown}>
-          <select className={styles.dropdownSelect}>
-            <option value="ai-mi">AI and Machine Learning</option>{" "}
-            <option value="full-stack">Full Stack Web Developer</option>
-            <option value="data-science">Data Science</option>
-            <option value="cyber-security">Cyber Security</option>
-            <option value="cloud-computing">Cloud Computing</option>
-            <option value="devops">DevOps</option>
-            <option value="blockchain">Blockchain Development</option>
-            <option value="ui-ux">UI/UX Design</option>
+          <select
+            className={styles.dropdownSelect}
+            value={selectedTag}
+            onChange={handleTagChange}
+          >
+            {filteredTags?.map((t, index) => (
+              <option key={index} value={t}>
+                {t}
+              </option>
+            ))}
           </select>
         </div>
         <ul className={styles.navItems}>
-          {navItems.map((item, index) => (
+          {excludedTags?.map((item, index) => (
             <li key={index}>
-              <a href="#">{item}</a>
+              <a href="#" onClick={() => handleNavItemClick(item)}>
+                {item}
+              </a>
             </li>
           ))}
         </ul>
