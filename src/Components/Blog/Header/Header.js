@@ -1,63 +1,60 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import styles from "./Header.module.css";
 import { ImTwitter, ImYoutube, ImSearch } from "react-icons/im";
 import Link from "next/link";
 
-const articles = [
-  {
-    id: 1,
-    title: "Understanding React",
-    summary: "A deep dive into React and its core concepts.",
-    category: "Technology",
-  },
-  {
-    id: 2,
-    title: "Best Manufacturing Practices",
-    summary: "Exploring best practices in manufacturing.",
-    category: "Manufacturing",
-  },
-  {
-    id: 3,
-    title: "The Future of Sports",
-    summary: "How technology is shaping the future of sports.",
-    category: "Sport",
-  },
-];
-
-const Header = () => {
+const Header = ({ posts, onFilter }) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredArticles, setFilteredArticles] = useState(articles);
 
-  const categories = [
-    "All",
-    "Manufacturing",
-    "Technology",
-    "Sport",
-    "Design",
-    "Programming",
-    "Engineering",
-  ];
+  const categories = useMemo(
+    () => [
+      "All",
+      ...new Set(
+        posts
+          .map((post) => post.tag.trim())
+          .filter(
+            (tag) =>
+              tag &&
+              ![
+                "Other",
+                "Career",
+                "Interview Question",
+                "Business Analyst",
+                "Business Analytics",
+              ].includes(tag)
+          )
+      ),
+    ],
+    [posts]
+  );
 
-  useEffect(() => {
-    filterArticles();
-  }, [searchTerm, activeCategory]);
-
-  const filterArticles = () => {
-    let filtered = articles;
+  const filteredPosts = useMemo(() => {
+    let filtered = posts;
 
     if (activeCategory !== "All") {
       filtered = filtered.filter(
-        (article) => article.category === activeCategory
+        (post) =>
+          post.tag.trim().toLowerCase() === activeCategory.trim().toLowerCase()
       );
     }
 
     if (searchTerm) {
-      filtered = filtered.filter((article) =>
-        article.title.toLowerCase().includes(searchTerm.toLowerCase())
+      const lowerCaseSearchTerm = searchTerm.toLowerCase();
+      filtered = filtered.filter((post) =>
+        post.tag.toLowerCase().includes(lowerCaseSearchTerm)
       );
     }
-    setFilteredArticles(filtered);
+    return filtered;
+  }, [searchTerm, activeCategory, posts]);
+
+  useEffect(() => {
+    onFilter(filteredPosts);
+  }, [filteredPosts, onFilter]);
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+    setSearchTerm("");
   };
 
   return (
@@ -96,9 +93,7 @@ const Header = () => {
               type="text"
               placeholder="Search... "
               value={searchTerm}
-              onChange={(e) => {
-                setSearchTerm(e.target.value);
-              }}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
           <div className={styles.categories}>
@@ -108,7 +103,7 @@ const Header = () => {
                 className={`${styles.categoryButton} ${
                   activeCategory === category ? styles.active : ""
                 }`}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => handleCategoryClick(category)}
               >
                 {category}
               </button>
