@@ -2,13 +2,20 @@ import React from "react";
 import styles from "./ValidUserPage.module.css";
 import Image from "next/image";
 
-const ValidUserPage = ({ valid, name, username }) => {
+const ValidUserPage = ({ valid, name, username, message }) => {
+  // Check if the message contains a specific substring
+  const messageIncludesLink = message.includes("User already linked with");
+
+  // Define the header message based on the substring check
+  const headerMessage = messageIncludesLink
+    ? message
+    : `Welcome ${username} from ${name}`;
+  console.log(username);
   return valid ? (
     <div className={styles.validWrapper}>
       <div className={styles.leftside}>
-        <h1>
-          Welcome <span>{username}</span> from {name}
-        </h1>
+        <h1>{headerMessage}</h1>
+
         <p className={styles.desc}>
           Enhance your English by chatting with Outspokn on any topic—sports,
           tech, business, fashion, or your latest book or show. Outspokn is
