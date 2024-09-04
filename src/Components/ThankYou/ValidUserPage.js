@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ValidUserPage = ({ valid, name, username, message }) => {
   // Check if the message contains a specific substring
-  const messageIncludesLink = message.includes("User already linked with");
+  const messageIncludesLink = message?.includes("User already linked with");
 
   // Define the header message based on the substring check
   const headerMessage = messageIncludesLink
