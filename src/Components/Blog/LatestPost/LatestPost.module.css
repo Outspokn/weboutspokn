@@ -48,6 +48,7 @@
 .postDetails {
   padding: 20px;
 }
+
 .postContent {
   display: flex;
   justify-content: space-between;
@@ -72,10 +73,17 @@
   margin-bottom: 10px;
   font-size: 24px;
   color: var(--primary-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .desc {
   color: var(--light-font-desc);
 }
+
 .sidePosts {
   display: flex;
   padding: 30px;
@@ -84,11 +92,17 @@
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.sidePost h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .sidePost {
   display: flex;
   gap: 10px;
-
   border-radius: 8px;
   padding: 10px;
 }
@@ -203,9 +217,11 @@
   .header h2 {
     font-size: 1.4rem;
   }
+
   .mainPost .imageContainer {
     height: 150px;
   }
+
   .header p {
     font-size: 0.8rem;
     color: var(--light-font-desc);
@@ -214,6 +230,7 @@
   .posts {
     gap: 10px;
   }
+
   .sidePosts {
     display: grid;
     background-color: transparent;
@@ -221,6 +238,7 @@
     padding: 10px 0px;
     grid-template-columns: 48% 48%;
   }
+
   .sidePost {
     flex-direction: column;
     gap: 5px;
@@ -233,10 +251,12 @@
     flex-direction: column;
     gap: 5px;
   }
+
   .sideImageWrapper {
     width: 100%;
     height: 120px;
   }
+
   .readTime {
     display: flex;
     align-items: center;
@@ -244,20 +264,25 @@
     gap: 5px;
     padding-left: 3px;
   }
+
   .readIcon {
     color: var(--primary-color);
   }
+
   .tag {
     margin-bottom: 0;
   }
+
   .tag,
   .readTime {
     width: max-content;
     font-size: 12px;
   }
+
   .postDetails {
     padding: 20px 0px;
   }
+  
   .sidePost h4 {
     font-size: 0.8rem;
     padding-left: 3px;

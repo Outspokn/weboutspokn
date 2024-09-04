@@ -3,7 +3,15 @@ import styles from "./LatestPost.module.css";
 import Image from "next/image";
 import { FaReadme } from "react-icons/fa";
 import Link from "next/link";
-const LatestPost = () => {
+
+const LatestPost = ({ posts }) => {
+  const truncateText = (text, limit) => {
+    if (text.length > limit) {
+      return text.slice(0, limit) + "...";
+    }
+    return text;
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -14,112 +22,70 @@ const LatestPost = () => {
         </p>
       </div>
       <div className={styles.posts}>
-        <div className={styles.mainPost}>
-          <Link href="/blogPage" className={styles.imageLink}>
-            <div className={styles.imageContainer}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src="/assets/blog.jpg"
-                  alt="Post Image"
-                  className={styles.postImage}
-                  fill
-                />
+        {posts[0] && (
+          <div className={styles.mainPost}>
+            <Link
+              href={{
+                pathname: `/blogPage/${posts[0].id}`,
+                query: { tag: posts[0].tag },
+              }}
+              className={styles.imageLink}
+            >
+              <div className={styles.imageContainer}>
+                <div className={styles.imageWrapper}>
+                  <Image
+                    src="/assets/blog.jpg"
+                    alt={posts[0].title}
+                    className={styles.postImage}
+                    fill
+                  />
+                </div>
               </div>
-            </div>
-          </Link>
-          <div className={styles.postDetails}>
-            <div className={styles.postContent}>
-              <span className={styles.tag}>Business Growth</span>
-              <span className={styles.date}>Aug 5, 2024</span>
-            </div>
-            <h3>How to Maximize Your Agency Profit Margins</h3>
-            <p className={styles.desc}>
-              Whether you choose to track your time via paper timesheets,
-              spreadsheets, a swipe-card system..
-            </p>
-          </div>
-        </div>
-        <div className={styles.sidePosts}>
-          <div className={styles.sidePost}>
-            <div className={styles.sideImageWrapper}>
-              <Image
-                src="/assets/blog1.jpg"
-                alt="Side Post Image"
-                className={styles.sidePostImage}
-                fill
-              />
-            </div>
-            <div className={styles.sidePostDetails}>
-              <div className={styles.sidePostContent}>
-                <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>
-                  <FaReadme className={styles.readIcon} />7 min read
-                </span>
+            </Link>
+            <div className={styles.postDetails}>
+              <div className={styles.postContent}>
+                <span className={styles.tag}>{posts[0].tag}</span>
+                <span className={styles.date}>{posts[0].date}</span>
               </div>
-              <h4>NEW! Introducing Homeworks to Assessment Library</h4>
+              <h3>{posts[0].title}</h3>
+              <p className={styles.desc}>{posts[0].description}</p>
             </div>
           </div>
-          <div className={styles.sidePost}>
-            <div className={styles.sideImageWrapper}>
-              <Image
-                src="/assets/blog1.jpg"
-                alt="Side Post Image"
-                className={styles.sidePostImage}
-                fill
-              />
-            </div>
-            <div className={styles.sidePostDetails}>
-              <div className={styles.sidePostContent}>
-                <span className={styles.tag}>Project Management</span>
-                <span className={styles.readTime}>
-                  <FaReadme className={styles.readIcon} />
-                  17 min read
-                </span>
+        )}
+        {posts.length > 1 && (
+          <div className={styles.sidePosts}>
+            {posts.slice(1).map((post, index) => (
+              <div className={styles.sidePost} key={index}>
+                <Link
+                  href={{
+                    pathname: `/blogPage/${post.id}`,
+                    query: { tag: post.tag },
+                  }}
+                  className={styles.sideImageLink}
+                >
+                  <div className={styles.sideImageWrapper}>
+                    <Image
+                      src="/assets/blog1.jpg"
+                      alt={post.title}
+                      className={styles.sidePostImage}
+                      fill
+                    />
+                  </div>
+                </Link>
+                <div className={styles.sidePostDetails}>
+                  <div className={styles.sidePostContent}>
+                    <span className={styles.tag}>{post.tag}</span>
+                    <span className={styles.readTime}>
+                      <FaReadme className={styles.readIcon} />
+                      {post.readTime} read
+                    </span>
+                  </div>
+                  <h4>{truncateText(post.title, 80)}</h4>
+                </div>
               </div>
-              <h4>What is Scope Creep? Common Causes & How to Avoid Them</h4>
-            </div>
+            ))}
           </div>
-          <div className={styles.sidePost}>
-            <div className={styles.sideImageWrapper}>
-              <Image
-                src="/assets/blog1.jpg"
-                alt="Side Post Image"
-                className={styles.sidePostImage}
-                fill
-              />
-            </div>
-            <div className={styles.sidePostDetails}>
-              <div className={styles.sidePostContent}>
-                <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>
-                  <FaReadme className={styles.readIcon} />
-                  15 min read
-                </span>
-              </div>
-              <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
-            </div>
-          </div>
-          <div className={styles.sidePost}>
-            <div className={styles.sideImageWrapper}>
-              <Image
-                src="/assets/blog1.jpg"
-                alt="Side Post Image"
-                className={styles.sidePostImage}
-                fill
-              />
-            </div>
-            <div className={styles.sidePostDetails}>
-              <div className={styles.sidePostContent}>
-                <span className={styles.tag}>Product News</span>
-                <span className={styles.readTime}>
-                  <FaReadme className={styles.readIcon} />
-                  15 min read
-                </span>
-              </div>
-              <h4>8 Examples of Using ChatGPT in Recruitment Process</h4>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
