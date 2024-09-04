@@ -76,7 +76,6 @@
     display: grid;
     grid-template-columns: 55% 44%;
   }
- 
 }
 @media (max-width: 481px) {
   .validWrapper {
@@ -86,9 +85,33 @@
     padding: 30px 50px;
   }
   .rightSide {
-     background-image: none;
+    background-image: none;
   }
   .headerImg {
     margin-top: 50px;
+  }
+}
+@media (max-width: 350px) {
+  .validWrapper {
+    padding: 20px;
+  }
+  .leftside {
+    width: 95%;
+  }
+  .leftside h1 {
+    font-size: 22px;
+  }
+  .linkWrapper {
+    display: flex;
+    flex-flow: column;
+  }
+  .paraHead {
+    text-align: center;
+  }
+  .headerImg {
+    position: relative;
+    width: 300px;
+    height: 466px;
+    /* background-color: var(--primary-color); */
   }
 }
