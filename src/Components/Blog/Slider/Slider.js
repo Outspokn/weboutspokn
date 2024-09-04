@@ -50,7 +50,6 @@ const Slider = ({ posts }) => {
           <SwiperSlide key={i} className={styles.slider}>
             <div className={styles.imageWrapper}>
               <Image
-                // src={post.headerImg}
                 src="/assets/sliderBackground.jpg"
                 alt={post.title}
                 layout="fill"
@@ -61,7 +60,6 @@ const Slider = ({ posts }) => {
             <div className={styles.slideProfile}>
               <div className={styles.imgWrapperProfile}>
                 <Image
-                  // src={post.avatar}
                   src="/assets/sliderAuthor.jpg"
                   width={35}
                   height={35}
