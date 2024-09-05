@@ -155,9 +155,8 @@
 }
 
 .text {
-  font-size: 16px;
-  line-height: 1.6;
   font-size: 14px;
+  line-height: 1.6;
   color: black;
 }
 
@@ -378,7 +377,7 @@
   }
 
   .relatedTitle {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .cardImage {
@@ -387,6 +386,33 @@
   }
 
   .cardContent {
-    padding: 5px;
+    padding: 3px;
+    width: 100%;
+  }
+
+  .info {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .info h4 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+    color: black;
+  }
+
+  .info span {
+    font-size: 1px;
+    color: var(--light-font-desc);
+    line-height: 1;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
   }
 }
