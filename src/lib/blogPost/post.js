@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
+import { marked } from "marked";
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
@@ -32,8 +32,30 @@ export function getSortedPostsData() {
 }
 
 export function getPostData(id) {
-  const allPosts = getSortedPostsData();
-  return allPosts.find((post) => post.id === id);
+  const fullPath = path.join(postsDirectory, `${id}.mdx`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  // Use gray-matter to parse the post metadata section
+  const { data, content } = matter(fileContents);
+
+  const html = marked(content);
+
+  // Combine the data with the id
+  return {
+    id,
+    title: data.title,
+    mainH1: data.h1,
+    desc: data.desc,
+    author: data.author,
+    time: data.readTime,
+    date: data.date,
+    tag: data.tag,
+    img: data.headerImg,
+    position: data.position,
+    table: data.tableData,
+    avatar: data.avatar,
+    body: html,
+  };
 }
 
 export function getAllPostIds() {

@@ -41,14 +41,14 @@ const MainContent = ({ post, relatedPosts }) => {
                     <span className={styles.category}>{post.tag}</span>
                     <span className={styles.date}>{post.date}</span>
                   </div>
-                  <article dangerouslySetInnerHTML={{ __html: post.body }} />
-                  {/* <h1 className={styles.title}>{post.title}</h1>
-                  <p className={styles.text}>
+                  <h1 className={styles.title}>{post.title}</h1>
+                  {/* <p className={styles.text}>
                     <span className={styles.firstLetter}>
                       {post.desc?.charAt(0) || ""}
                     </span>
                     {post.desc?.slice(1) || "Content not available."}
                   </p> */}
+                  <article dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
               </div>
             </div>
