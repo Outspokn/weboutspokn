@@ -78,7 +78,7 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
                       <span>{relatedPost.date}</span>
                     </div>
                     <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
-                    <p className={styles.description}>
+                    <p className={styles.rightDescription}>
                       {truncateText(relatedPost.desc, 72)}
                     </p>
                     <div className={styles.iconContainerRight}>

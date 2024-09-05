@@ -15,7 +15,6 @@
 .imgWrapper {
   position: relative;
   width: 100%;
-  height: 390px;
 }
 
 .article {
@@ -95,7 +94,7 @@
 }
 
 .articleBody h2 {
-  font-size: 25px;
+  font-size: 24px;
   color: #2e2e2e;
   margin-bottom: 8px;
 }
@@ -123,8 +122,12 @@
 .relatedTitle {
   font-size: 16px;
   margin: 10px 0;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
+}
+
+.rightDescription {
+  color: #646464;
 }
 
 .sidebar {
@@ -137,7 +140,6 @@
 .imgWrapperSide {
   position: relative;
   width: 100%;
-  height: 220px;
 }
 
 .card {
@@ -191,7 +193,6 @@
   width: 25px;
   height: 25px;
   padding: 5px;
-  padding: 5px;
   border-radius: 50%;
   border: 1px solid black;
 }
@@ -218,6 +219,7 @@
   .container {
     padding: 40px 50px;
   }
+
   .articleContentContainer {
     margin-top: -40px;
   }
@@ -237,14 +239,46 @@
   }
 }
 
-@media (max-width: 641px) {
+@media (max-width: 991px) {
   .main {
     display: flex;
     flex-direction: column;
   }
 
+  .category {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
+  .cardImage {
+    height: 320px;
+    object-fit: cover;
+  }
+
   .container {
-    padding: 10px;
+    padding: 60px 40px;
+  }
+
+  .iconRight {
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .articleIcon {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .articleImage {
+    height: 360px;
   }
 
   .articleContent {
@@ -252,38 +286,74 @@
     max-width: 100%;
   }
 
-  .title {
-    font-size: 20px;
-  }
-
   .sidebar {
     margin-top: 20px;
   }
 
   .relatedTitle {
-    font-size: 12px;
+    font-size: 26px;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+
+  .rightDescription {
+    color: #646464;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .info h4 {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1;
+    color: black;
+  }
+
+  .info span {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .articleBody h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 641px) {
+  .articleImage {
+    height: 200px;
   }
 }
 
 @media (max-width: 481px) {
   .container {
-    padding: 10px;
-  }
-
-  .articleHeader {
-    height: 250px;
-  }
-
-  .title {
-    font-size: 18px;
+    padding: 20px 20px;
   }
 
   .relatedTitle {
-    font-size: 12px;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+
+  .rightDescription {
+    color: #646464;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .articleBody h2 {
+    font-size: 22px;
   }
 
   .cardImage {
     border-radius: 8px;
+    height: 200px;
   }
 
   .cardContent {
