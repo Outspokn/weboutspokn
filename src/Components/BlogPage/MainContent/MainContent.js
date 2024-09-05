@@ -42,7 +42,11 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
                     </div>
                   </div>
                   <h1 className={styles.title}>{post.title}</h1>
-                  <article dangerouslySetInnerHTML={{ __html: post.body }} />
+                  <p className={styles.blogDesc}>{post.desc}</p>
+                  <article
+                    className={styles.articleBody}
+                    dangerouslySetInnerHTML={{ __html: post.body }}
+                  />
                 </div>
               </div>
             </div>

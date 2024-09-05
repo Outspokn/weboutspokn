@@ -4,6 +4,7 @@ import MainContent from "@/Components/BlogPage/MainContent/MainContent";
 import Navbar from "@/Components/Navbar/Navbar";
 import Header from "@/Components/BlogPage/Header/Header";
 import { useEffect, useState } from "react";
+import Footer from "@/Components/Footer/Footer";
 
 const BlogPage = ({ postData, posts }) => {
   const router = useRouter();
@@ -55,6 +56,7 @@ const BlogPage = ({ postData, posts }) => {
         relatedPosts={relatedPosts}
         onRelatedPostClick={handleRelatedPostClick}
       />
+      <Footer/>
     </div>
   );
 };
