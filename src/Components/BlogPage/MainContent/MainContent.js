@@ -18,16 +18,16 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
     <div className={styles.container}>
       <main className={styles.main}>
         <article className={styles.article}>
+          <div className={styles.imgWrapper}>
+            <Image
+              src={post.imageSrc || "/assets/blog3.png"}
+              alt={post.title}
+              width={600}
+              height={400}
+              className={styles.articleImage}
+            />
+          </div>
           <div className={styles.articleHeader}>
-            <div className={styles.imgWrapper}>
-              <Image
-                src={post.imageSrc || "/assets/blog3.png"}
-                alt={post.title}
-                width={600}
-                height={400}
-                className={styles.articleImage}
-              />
-            </div>
             <div className={styles.articleContentContainer}>
               <div className={styles.articleContent}>
                 <div className={styles.iconTextContainer}>
@@ -52,42 +52,45 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
             </div>
           </div>
         </article>
-
-        {relatedPosts.length > 0 && (
-          <aside className={styles.sidebar}>
-            {relatedPosts.map((relatedPost, index) => (
-              <div
-                className={styles.card}
-                key={index}
-                onClick={() => onRelatedPostClick(relatedPost, index)}
-              >
-                <div className={styles.imgWrapperSide}>
-                  <Image
-                    src={relatedPost.imageSrc || "/assets/blog4.jpg"}
-                    alt={relatedPost.title}
-                    width={250}
-                    height={150}
-                    className={styles.cardImage}
-                  />
-                </div>
-                <div className={styles.cardContent}>
-                  <div className={styles.info}>
-                    <h4 className={styles.relatedPostTag}>{relatedPost.tag}</h4>
-                    <span>{relatedPost.date}</span>
+        <div>
+          {relatedPosts.length > 0 && (
+            <aside className={styles.sidebar}>
+              {relatedPosts.map((relatedPost, index) => (
+                <div
+                  className={styles.card}
+                  key={index}
+                  onClick={() => onRelatedPostClick(relatedPost, index)}
+                >
+                  <div className={styles.imgWrapperSide}>
+                    <Image
+                      src={relatedPost.imageSrc || "/assets/blog4.jpg"}
+                      alt={relatedPost.title}
+                      width={250}
+                      height={150}
+                      className={styles.cardImage}
+                    />
                   </div>
-                  <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
-                  <p className={styles.description}>
-                    {truncateText(relatedPost.desc, 72)}
-                  </p>
-                  <div className={styles.iconContainerRight}>
-                    <IoBookmark className={styles.iconRight} />
-                    <FaShare className={styles.iconRight} />
+                  <div className={styles.cardContent}>
+                    <div className={styles.info}>
+                      <h4 className={styles.relatedPostTag}>
+                        {relatedPost.tag}
+                      </h4>
+                      <span>{relatedPost.date}</span>
+                    </div>
+                    <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
+                    <p className={styles.description}>
+                      {truncateText(relatedPost.desc, 72)}
+                    </p>
+                    <div className={styles.iconContainerRight}>
+                      <IoBookmark className={styles.iconRight} />
+                      <FaShare className={styles.iconRight} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </aside>
-        )}
+              ))}
+            </aside>
+          )}
+        </div>
       </main>
     </div>
   );

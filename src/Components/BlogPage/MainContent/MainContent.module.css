@@ -20,8 +20,7 @@
 
 .article {
   display: flex;
-  border-radius: 12px;
-  overflow: hidden;
+  flex-flow: column;
 }
 
 .articleHeader {
@@ -43,7 +42,6 @@
   position: relative;
   z-index: 1;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .articleContent {
@@ -202,10 +200,9 @@
   color: var(--hover-color);
 }
 
-@media (max-width: 1280px) {
-  .main {
-    flex-direction: column;
-    gap: 20px;
+@media (max-width: 1281px) {
+  .container {
+    padding: 40px 80px;
   }
 
   .sidebar {
@@ -218,6 +215,9 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding: 40px 50px;
+  }
   .articleContentContainer {
     margin-top: -40px;
   }
