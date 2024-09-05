@@ -1,9 +1,5 @@
 import { useRouter } from "next/router";
-import {
-  getAllPostIds,
-  getPostData,
-  getSortedPostsData,
-} from "@/lib/blogPost/post";
+import { getAllPostIds, getPostData, getSortedPostsData } from "@/lib/blogPost/post";
 import MainContent from "@/Components/BlogPage/MainContent/MainContent";
 import Navbar from "@/Components/Navbar/Navbar";
 import Header from "@/Components/BlogPage/Header/Header";
@@ -12,27 +8,53 @@ import { useEffect, useState } from "react";
 const BlogPage = ({ postData, posts }) => {
   const router = useRouter();
   const { tag } = router.query;
+  const [mainPost, setMainPost] = useState(postData);
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (tag) {
       const relatedPosts = posts
-        .filter((post) => post.tag === tag)
-        .slice(0, 10); // Get the first 10 related posts
-
+        .filter((post) => post.tag === tag && post.id !== mainPost.id)
+        .slice(0, 6);
       setRelatedPosts(relatedPosts);
     }
-  }, [tag, posts]);
-  let singleCategoryPost = posts.map((post) => {
-    return post.tag;
-  });
+  }, [tag, posts, mainPost.id]);
+
+  const handleRelatedPostClick = (clickedPost, index) => {
+    const updatedRelatedPosts = [...relatedPosts];
+
+    updatedRelatedPosts[index] = mainPost;
+
+    if (updatedRelatedPosts.length > 6) {
+      updatedRelatedPosts.pop();
+    }
+
+    setRelatedPosts(updatedRelatedPosts);
+    setMainPost(clickedPost);
+
+    router.push({
+      pathname: `/blog/${clickedPost.id}`,
+      query: { tag: clickedPost.tag },
+    });
+  };
+
+  let singleCategoryPost = posts.map((post) => post.tag);
   let categoryPostTag = Array.from(new Set(singleCategoryPost));
-  let permalink = `https://blog.skillslash.com/${postData.id}`;
+
   return (
     <div>
       <Navbar />
-      <Header tags={categoryPostTag} />
-      <MainContent post={postData} relatedPosts={relatedPosts} />
+      <Header
+        tags={categoryPostTag}
+        allPostData={posts}
+        setMainPost={setMainPost}
+        setRelatedPosts={setRelatedPosts}
+      />
+      <MainContent
+        post={mainPost}
+        relatedPosts={relatedPosts}
+        onRelatedPostClick={handleRelatedPostClick}
+      />
     </div>
   );
 };
@@ -48,7 +70,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const posts = getSortedPostsData();
-
   const postData = getPostData(params.id);
 
   return {
