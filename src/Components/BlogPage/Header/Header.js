@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import styles from "./Header.module.css";
 
-const Header = ({ tags }) => {
+const Header = ({ tags, allPostData, setMainPost, setRelatedPosts }) => {
   const router = useRouter();
   const { tag } = router.query;
 
@@ -22,22 +22,31 @@ const Header = ({ tags }) => {
     }
   }, [tag]);
 
-  const handleTagChange = (event) => {
-    const selectedValue = event.target.value;
+  const handleCategoryChange = (selectedValue) => {
     setSelectedTag(selectedValue);
 
-    router.push({
-      pathname: router.pathname,
-      query: { ...router.query, tag: selectedValue },
-    });
+    const filteredPosts = allPostData.filter(
+      (post) => post.tag === selectedValue
+    );
+
+    if (filteredPosts.length > 0) {
+      setMainPost(filteredPosts[0]);
+      setRelatedPosts(filteredPosts.slice(1, 4));
+
+      router.push({
+        pathname: `/blogPage/${filteredPosts[0].id}`,
+        query: { tag: selectedValue },
+      });
+    }
+  };
+
+  const handleTagChange = (event) => {
+    const selectedValue = event.target.value;
+    handleCategoryChange(selectedValue);
   };
 
   const handleNavItemClick = (item) => {
-    setSelectedTag(item);
-    router.push({
-      pathname: router.pathname,
-      query: { ...router.query, tag: item },
-    });
+    handleCategoryChange(item);
   };
 
   return (

@@ -5,43 +5,41 @@ import Navbar from "@/Components/Navbar/Navbar";
 import Header from "@/Components/BlogPage/Header/Header";
 import { useEffect, useState } from "react";
 
-const BlogPage = ({ post, relatedPosts, allPostData }) => {
+const BlogPage = ({ initialPost, initialRelatedPosts, allPostData }) => {
   const router = useRouter();
-  const { tag } = router.query;
+  const { id } = router.query;
 
-  const [mainPost, setMainPost] = useState(post);
-  const [filteredPosts, setFilteredPosts] = useState(relatedPosts);
+  const [mainPost, setMainPost] = useState(initialPost);
+  const [relatedPosts, setRelatedPosts] = useState(initialRelatedPosts);
 
   useEffect(() => {
-    if (tag) {
-      const postByTag = allPostData.find((p) => p.tag === tag);
-      if (postByTag) {
-        setMainPost(postByTag);
+    if (id) {
+      const selectedPost = allPostData.find((p) => p.id === id);
+      setMainPost(selectedPost);
+
+      if (selectedPost) {
+        const newRelatedPosts = allPostData
+          .filter((p) => p.tag === selectedPost.tag && p.id !== selectedPost.id)
+          .slice(0, 3);
+        setRelatedPosts(newRelatedPosts);
       }
-
-      const relatedPostsByTag = allPostData
-        .filter((p) => p.tag === tag && p.id !== postByTag?.id)
-        .slice(0, 3);
-      setFilteredPosts(relatedPostsByTag);
-    } else {
-      const relatedPostsByCategory = allPostData
-        .filter((p) => p.category === post.category && p.id !== post.id)
-        .slice(0, 3);
-      setFilteredPosts(relatedPostsByCategory);
     }
-  }, [tag, post, allPostData]);
+  }, [id, allPostData]);
 
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
+  if (!mainPost) return <div>Loading...</div>;
 
   const tags = [...new Set(allPostData.map((post) => post.tag))];
 
   return (
     <div>
       <Navbar />
-      <Header tags={tags} />
-      <MainContent post={mainPost} relatedPosts={filteredPosts} />
+      <Header
+        tags={tags}
+        allPostData={allPostData} 
+        setMainPost={setMainPost} 
+        setRelatedPosts={setRelatedPosts} 
+      />
+      <MainContent post={mainPost} relatedPosts={relatedPosts} />
     </div>
   );
 };
@@ -49,14 +47,15 @@ const BlogPage = ({ post, relatedPosts, allPostData }) => {
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
   const post = allPostsData.find((post) => post.id === params.id);
+
   const relatedPosts = allPostsData
-    .filter((p) => p.category === post.category && p.id !== post.id)
+    .filter((p) => p.tag === post.tag && p.id !== post.id)
     .slice(0, 3);
 
   return {
     props: {
-      post,
-      relatedPosts,
+      initialPost: post,
+      initialRelatedPosts: relatedPosts,
       allPostData: allPostsData,
     },
   };
@@ -71,7 +70,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 }
 
