@@ -14,8 +14,8 @@ const Card = ({ post }) => {
   return (
     <Link
       href={{
-        pathname: `/blogPage/${post?.id}`,
-        query: { tag: post?.tag },
+        pathname: `/blogPage/${post.id}`,
+        query: { tag: post.tag, category: post.category },
       }}
       className={styles.cardLink}
     >

@@ -54,41 +54,34 @@ const MainContent = ({ post, relatedPosts }) => {
             </div>
           </div>
         </article>
-        <aside className={styles.sidebar}>
-          {relatedPosts.map((relatedPost, index) => (
-            <div className={styles.card} key={index}>
-              <Link href={`/blogPage/${relatedPost.id}`}>
-                <div className={styles.imgWrapperSide}>
-                  <Image
-                    src={relatedPost.imageSrc || "/assets/blog4.jpg"}
-                    alt={relatedPost.title}
-                    width={250}
-                    height={150}
-                    className={styles.cardImage}
-                  />
-                </div>
-                <div className={styles.cardContent}>
-                  <div className={styles.info}>
-                    <h4 className={styles.relatedPostTag}>{relatedPost.tag}</h4>
-                    <span>{relatedPost.date}</span>
+        {relatedPosts.length > 0 && (
+          <aside className={styles.sidebar}>
+            {relatedPosts.map((relatedPost, index) => (
+              <div className={styles.card} key={index}>
+                <Link href={`/blogPage/${relatedPost.id}`}>
+                  <div className={styles.imgWrapperSide}>
+                    <Image
+                      src={relatedPost.imageSrc || "/assets/blog4.jpg"}
+                      alt={relatedPost.title}
+                      width={250}
+                      height={150}
+                      className={styles.cardImage}
+                    />
                   </div>
-                  <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
-
-                  <div className={styles.stats}>
-                    <div className={styles.textGroup}>
-                      <span className={styles.views}>{relatedPost.views}</span>
-                      <span className={styles.text}>People saw</span>
+                  <div className={styles.cardContent}>
+                    <div className={styles.info}>
+                      <h4 className={styles.relatedPostTag}>
+                        {relatedPost.tag}
+                      </h4>
+                      <span>{relatedPost.date}</span>
                     </div>
-                    <div className={styles.iconContainer}>
-                      <IoBookmark className={styles.icon} />
-                      <FaShare className={styles.icon} />
-                    </div>
+                    <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
                   </div>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </aside>
+                </Link>
+              </div>
+            ))}
+          </aside>
+        )}
       </main>
     </div>
   );
