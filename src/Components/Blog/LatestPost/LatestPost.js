@@ -15,7 +15,7 @@ const LatestPost = ({ posts }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h2>Latest posts...</h2>
+        <h2>Latest Posts...</h2>
         <p>
           Check out our content at a glance. Like what you see? Explore the
           guide to see more.
@@ -41,10 +41,9 @@ const LatestPost = ({ posts }) => {
                   />
                 </div>
               </div>
-
               <div className={styles.postDetails}>
                 <div className={styles.postContent}>
-                  <span className={styles.tag}>{posts[0].tag}</span>
+                  <span className={styles.MainTag}>{posts[0].tag}</span>
                   <span className={styles.date}>{posts[0].date}</span>
                 </div>
                 <h3>{posts[0].title}</h3>

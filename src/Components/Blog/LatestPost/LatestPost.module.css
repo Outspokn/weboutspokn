@@ -64,6 +64,18 @@
   margin-bottom: 10px;
 }
 
+.MainTag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
+}
+
 .date {
   font-size: 1rem;
   color: #666;
@@ -92,6 +104,7 @@
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
 .sidePost h4 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -127,10 +140,12 @@
 .sidePostContent {
   display: flex;
 }
+
 .sideImageLink {
-  color: inherit; /* Inherits the text color from its parent */
-  text-decoration: none; /* Removes underline */
+  color: inherit;
+  text-decoration: none;
 }
+
 .readTime {
   font-size: 0.8rem;
   color: #666;
