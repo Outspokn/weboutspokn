@@ -2,11 +2,9 @@
   display: flex;
   align-items: center;
   background-color: #f9fafb;
-  padding: 10px 20px;
+  padding: 10px 100px;
   margin: auto;
   margin-top: 4rem;
-  max-width: 85%;
-  border-bottom: 1px solid black;
 }
 
 .navContent {
@@ -21,11 +19,17 @@
 
 .dropdownSelect {
   padding: 8px;
+  cursor: pointer;
   border: 1px solid #e2e8f0;
   border-radius: 4px;
   font-size: 14px;
 }
-
+.dropdown option {
+  cursor: pointer;
+  border: 0 !important;
+  border-radius: 0 0 8px 8px !important;
+  outline: none !important;
+}
 .navItems {
   list-style: none;
   display: flex;

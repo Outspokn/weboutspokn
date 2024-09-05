@@ -127,7 +127,10 @@
 .sidePostContent {
   display: flex;
 }
-
+.sideImageLink {
+  color: inherit; /* Inherits the text color from its parent */
+  text-decoration: none; /* Removes underline */
+}
 .readTime {
   font-size: 0.8rem;
   color: #666;

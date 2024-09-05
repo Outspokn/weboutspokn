@@ -29,7 +29,7 @@ const Index = ({ allPostsData }) => {
     <div>
       <Navbar />
       <Header posts={allPostsData} onFilter={handleFilter} />
-      <Slider posts={allPostsData.slice(0, 3)} />
+      {/* <Slider posts={allPostsData.slice(0, 3)} />  */}
       <LatestPost
         posts={
           filteredPosts.length > 0 && filteredPosts.length <= 5

@@ -13,10 +13,12 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     const matterResult = matter(fileContents);
+    // console.log(matterResult, "checking content");
 
     return {
       id,
       ...matterResult.data,
+      body: matterResult.content,
     };
   });
 
@@ -37,6 +39,6 @@ export function getPostData(id) {
 export function getAllPostIds() {
   const allPosts = getSortedPostsData();
   return allPosts.map((post) => ({
-    id: post.id,
+    params: { id: post.id.toString() }, // Ensure 'id' is a string and nested under 'params'
   }));
 }
