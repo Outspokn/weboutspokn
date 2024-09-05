@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MainContent = ({ post, relatedPosts }) => {
+  console.log(post.body, "post");
+
   if (!post) return <p>Post not found!</p>;
 
   return (
@@ -39,14 +41,14 @@ const MainContent = ({ post, relatedPosts }) => {
                     <span className={styles.category}>{post.tag}</span>
                     <span className={styles.date}>{post.date}</span>
                   </div>
-
-                  <h1 className={styles.title}>{post.title}</h1>
+                  <article dangerouslySetInnerHTML={{ __html: post.body }} />
+                  {/* <h1 className={styles.title}>{post.title}</h1>
                   <p className={styles.text}>
                     <span className={styles.firstLetter}>
                       {post.desc?.charAt(0) || ""}
                     </span>
                     {post.desc?.slice(1) || "Content not available."}
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
