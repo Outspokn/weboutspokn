@@ -31,10 +31,9 @@ const Header = ({ tags, allPostData, setMainPost, setRelatedPosts }) => {
 
     if (filteredPosts.length > 0) {
       setMainPost(filteredPosts[0]);
-      setRelatedPosts(filteredPosts.slice(1, 4));
-
+      setRelatedPosts(filteredPosts.slice(1, 7));
       router.push({
-        pathname: `/blogPage/${filteredPosts[0].id}`,
+        pathname: `/blog/${filteredPosts[0].id}`,
         query: { tag: selectedValue },
       });
     }
