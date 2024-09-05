@@ -27,7 +27,7 @@ const LatestPost = ({ posts }) => {
             <Link
               href={{
                 pathname: `/blogPage/${posts[0].id}`,
-                query: { tag: posts[0].tag },
+                query: { tag: posts[0].tag, category: posts[0].category },
               }}
               className={styles.imageLink}
             >
