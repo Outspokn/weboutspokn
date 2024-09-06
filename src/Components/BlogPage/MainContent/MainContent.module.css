@@ -22,6 +22,17 @@
   flex-flow: column;
 }
 
+.iconTextContainer {
+  width: 100%;
+}
+
+.articleBody pre code {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
 .articleHeader {
   position: relative;
   height: 100%;
@@ -402,6 +413,10 @@
 @media (max-width: 481px) {
   .container {
     padding: 20px 20px;
+  }
+
+  .articleContentContainer {
+    width: 100%;
   }
 
   .category {

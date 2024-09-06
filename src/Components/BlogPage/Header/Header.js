@@ -38,7 +38,7 @@ const Header = ({ tags, allPostData, setMainPost, setRelatedPosts }) => {
       });
     }
   };
-  
+
   const handleTagChange = (event) => {
     const selectedValue = event.target.value;
     handleCategoryChange(selectedValue);
