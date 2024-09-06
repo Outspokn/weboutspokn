@@ -3,7 +3,6 @@ import styles from "./MainContent.module.css";
 import { IoBookmark } from "react-icons/io5";
 import { FaShare } from "react-icons/fa6";
 import Image from "next/image";
-import Link from "next/link";
 
 const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
   const truncateText = (text, limit) => {
@@ -57,17 +56,10 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
           {relatedPosts.length > 0 && (
             <aside className={styles.sidebar}>
               {relatedPosts.map((relatedPost, index) => (
-                 <Link
-                 href={{
-                   pathname: `/blog/${post.id}`,
-                   query: { tag: post.tag },
-                 }}
-                 className={styles.sideImageLink}
-               >
                 <div
                   className={styles.card}
                   key={index}
-                  // onClick={() => onRelatedPostClick(relatedPost, index)}
+                  onClick={() => onRelatedPostClick(relatedPost, index)}
                 >
                   <div className={styles.imgWrapperSide}>
                     <Image
@@ -95,9 +87,7 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
                     </div>
                   </div>
                 </div>
-                </Link>
               ))}
-              
             </aside>
           )}
         </div>

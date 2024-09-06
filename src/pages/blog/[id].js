@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { getAllPostIds, getPostData, getSortedPostsData } from "@/lib/blogPost/post";
+import { getAllPostIds, getPostData,getSortedPostsData } from "@/lib/blogPost/post";
 import MainContent from "@/Components/BlogPage/MainContent/MainContent";
 import Navbar from "@/Components/Navbar/Navbar";
 import Header from "@/Components/BlogPage/Header/Header";
@@ -52,11 +52,12 @@ const BlogPage = ({ postData, posts }) => {
         setRelatedPosts={setRelatedPosts}
       />
       <MainContent
+        key={mainPost.id}
         post={mainPost}
         relatedPosts={relatedPosts}
         onRelatedPostClick={handleRelatedPostClick}
       />
-      <Footer/>
+      <Footer />
     </div>
   );
 };
@@ -83,5 +84,3 @@ export async function getStaticProps({ params }) {
 }
 
 export default BlogPage;
-
-
