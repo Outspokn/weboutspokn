@@ -240,7 +240,10 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 961px) {
+  .container {
+    padding: 20px 20px;
+  }
   .main {
     display: flex;
     flex-direction: column;
@@ -252,7 +255,8 @@
   }
 
   .date {
-    font-size: 16px;
+    font-size: 14px;
+    margin-left: 8px;
   }
 
   .cardImage {
@@ -285,6 +289,7 @@
   .articleContent {
     margin-top: 10px;
     max-width: 100%;
+    padding: 20px 20px;
   }
 
   .sidebar {
@@ -292,14 +297,13 @@
   }
 
   .relatedTitle {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 15px;
     font-weight: 700;
   }
 
   .rightDescription {
-    color: #646464;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 4px;
   }
 
@@ -311,7 +315,8 @@
   }
 
   .info span {
-    font-size: 18px;
+    font-size: 14px;
+    margin-left: 12px;
   }
 
   .title {
@@ -321,11 +326,76 @@
   .articleBody h2 {
     font-size: 26px;
   }
+
+  .iconRight {
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+  }
+
+  .articleIcon {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+  }
 }
 
 @media (max-width: 641px) {
   .articleImage {
     height: 200px;
+  }
+
+  .category {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .articleBody h2 {
+    font-size: 22px;
+  }
+
+  .articleBody p {
+    margin-bottom: 8px;
+  }
+
+  .info h4 {
+    font-size: 16px;
+  }
+
+  .relatedTitle {
+    font-size: 22px;
+  }
+
+  .info span {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .rightDescription {
+    font-size: 16px;
+  }
+
+  .iconRight {
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+  }
+
+  .articleIcon {
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
   }
 }
 
@@ -334,14 +404,32 @@
     padding: 20px 20px;
   }
 
+  .category {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .info span {
+    font-size: 12px;
+    margin-left: 12px;
+  }
+
+  .info h4 {
+    font-size: 16px;
+  }
+
   .relatedTitle {
-    font-size: 20px;
-    margin-top: 15px;
+    font-size: 18px;
+    margin-top: 12px;
     font-weight: 700;
   }
 
   .rightDescription {
     color: #646464;
+    font-size: 14px;
   }
 
   .title {
