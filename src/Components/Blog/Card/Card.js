@@ -13,10 +13,11 @@ const Card = ({ post }) => {
 
   return (
     <Link
-      href={{
-        pathname: `/blog/${post.id}`,
-        query: { tag: post.tag, category: post.category },
-      }}
+      // href={{
+      //   pathname: `/blog/${post.id}`,
+      //   query: { tag: post.tag, category: post.category, imageSrc: post.headerImg },
+      // }}
+      href={`/blog/${post.id}`}
       className={styles.cardLink}
     >
       <div className={styles.card}>

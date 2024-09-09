@@ -24,10 +24,12 @@ const LatestPost = ({ posts }) => {
       <div className={styles.posts}>
         {posts[0] && (
           <Link
-            href={{
-              pathname: `/blog/${posts[0].id}`,
-              query: { tag: posts[0].tag },
-            }}
+            // href={{
+            //   pathname: `/blog/${posts[0].id}`,
+            //   query: { tag: posts[0].tag, imageSrc: posts[0].headerImg },
+            // }}
+
+            href={`/blog/${posts[0].id}`}
             className={styles.imageLink}
           >
             <div className={styles.mainPost}>
@@ -58,7 +60,8 @@ const LatestPost = ({ posts }) => {
               <Link
                 href={{
                   pathname: `/blog/${post.id}`,
-                  query: { tag: post.tag },
+                  // query: { tag: post.tag },
+                  // query: { tag: posts[0].tag, imageSrc: posts[0].headerImg || '/assets/default-image.jpg' },
                 }}
                 className={styles.sideImageLink}
               >
