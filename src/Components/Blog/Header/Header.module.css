@@ -78,7 +78,7 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .categoryButton {
