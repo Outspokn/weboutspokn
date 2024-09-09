@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
-import { getAllPostIds, getPostData,getSortedPostsData } from "@/lib/blogPost/post";
+import { getAllPostIds, getPostData, getSortedPostsData } from "@/lib/blogPost/post";
 import MainContent from "@/Components/BlogPage/MainContent/MainContent";
 import Navbar from "@/Components/Navbar/Navbar";
-import Header from "@/Components/BlogPage/Header/Header";
 import { useEffect, useState } from "react";
 import Footer from "@/Components/Footer/Footer";
+import FaqSection from "@/Components/Blog/FaqSection/FaqSection";
 
 const BlogPage = ({ postData, posts }) => {
   const router = useRouter();
@@ -45,18 +45,19 @@ const BlogPage = ({ postData, posts }) => {
   return (
     <div>
       <Navbar />
-      <Header
+      {/* <Header
         tags={categoryPostTag}
         allPostData={posts}
         setMainPost={setMainPost}
         setRelatedPosts={setRelatedPosts}
-      />
+      /> */}
       <MainContent
         key={mainPost.id}
         post={mainPost}
         relatedPosts={relatedPosts}
         onRelatedPostClick={handleRelatedPostClick}
       />
+      <FaqSection />
       <Footer />
     </div>
   );

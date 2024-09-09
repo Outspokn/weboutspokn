@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 20px 100px;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .main {
@@ -117,6 +117,28 @@
 }
 
 .icon:hover {
+  color: var(--hover-color);
+}
+
+.articleFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.iconFooter {
+  cursor: pointer;
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.iconFooter:hover {
   color: var(--hover-color);
 }
 

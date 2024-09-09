@@ -20,7 +20,8 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
             <Image
-              src={post.imageSrc || "/assets/blog3.png"}
+              // src={post.headerImg || "/assets/blog3.png"}
+              src={post.headerImg || "/assets/blog3.png"}
               alt={post.title}
               width={600}
               height={400}
@@ -47,12 +48,16 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
                     className={styles.articleBody}
                     dangerouslySetInnerHTML={{ __html: post.body }}
                   />
+                  <div className={styles.articleFooter}>
+                    <IoBookmark className={styles.iconFooter} />
+                    <FaShare className={styles.iconFooter} />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </article>
-        <div>
+        {/* <div>
           {relatedPosts.length > 0 && (
             <aside className={styles.sidebar}>
               {relatedPosts.map((relatedPost, index) => (
@@ -90,7 +95,7 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
               ))}
             </aside>
           )}
-        </div>
+        </div> */}
       </main>
     </div>
   );
