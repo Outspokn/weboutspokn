@@ -3,13 +3,47 @@
   justify-content: center;
   padding: 20px 100px;
   margin-top: 4rem;
+  position: relative;
+}
+
+.sidebar {
+  width: 25%;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: red;
+  height: 50%;
+  top: 0;
+  left: 0;
+  margin-right: 5rem;
 }
 
 .main {
   display: grid;
   grid-template-columns: 70% 24%;
   gap: 40px;
-  width: 100%;
+  width: 80%;
+  margin-left: 1rem;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  scrollbar-width: none;
+}
+
+.tocItem {
+  cursor: pointer;
+  padding: 5px 0;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.tocItem:hover {
+  color: var(--hover-color);
 }
 
 .imgWrapper {
@@ -22,6 +56,13 @@
   flex-flow: column;
 }
 
+.tocList {
+  list-style: none;
+}
+
+.sidebar {
+  margin-right: 30px;
+}
 .iconTextContainer {
   width: 100%;
 }
@@ -470,11 +511,11 @@
   }
 
   .title {
-    font-size: 26px;
+    font-size: 19px;
   }
 
   .articleBody h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .cardImage {

@@ -1,26 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./MainContent.module.css";
 import { IoBookmark } from "react-icons/io5";
 import { FaShare } from "react-icons/fa6";
 import Image from "next/image";
 
-const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
-  const truncateText = (text, limit) => {
-    if (text.length > limit) {
-      return text.slice(0, limit) + "...";
-    }
-    return text;
+const MainContent = ({ post }) => {
+  const contentRefs = useRef([]);
+
+  const scrollToSection = (index) => {
+    contentRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   if (!post) return <p>Post not found!</p>;
 
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <div className={styles.sidebar}>
+        <h3>Table of Content</h3>
+        <ul className={styles.tocList}>
+          {post?.table?.map((item, index) => (
+            <li
+              key={index}
+              className={styles.tocItem}
+              onClick={() => scrollToSection(index)}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.main}>
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
             <Image
-              // src={post.headerImg || "/assets/blog3.png"}
               src={post.headerImg || "/assets/blog3.png"}
               alt={post.title}
               width={600}
@@ -44,10 +59,22 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
                   </div>
                   <h1 className={styles.title}>{post.title}</h1>
                   <p className={styles.blogDesc}>{post.desc}</p>
+
                   <article
                     className={styles.articleBody}
                     dangerouslySetInnerHTML={{ __html: post.body }}
+                    ref={(el) => (contentRefs.current[0] = el)}
                   />
+
+                  {post.sections?.map((section, index) => (
+                    <article
+                      key={index}
+                      className={styles.articleBody}
+                      dangerouslySetInnerHTML={{ __html: section.body }}
+                      ref={(el) => (contentRefs.current[index + 1] = el)}
+                    />
+                  ))}
+
                   <div className={styles.articleFooter}>
                     <IoBookmark className={styles.iconFooter} />
                     <FaShare className={styles.iconFooter} />
@@ -57,46 +84,7 @@ const MainContent = ({ post, relatedPosts, onRelatedPostClick }) => {
             </div>
           </div>
         </article>
-        {/* <div>
-          {relatedPosts.length > 0 && (
-            <aside className={styles.sidebar}>
-              {relatedPosts.map((relatedPost, index) => (
-                <div
-                  className={styles.card}
-                  key={index}
-                  onClick={() => onRelatedPostClick(relatedPost, index)}
-                >
-                  <div className={styles.imgWrapperSide}>
-                    <Image
-                      src={relatedPost.imageSrc || "/assets/blog4.jpg"}
-                      alt={relatedPost.title}
-                      width={250}
-                      height={150}
-                      className={styles.cardImage}
-                    />
-                  </div>
-                  <div className={styles.cardContent}>
-                    <div className={styles.info}>
-                      <h4 className={styles.relatedPostTag}>
-                        {relatedPost.tag}
-                      </h4>
-                      <span>{relatedPost.date}</span>
-                    </div>
-                    <h4 className={styles.relatedTitle}>{relatedPost.title}</h4>
-                    <p className={styles.rightDescription}>
-                      {truncateText(relatedPost.desc, 72)}
-                    </p>
-                    <div className={styles.iconContainerRight}>
-                      <IoBookmark className={styles.iconRight} />
-                      <FaShare className={styles.iconRight} />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </aside>
-          )}
-        </div> */}
-      </main>
+      </div>
     </div>
   );
 };

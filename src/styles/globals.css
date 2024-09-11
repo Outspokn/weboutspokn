@@ -19,6 +19,12 @@
   --small-card-border-radius: 16px;
 }
 
+/* styles/globals.css */
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;
