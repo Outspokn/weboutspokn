@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
@@ -15,32 +16,41 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
     const html = marked(matterResult.content);
 
+    // Extract headings dynamically for ToC
+    const headings = extractHeadings(matterResult.content);
+
     return {
       id,
       ...matterResult.data,
       body: html,
+      table: headings,
     };
   });
 
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return -1;
-    } else {
-      return 1;
-    }
-  });
+  return allPostsData.sort((a, b) => (a.date < b.date ? -1 : 1));
+}
+
+function extractHeadings(markdownContent) {
+  const headingRegex = /##\s+(.*)/g;
+  const headings = [];
+  let match;
+
+  while ((match = headingRegex.exec(markdownContent)) !== null) {
+    headings.push(match[1]);
+  }
+
+  return headings;
 }
 
 export function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
-  // Use gray-matter to parse the post metadata section
   const { data, content } = matter(fileContents);
-
   const html = marked(content);
 
-  // Combine the data with the id
+  const headings = extractHeadings(content);
+
   return {
     id,
     title: data.title,
@@ -55,6 +65,7 @@ export function getPostData(id) {
     table: data.tableData,
     avatar: data.avatar,
     body: html,
+    // table: headings,
   };
 }
 

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "./MainContent.module.css";
 import { IoBookmark } from "react-icons/io5";
 import { FaShare } from "react-icons/fa6";
@@ -13,12 +13,16 @@ const MainContent = ({ post }) => {
     });
   };
 
+  useEffect(() => {
+    contentRefs.current = document.querySelectorAll("h2");
+  }, [post]);
+
   if (!post) return <p>Post not found!</p>;
 
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
-        <h3>Table of Content</h3>
+        <h3>Table of Contents</h3>
         <ul className={styles.tocList}>
           {post?.table?.map((item, index) => (
             <li
@@ -31,7 +35,6 @@ const MainContent = ({ post }) => {
           ))}
         </ul>
       </div>
-
       <div className={styles.main}>
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
@@ -48,7 +51,7 @@ const MainContent = ({ post }) => {
               <div className={styles.articleContent}>
                 <div className={styles.iconTextContainer}>
                   <div className={styles.articleTxt}>
-                    <div>
+                    <div className={styles.articleInfo}>
                       <span className={styles.category}>{post.tag}</span>
                       <span className={styles.date}>{post.date}</span>
                     </div>
@@ -59,22 +62,10 @@ const MainContent = ({ post }) => {
                   </div>
                   <h1 className={styles.title}>{post.title}</h1>
                   <p className={styles.blogDesc}>{post.desc}</p>
-
-                  <article
+                  <div
                     className={styles.articleBody}
                     dangerouslySetInnerHTML={{ __html: post.body }}
-                    ref={(el) => (contentRefs.current[0] = el)}
                   />
-
-                  {post.sections?.map((section, index) => (
-                    <article
-                      key={index}
-                      className={styles.articleBody}
-                      dangerouslySetInnerHTML={{ __html: section.body }}
-                      ref={(el) => (contentRefs.current[index + 1] = el)}
-                    />
-                  ))}
-
                   <div className={styles.articleFooter}>
                     <IoBookmark className={styles.iconFooter} />
                     <FaShare className={styles.iconFooter} />
