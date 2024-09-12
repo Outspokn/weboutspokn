@@ -6,11 +6,19 @@ import Image from "next/image";
 
 const MainContent = ({ post }) => {
   const contentRefs = useRef([]);
+  const articleRef = useRef(null);
 
   const scrollToSection = (index) => {
-    contentRefs.current[index]?.scrollIntoView({
-      behavior: "smooth",
-    });
+    const element = contentRefs.current[index + 1];
+    const articleElement = articleRef.current;
+
+    if (element && articleElement) {
+      articleElement.scrollTo({
+        top:
+          articleElement.scrollTop + element.getBoundingClientRect().top - 90,
+        behavior: "smooth",
+      });
+    }
   };
 
   useEffect(() => {
@@ -35,7 +43,7 @@ const MainContent = ({ post }) => {
           ))}
         </ul>
       </div>
-      <div className={styles.main}>
+      <div className={styles.main} ref={articleRef}>
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
             <Image
@@ -62,10 +70,12 @@ const MainContent = ({ post }) => {
                   </div>
                   <h1 className={styles.title}>{post.title}</h1>
                   <p className={styles.blogDesc}>{post.desc}</p>
-                  <div
-                    className={styles.articleBody}
-                    dangerouslySetInnerHTML={{ __html: post.body }}
-                  />
+                  <div className={styles.articleContentWrapper}>
+                    <div
+                      className={styles.articleBody}
+                      dangerouslySetInnerHTML={{ __html: post.body }}
+                    />
+                  </div>
                   <div className={styles.articleFooter}>
                     <IoBookmark className={styles.iconFooter} />
                     <FaShare className={styles.iconFooter} />

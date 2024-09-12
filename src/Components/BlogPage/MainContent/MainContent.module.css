@@ -92,6 +92,15 @@
   height: 100%;
 }
 
+.articleContentWrapper {
+  position: relative;
+}
+
+.articleBody {
+ 
+  scroll-margin-top: 80px;
+}
+
 .articleContent {
   padding: 60px 40px;
   display: flex;
