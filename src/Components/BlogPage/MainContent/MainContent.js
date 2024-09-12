@@ -14,7 +14,7 @@ const MainContent = ({ post }) => {
   };
 
   useEffect(() => {
-    contentRefs.current = document.querySelectorAll("h2");
+    contentRefs.current = document.querySelectorAll("h2,h3");
   }, [post]);
 
   if (!post) return <p>Post not found!</p>;
