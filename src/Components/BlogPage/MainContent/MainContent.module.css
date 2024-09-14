@@ -102,7 +102,7 @@
 }
 
 .articleContent {
-  padding: 60px 40px;
+  padding: 30px 40px;
   display: flex;
   align-items: start;
   width: 95%;
@@ -149,7 +149,30 @@
   height: 25px;
   padding: 5px;
   border-radius: 50%;
-  border: 1px solid black;
+}
+
+.articleIcon.meta {
+  background-color: #1877f2;
+  color: white;
+}
+
+.articleIcon.linkedin {
+  background-color: #0a66c2;
+  color: white;
+}
+
+.articleIcon.twitter {
+  background-color: black;
+  color: white;
+}
+
+.articleIcon.whatsapp {
+  background-color: #25d366;
+  color: white;
+}
+
+.articleIcon:hover {
+  transform: scale(1.1);
 }
 
 .articleBody h2 {
@@ -301,7 +324,7 @@
   }
 
   .tocItem {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .articleContentContainer {
@@ -309,7 +332,7 @@
   }
 
   .articleContent {
-    padding: 15px;
+    padding: 16px;
     bottom: -150px;
     max-width: 90%;
   }
@@ -431,12 +454,16 @@
     height: 200px;
   }
 
+  .main {
+    margin-left: 0px;
+  }
+
   .category {
     font-size: 16px;
   }
 
   .tocItem {
-    font-size: 16px;
+    font-size: 14px;
   }
   .date {
     font-size: 14px;
@@ -483,6 +510,10 @@
     width: 25px;
     height: 25px;
     padding: 5px;
+  }
+
+  .articleContent {
+    padding: 18px;
   }
 
   .articleInfo {

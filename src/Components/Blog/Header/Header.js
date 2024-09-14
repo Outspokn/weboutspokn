@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import styles from "./Header.module.css";
-import { FaYoutube } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaMeta, FaXTwitter } from "react-icons/fa6";
+import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 
 const Header = ({ posts, onFilter }) => {
@@ -66,12 +66,20 @@ const Header = ({ posts, onFilter }) => {
           <h1 className={styles.title}>Discover Nice Articles Here</h1>
           <div className={styles.socialIcons}>
             <Link
-              href="https://twitter.com/skillslash"
+              href="https://www.facebook.com/SkillSlash-100623872122442"
               target="_blank"
               aria-label="Go to the Twitter Page of skillslash"
-              className={`${styles.icon} ${styles.twitter}`}
+              className={`${styles.icon} ${styles.meta}`}
             >
-              <FaXTwitter className={styles.FIcon} />
+              <FaMeta className={styles.FIcon} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/skillslash_Academy/"
+              target="_blank"
+              aria-label="Go to the Twitter Page of skillslash"
+              className={`${styles.icon} ${styles.instagram}`}
+            >
+              <FaInstagram className={styles.FIcon} />
             </Link>
             <Link
               href="https://www.youtube.com/c/Skillslash"
@@ -80,6 +88,22 @@ const Header = ({ posts, onFilter }) => {
               className={`${styles.icon} ${styles.youtube}`}
             >
               <FaYoutube className={styles.FIcon} />
+            </Link>
+            <Link
+              href="https://twitter.com/skillslash"
+              target="_blank"
+              aria-label="Go to the Twitter Page of skillslash"
+              className={`${styles.icon} ${styles.twitter}`}
+            >
+              <FaXTwitter className={styles.FIcon} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/skillslash"
+              target="_blank"
+              aria-label="Go to the Twitter Page of skillslash"
+              className={`${styles.icon} ${styles.linkedin}`}
+            >
+              <FaLinkedinIn className={styles.FIcon} />
             </Link>
           </div>
         </div>

@@ -111,27 +111,46 @@
 }
 
 .icon.twitter {
-  background-color: #e9f2f9;
-  color: #1da1f2;
+  background-color: black;
+  color: white;
 }
 
 .icon.youtube {
-  background-color: #f9e9e9;
-  color: #ff0000;
+  background-color: #ff0000;
+  color: white;
+}
+
+.icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #fd1d1d,
+    #f77737,
+    #e1306c,
+    #833ab4,
+    #405de6
+  );
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.icon.linkedin {
+  background-color: #0a66c2;
+  color: white;
 }
 
 .icon:hover {
   transform: scale(1.1);
 }
 
-.icon.twitter:hover {
-  background-color: #1da1f2;
-  color: #fff;
-}
-
 .icon.youtube:hover {
   background-color: #ff0000;
   color: #fff;
+}
+
+.icon.meta {
+  background-color: #1877f2;
+  color: white;
 }
 
 @media (max-width: 1280px) {

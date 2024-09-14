@@ -1,8 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import styles from "./MainContent.module.css";
-import { IoBookmark } from "react-icons/io5";
-import { FaShare } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io5";
 import Image from "next/image";
+import { FaMeta, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const MainContent = ({ post }) => {
   const contentRefs = useRef([]);
@@ -15,7 +16,7 @@ const MainContent = ({ post }) => {
     if (element && articleElement) {
       articleElement.scrollTo({
         top:
-          articleElement.scrollTop + element.getBoundingClientRect().top - 90,
+          articleElement.scrollTop + element.getBoundingClientRect().top - 80,
         behavior: "smooth",
       });
     }
@@ -64,8 +65,18 @@ const MainContent = ({ post }) => {
                       <span className={styles.date}>{post.date}</span>
                     </div>
                     <div className={styles.articleIconContainer}>
-                      <IoBookmark className={styles.articleIcon} />
-                      <FaShare className={styles.articleIcon} />
+                      <FaMeta
+                        className={`${styles.articleIcon} ${styles.meta}`}
+                      />
+                      <IoLogoWhatsapp
+                        className={`${styles.articleIcon} ${styles.whatsapp}`}
+                      />
+                      <FaXTwitter
+                        className={`${styles.articleIcon} ${styles.twitter}`}
+                      />
+                      <FaLinkedinIn
+                        className={`${styles.articleIcon} ${styles.linkedin}`}
+                      />
                     </div>
                   </div>
                   <h1 className={styles.title}>{post.title}</h1>
@@ -77,8 +88,18 @@ const MainContent = ({ post }) => {
                     />
                   </div>
                   <div className={styles.articleFooter}>
-                    <IoBookmark className={styles.iconFooter} />
-                    <FaShare className={styles.iconFooter} />
+                    <FaMeta
+                      className={`${styles.articleIcon} ${styles.meta}`}
+                    />
+                    <IoLogoWhatsapp
+                      className={`${styles.articleIcon} ${styles.whatsapp}`}
+                    />
+                    <FaXTwitter
+                      className={`${styles.articleIcon} ${styles.twitter}`}
+                    />
+                    <FaLinkedinIn
+                      className={`${styles.articleIcon} ${styles.linkedin}`}
+                    />
                   </div>
                 </div>
               </div>
