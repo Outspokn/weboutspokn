@@ -30,13 +30,28 @@ export function getSortedPostsData() {
   return allPostsData.sort((a, b) => (a.date < b.date ? -1 : 1));
 }
 
+// function extractHeadings(markdownContent) {
+//   const headingRegex = /##\s+(.*)/g;
+//   const headings = [];
+//   let match;
+
+//   while ((match = headingRegex.exec(markdownContent)) !== null) {
+//     headings.push(match[1]);
+//   }
+
+//   return headings;
+// }
+
 function extractHeadings(markdownContent) {
-  const headingRegex = /##\s+(.*)/g;
+  // Regex to match h2 and h3 headings
+  const headingRegex = /^(##|###)\s+(.*)$/gm;
   const headings = [];
   let match;
 
   while ((match = headingRegex.exec(markdownContent)) !== null) {
-    headings.push(match[1]);
+    const level = match[1].length; // 2 for h2, 3 for h3
+    const text = match[2];
+    headings.push({ level, text });
   }
 
   return headings;
