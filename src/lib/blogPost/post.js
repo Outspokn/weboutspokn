@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { gfmHeadingId } from 'marked-gfm-heading-id';
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -14,16 +15,17 @@ export function getSortedPostsData() {
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     const matterResult = matter(fileContents);
+    marked.use(gfmHeadingId());
     const html = marked(matterResult.content);
 
     // Extract headings dynamically for ToC
-    const headings = extractHeadings(matterResult.content);
+    // const headings = extractHeadings(matterResult.content);
 
     return {
       id,
       ...matterResult.data,
       body: html,
-      table: headings,
+      // table: headings,
     };
   });
 
@@ -42,29 +44,30 @@ export function getSortedPostsData() {
 //   return headings;
 // }
 
-function extractHeadings(markdownContent) {
-  // Regex to match h2 and h3 headings
-  const headingRegex = /^(##|###)\s+(.*)$/gm;
-  const headings = [];
-  let match;
+// function extractHeadings(markdownContent) {
+//   // Regex to match h2 and h3 headings
+//   const headingRegex = /^(##|###)\s+(.*)$/gm;
+//   const headings = [];
+//   let match;
 
-  while ((match = headingRegex.exec(markdownContent)) !== null) {
-    const level = match[1].length; // 2 for h2, 3 for h3
-    const text = match[2];
-    headings.push({ level, text });
-  }
+//   while ((match = headingRegex.exec(markdownContent)) !== null) {
+//     const level = match[1].length; // 2 for h2, 3 for h3
+//     const text = match[2];
+//     headings.push({ level, text });
+//   }
 
-  return headings;
-}
+//   return headings;
+// }
 
 export function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   const { data, content } = matter(fileContents);
+  marked.use(gfmHeadingId());
   const html = marked(content);
 
-  const headings = extractHeadings(content);
+  // const headings = extractHeadings(content);
 
   return {
     id,
