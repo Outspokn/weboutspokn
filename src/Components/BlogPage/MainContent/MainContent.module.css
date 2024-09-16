@@ -6,17 +6,17 @@
   position: relative;
 }
 
-.sideContainer {
+/* .sideContainer {
   display: flex;
   height: 100%;
-}
+} */
 
 .sidebar {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  /* height: 50%; */
-  top: 70px;
+  height: 50%;
+  top: 50px;
   left: 0;
   gap: 30px;
   flex: 1;
@@ -31,7 +31,7 @@
   gap: 40px;
   width: 80%;
   margin-left: 1rem;
-  /* height: 100vh; */
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   scrollbar-width: none;
@@ -103,7 +103,8 @@
 }
 
 .articleBody {
-  scroll-margin-top: 80px;
+  padding: 20px 0;
+  scroll-margin-top: 100px;
 }
 
 .articleContent {
