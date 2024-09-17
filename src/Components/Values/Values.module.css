@@ -4,6 +4,7 @@
   gap: 100px;
   padding: 80px 100px;
 }
+
 .valuesWrapperInverted {
   display: grid;
   grid-template-columns: 40% 45%;
@@ -11,6 +12,16 @@
   background-color: var(--background-color-light);
   padding: 40px 100px 40px 100px;
 }
+@media (min-width: 1650px) {
+  .valuesWrapper {
+    padding: 80px 300px;
+  }
+
+  .valuesWrapperInverted {
+    padding: 40px 300px;
+  }
+}
+
 .leftValue,
 .leftValueInverted {
   display: flex;
@@ -80,6 +91,8 @@
     flex-flow: column-reverse;
     gap: 30px;
     padding: 50px 20px;
+    text-align: center;
+  
   }
   .valuesWrapperInverted {
     flex-flow: column;
@@ -97,8 +110,10 @@
   }
   .rightValue {
     padding: 0 10px;
+    align-items: center;
   }
   .valueHeading {
     font-size: var(--h2-font-size-mobile);
+        width: 99%;
   }
 }

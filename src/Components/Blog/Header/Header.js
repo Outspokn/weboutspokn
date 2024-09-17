@@ -66,41 +66,41 @@ const Header = ({ posts, onFilter }) => {
           <h1 className={styles.title}>Discover Nice Articles Here</h1>
           <div className={styles.socialIcons}>
             <Link
-              href="https://www.facebook.com/SkillSlash-100623872122442"
+              href="https://www.facebook.com/profile.php?id=61561944704188"
               target="_blank"
-              aria-label="Go to the Twitter Page of skillslash"
+              aria-label="Go to the Twitter Page of Outspokn"
               className={`${styles.icon} ${styles.meta}`}
             >
               <FaMeta className={styles.FIcon} />
             </Link>
             <Link
-              href="https://www.instagram.com/skillslash_Academy/"
+              href="https://www.instagram.com/outspokn.ai"
               target="_blank"
-              aria-label="Go to the Twitter Page of skillslash"
+              aria-label="Go to the Twitter Page of Outspokn"
               className={`${styles.icon} ${styles.instagram}`}
             >
               <FaInstagram className={styles.FIcon} />
             </Link>
             <Link
-              href="https://www.youtube.com/c/Skillslash"
+              href="https://www.youtube.com/@Outspokn_app"
               target="_blank"
-              aria-label="Go to the Youtube of skillslash"
+              aria-label="Go to the Youtube of Outspokn"
               className={`${styles.icon} ${styles.youtube}`}
             >
               <FaYoutube className={styles.FIcon} />
             </Link>
             <Link
-              href="https://twitter.com/skillslash"
+              href= "https://x.com/Outspokn_app"
               target="_blank"
-              aria-label="Go to the Twitter Page of skillslash"
+              aria-label="Go to the Twitter Page of Outspokn"
               className={`${styles.icon} ${styles.twitter}`}
             >
               <FaXTwitter className={styles.FIcon} />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/skillslash"
+              href="https://www.linkedin.com/company/outspokn/"
               target="_blank"
-              aria-label="Go to the Twitter Page of skillslash"
+              aria-label="Go to the Twitter Page of Outspokn"
               className={`${styles.icon} ${styles.linkedin}`}
             >
               <FaLinkedinIn className={styles.FIcon} />

@@ -16,7 +16,7 @@ const Footer = () => {
             href="/"
             className={styles.logo}
             style={{ cursor: "pointer" }}
-            aria-label="Go to the Home Page of skillslash"
+            aria-label="Go to the Home Page of Outspokn"
           >
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/Outspokn-logo-new.png"
@@ -33,37 +33,37 @@ const Footer = () => {
             <h5>Follow us!</h5>
             <div className={styles.sIcon}>
               <a
-                href="https://www.facebook.com/SkillSlash-100623872122442"
+                href="https://www.facebook.com/profile.php?id=61561944704188"
                 target="_blank"
-                aria-label="Go to the facebook page of skillslash"
+                aria-label="Go to the facebook page of Outspokn"
               >
                 <FaMeta className={styles.FIcon} />
               </a>
               <a
-                href="https://www.instagram.com/skillslash_Academy/"
+                href="https://www.instagram.com/outspokn.ai"
                 target="_blank"
-                aria-label="Go to the Instagram of skillslash"
+                aria-label="Go to the Instagram of Outspokn"
               >
                 <FaInstagram className={styles.FIcon} />
               </a>
               <a
-                href="https://www.youtube.com/c/Skillslash"
+                href="https://www.youtube.com/@Outspokn_app"
                 target="_blank"
-                aria-label="Go to the Youtube of skillslash"
+                aria-label="Go to the Youtube of Outspokn"
               >
                 <FaYoutube className={styles.FIcon} />
               </a>
               <a
-                href="https://twitter.com/skillslash"
+                href="https://x.com/Outspokn_app"
                 target="_blank"
-                aria-label="Go to the Twitter Page of skillslash"
+                aria-label="Go to the Twitter Page of Outspokn"
               >
                 <FaXTwitter className={styles.FIcon} />
               </a>
               <a
-                href="https://www.linkedin.com/company/skillslash"
+                href="https://www.linkedin.com/company/outspokn/"
                 target="_blank"
-                aria-label="Go to the Linkedin Page of skillslash"
+                aria-label="Go to the Linkedin Page of Outspokn"
               >
                 <FaLinkedinIn className={styles.FIcon} />
               </a>
@@ -104,6 +104,13 @@ const Footer = () => {
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
               alt="Download from play store"
+              fill
+            />
+          </div>
+          <div className={styles.googlePlayStore}>
+            <Image
+              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/appStore_new.png"
+              alt="Download from app store"
               fill
             />
           </div>

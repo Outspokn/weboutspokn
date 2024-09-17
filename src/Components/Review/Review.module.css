@@ -4,6 +4,11 @@
   gap: 30px;
   padding: 40px 100px;
 }
+@media (min-width: 1650px) {
+  .reviewWrapper {
+    padding: 40px 300px;
+  }
+}
 .sliderParent {
   padding-bottom: 40px;
 }
@@ -57,4 +62,8 @@
   .reviewWrapper {
     padding: 20px;
   }
+    .reviewHeading {
+      color: var(--primary-color);
+      text-align: center;
+    }
 }
