@@ -58,6 +58,7 @@ const LatestPost = ({ posts }) => {
           <div className={styles.sidePosts}>
             {posts.slice(1).map((post, index) => (
               <Link
+                key={index}
                 href={{
                   pathname: `/blog/${post.id}`,
                   // query: { tag: post.tag },

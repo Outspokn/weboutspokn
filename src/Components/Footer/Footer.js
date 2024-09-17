@@ -32,41 +32,41 @@ const Footer = () => {
           <div className={styles.followRow}>
             <h5>Follow us!</h5>
             <div className={styles.sIcon}>
-              <a
+             <Link
                 href="https://www.facebook.com/profile.php?id=61561944704188"
                 target="_blank"
                 aria-label="Go to the facebook page of Outspokn"
               >
                 <FaMeta className={styles.FIcon} />
-              </a>
-              <a
+             </Link>
+             <Link
                 href="https://www.instagram.com/outspokn.ai"
                 target="_blank"
                 aria-label="Go to the Instagram of Outspokn"
               >
                 <FaInstagram className={styles.FIcon} />
-              </a>
-              <a
+             </Link>
+             <Link
                 href="https://www.youtube.com/@Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Youtube of Outspokn"
               >
                 <FaYoutube className={styles.FIcon} />
-              </a>
-              <a
+             </Link>
+             <Link
                 href="https://x.com/Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Twitter Page of Outspokn"
               >
                 <FaXTwitter className={styles.FIcon} />
-              </a>
-              <a
+             </Link>
+             <Link
                 href="https://www.linkedin.com/company/outspokn/"
                 target="_blank"
                 aria-label="Go to the Linkedin Page of Outspokn"
               >
                 <FaLinkedinIn className={styles.FIcon} />
-              </a>
+             </Link>
             </div>
           </div>
         </div>
@@ -78,9 +78,9 @@ const Footer = () => {
           <Link href="/About">
             <p>About</p>
           </Link>
-          <a href="/blog">
+         <Link href="/blog">
             <p>Blog</p>
-          </a>
+         </Link>
           <Link href="/Contact-us">
             <p>Contact</p>
           </Link>
