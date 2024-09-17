@@ -1,0 +1,154 @@
+---
+title: Discover the Concept Behind Every Intermediate Array Elements | Skillslash
+desc: "This article discussed arrays and elements of arrays and then solved the problem ofprinting intermediate integers between one element and the next element an integer array"
+slug: home
+date: "Feb 1, 2023"
+tag: "Data Science"
+author: "Skillslash"
+position: "Seo Writer"
+readTime: "4 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-02.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Discover-the-Concept-Behind-Every-Intermediate-Array-Elements.png"
+h1: "Discover the Concept Behind Every Intermediate Array Elements"
+id: "discover-the-concept-behind-every-intermediate-array-elements"
+tableData:
+  [
+    Introduction,
+    About hashing methods,
+    What's the concept behind Fibonacci Hashing?,
+    Well what's Fibonacci Hashing?,
+    Problems faced by Integer Modulo method,
+    Why Fibonacci Hashing?,
+    How Fibonacci Hashing solves the problems?,
+    Final Words,
+  ]
+---
+
+## Introduction
+
+The concept of Data Structures and Algorithms must not be new to you! But there is no ending to knowing more about it. In any product based company interview including the big MNCs and F(M)AANG companies have their main interest in interviewing your strength in Data Structures. This is because it forms the crux and base of your ability in problem solving and application of your knowledge in Computer Science. Be it as simple as the arrays concept, you must be practicing problems from everything to get the job of your dreams where you can enjoy the perks of being a Full-Stack Developer. Before we jump into discussing the problem of **printing intermediate integers** we must know about some of the basic terms like the arrays concept, **array elements** and then the algorithm to solve the **intermediate integer** problem.
+
+This article mainly discusses the method for **printing intermediate integers between one element and the next element of an array**. So, starting with the first question, what is an array? An array is a group of variables, called its elements, of the same data type. These elements are stored in contiguous memory locations. The elements of an array are indexed from 0 onwards. An array can be either a single dimensional array or a multidimensional array depending upon the size you mention while declaring the array.
+
+**Problem**
+
+Take input from the user to set the integers into an array. The intermediate integer of each pair of successive elements is supposed to be printed as the final output.
+
+**Input**
+
+The first line of input must be the size of the array, i.e. the number of elements in the array. The second line of input must contain the array elements.
+
+#### Output
+
+The intermediate integers between each of the two successive elements of the array is the output of each line.
+
+### Example
+
+![](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/intermidiate-array-element-frame-1.png)
+
+## Solution
+
+**Logic behind printing intermediate integers**
+
+1. The numbers entered must be stored in an array.
+2. Create a for loop that executes for each pair of successive elements of the array.
+
+3. If two successive elements of the array are the same or the difference between the two successive elements of the array is one then no intermediate integer exists and hence the same message is printed for no integer presence.
+4. The lesser number is identified in between the two integers of each pair of array elements.
+5. The printing of integers should start from the number one more than the lesser number, this number is then incremented by one and is again printed. This procedure continues until the number one less than the greater number between the pair is encountered.
+
+### Code Implementation in C++
+
+```c
+#include"iostream";
+using namespace std;
+main(){
+  int n;
+  cout\<\<"Enter number of Integer in array "\<\<endl;
+  cin\>\>n;
+  int num[n];
+  cout\<\<"Enter elements of array "\<\<endl;
+  for(int p=0;p\<n;p++)
+  cin\>\>num[p];
+  for(int k=0;k\<n-1;k++){
+    if((num[k]-num[k+1]==1) || (num[k+1]-num[k]==1) || (num[k]==num[k+1])){
+      cout\<\<"No intermediate element in between these "\<\<num[k]\<\<" & "\<\<num[k+1]\<\<" elements "\<\<endl;
+      }else if(num[k]\<num[k+1]){
+        cout\<\<"Element between "\<\<num[k]\<\<" and "\<\<num[k+1]\<\<" is/are ";
+        for(int a=num[k];a\<num[k+1]-1;){
+          cout\<\<++a\<\<" ";
+          //printing intermediate element
+          }
+          cout\<\<endl;
+          }else if(num[k]\>num[k+1]){
+            cout\<\<"Element between "\<\<num[k]\<\<" and "\<\<num[k+1]\<\<" is/are ";
+            for(int a=num[k+1];a\<num[k]-1;){
+              cout\<\<++a\<\<" ";
+              //printing intermediate element
+              }
+              cout\<\<endl;
+              }
+              }
+              }
+```
+
+[Click here](https://ideone.com/FLe7SX)to try out the code and observe it running in a compiler on Ideone with the input as 4 2 6 8 3. Where 4 is the size of the array and the rest are the array elements.
+
+[Click here](https://ideone.com/SecoCR) to try out the code and observe it runnung in a compiler on Ideone with the input as 3 8 9 9. Where 3 is the size of the array and the rest are the array elements.
+
+**Explanation :**
+
+The first set of input numbers are entered and stored in an arrary named num like the figure below:
+
+![](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/intermidiate-array-element-frame-2.png)
+
+The elements of the array 'num' are considered as (2,6) first, then (6.8), then (8,3).
+
+The intermediate values are then printed.
+
+The second set of inputs which are entered are stored in the array 'num' as in the figure below:
+
+![](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/intermidiate-array-element-frame-3.png)
+
+The pairs in this array are considered as (8,9) first, then (9,9). In this case, no intermediate element exists and hence the same is conveyed by the message printed.
+
+### Another C++ Code with Different Logic:
+
+```C
+#include"iostream";
+using namespace std;
+main(){
+  int n,a,b,large,small;
+  cout\<\<"Enter number of Integer in array "\<\<endl;
+  cin\>\>n;
+  int num[n];
+  cout\<\<"Enter element of array "\<\<endl;
+  for(int p=0;p\<n;p++)cin\>\>num[p];
+  for(int k=0;k\<n-1;k++){
+    a=num[k];
+    b=num[k+1];
+    if((num[k]-num[k+1]==1) || (num[k+1]-num[k]==1) || (num[k]==num[k+1])){
+      cout\<\<"No intermediate element present in between these "\<\<num[k]\<\<" & "\<\<num[k+1]\<\<" elements";
+      }else{
+        large=a\>b?a:b;
+        //identifying larger number of pair
+        small=a\<b?a:b;
+        //identifying smaller number of pair
+        cout\<\<"Element between "\<\<num[k]\<\<" and "\<\<num[k+1]\<\<" is/are ";
+        for(int p=small;p\<large-1;){
+          cout\<\<++p\<\<" ";
+          //printing intermediate element
+          }
+          }
+          cout\<\<endl;
+          }
+          }
+```
+
+[Click here](https://ideone.com/nmMvaw)to try out the code and observe it running in a compiler on Ideone with the input as 4 2 6 8 3. Where 4 is the size of the array and the rest are the array elements.
+
+[Click here](https://ideone.com/tHz5fw)to try out the code and observe it running in a compiler on Ideone with the input as 3 8 9 9. Where 3 is the size of the array and the rest are the array elements.
+
+## Wrapping Up
+
+This article discussed arrays and **elements of arrays** and then solved the problem ofprinting intermediate integers between one element and the next element an **integer array**. We started with discussion of arrays and then the problem, its input and its output and then we went on to solving it. The solution began with an explanation of logic and then illustrated with a C++ code implemented with two different logic. The observations are also shown with pictorial representations. For more learning about coding and [**data structures and algorithms**](https://skillslash.com/data-structures-&-algorithm-system-design) stay tuned on our [**Skillslash**](https://skillslash.com/) blogs and [**Full-Stack Development courses**](https://skillslash.com/full-stack-developer-course-in-bangalore) which guarantee you with **100% job referrals**. Our main aim is to encourage you to grasp more concepts with ease and interest.

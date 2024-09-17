@@ -1,0 +1,122 @@
+---
+title: Counting Subarrays| Counting Subarray Sum | Skillslash
+desc: "In this article we discussed counting subarrays, counting method and the counting subarray sum"
+slug: home
+date: "Sep 26, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Author"
+readTime: "4 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/A-New-Data-Structures-Advent-28-se[-2022.webp"
+h1: "A New Data Structures Advent: Colossal Counting Subarrays"
+id: "counting-subarrays"
+tableData:
+  [
+    Introduction,
+    Making and Counting Subarrays,
+    Counting Subarrays,
+    Code Implementation in C++,
+    Hint for Optional Implementation,
+    Finishing Up,
+  ]
+---
+
+## Introduction
+
+The most common and important thing we learn as we learn coding is data structures and algorithm analysis. This is because it forms the crux of every code we perform or to every solution we look for in problems and teaches us to handle and approach the real-world problem scenarios. Algorithms define the steps to solving and approaching a problem and every programmer must be familiar with different algorithms and advanced algorithms for pursuing their career further in this domain. Before discussing the **counting method** of subarrays we should know about some of the basic terms and methods like subarrays, **continuous subarray sum** and everything around it.
+
+This article mainly discusses the method for finding the **sum of all odd length subarrays** and the even lengthened ones too. So, coming to the first question, what is a subarray? It is an integral part of an array, that is an array inside another array. For example, let A be an array where A= [a,b,c,d], then there are 10 non-empty sub-arrays of A, they are (a), (b), (c), (d), (a,b), (b,c), (c,d), (a,b,c), (b,c,d) and (a,b,c,d).
+
+## Making and Counting Subarrays
+
+We approach to do this by using two pointers named start and end for maintaining the starting and ending point of the array and proceed with the following steps:
+
+- Stopping on reaching the end of the array
+- Incrementing the end index if the start becomes greater than the end.
+- Printing the subarray from the index start to end and incrementing the starting index.
+
+For counting the number of subarrays in an array we have another approach. For discovering the number of subarrays whose maximum element is less than or equal to k, we need to remove all the elements which are greater than k and find the number of subarrays with the leftover elements. On finding the above count, we need to subtract it from n\*(n+1)/2 to get the necessary solution.
+
+According to Leetcode, the **continuous subarray sum leetcode** problem returns true if nums has a continuous subarray of size at least two for an integer array which is given, whose elements sum upto a multiple of k, or otherwise returns false. Here x is considered an integer such that x is a multiple of of k and there exists such an integer n that x=n\*k.
+
+### Counting Subarrays
+
+Now we are coming to the main topic of discussion, the question of odd-even subarrays. In Leetcode it is defined as a subarray of an array A of N positive integers where the number of odd integers in the subarray is equal to the number of even integers in the same subarray.
+
+It is basically to find the number of Odd-Even subarrays for the given array. The input consists of two lines in which the first line denotes the size of the array, i.e., N and the second line contains the array A of N positive integers. As the output, only a single integer is printed which denotes the number of odd-even subarrays for the input array A.
+
+On carefully looking at this problem it will seem like it can be solved in O(n^3), i.e., (O(n^2)) for traversing all the subarrays and O(n) for checking if the subarray has equal number of odd and even elements or not. But on looking deeper, according to the given constraints to this problem, the solution is too slow to be passed.
+
+### Code Implementation in C++
+
+```c
+#include \<bits/stdc++.h\>
+#define ll int64_tusing namespace std;
+int main(){
+  int n;
+  cin\>\>n;
+  ll a[n];
+  for(int i=0;i\<n;i++)
+   cin\>\>a[i];ll cnt=0;
+   for(int i=0;i\<n;i++){
+    for(int j=i+1;j\<n;j++){
+      int odd=0,even=0;
+      for(int k=i;k\<=j;k++)
+      if(a[k]&1)odd++;
+      else even++;
+      if(odd==even)cnt++;
+      }
+      }
+      cout\<\<cnt;return 0;}
+```
+
+As it is clear now that the solution given above is not very time optimal, hence there is a need to find a more optimal solution by making use of some observations. For observing, let us take an example problem.
+
+Here N is taken as 7 and A= {1,2,2,1,2,2,1}. For this we have to find the number of odd and even integers for each and every position from the start and then have to find t, which is odd-even for each position.
+
+![counting-subarrays](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/counting-subarrays-img-28-sep-2022.webp)
+
+Observations from the above picture are as follows.
+
+- The subarray which is bounded by the same value as of the value of t where the leftmost element is not accounted for, satisfies the requirement.
+- This is understood by considering the elements from the 3rd column to the 5th column. If we exclude 2 which is at the 3rd position, we get {1,2} which satisfies the requirement.
+- Similarly, from the 3rd column to 7th column we get {1,2,2,1} after ignoring 2.
+- Thus for each value of t there are C(n,2) ways of selecting them.
+- Also, we have to add an extra 0, which is a very important point. For the 1st to 2nd columns for example, {1,2} satisfies the condition but are counted. Hence, adding an extra 0 solves the problem.
+
+Therefore, all that is required after this is all the values of t to be counted and their C(t,2) to be computed. Thus the complexity in this case would be O(max_N) as the max value that t can attain is either N or -N.
+
+### Code Implementation in C++
+
+```c
+ #include \<bits/stdc++.h\>
+ #define MX 1000006
+ #define MX1 400020
+ #define ll int64_tusing namespace std;
+ int a[MX];
+ // Array for storing count of each t value
+ // here double sized array is used to store negative t values
+ int main(){int n;cin\>\>n;int o=0,e=0;a[MX1]++;
+ // Update according to point #3 of observation at 0 position, as double sized array is used
+ for(int i=0;i\<n;i++){ll b;cin\>\>b; // element
+ inputif(b&1)o++; // if odd update o which stores nos. of odd till that positionelse
+ e++; // else update e which stores nos. of even till that positionint
+ t=o-e; // calculate t at that position
+ a[MX1+t]++; // update array accordingly
+ }ll res=0;
+ for(int i=0;i\<MX;i++){
+  // Now, for each value
+  int array ares+=((1LL\*a[i]\*(a[i]-1))/2); // calculate C(n,2) i.e. no. of ways of choosing 2 things out of n
+  }
+  cout\<\<res\<\<"\n"; // display the resultreturn 0;
+  }
+```
+
+### Hint for Optional implementation
+
+A map data structure can be used instead of using a double size array. But if done so, the addition and the query will take O(log n) in that case. A map is an abstract data structure which is also known as an associative array as it functions partially like an array being a collection of values instead of being a single value like a string, char or int. It stores key-value pairs (k,v) and each key is unique and is associated with a value, hence there is no duplication of keys, which makes it an associative array.
+
+### Finishing Up
+
+In this article we discussed counting subarrays, **counting method** and the **counting subarray sum**. We started with understanding what are arrays and subarrays and looked upon the approaches to making and counting the subarrays of the odd-even type. Then we jumped upon the problem of counting subarrays which is the main topic of discussion here and is shown with its implementation in C++. The observations of the solution are carefully noted and the hints and techniques are then talked about. To learn more about coding and data structures and algorithms stay tuned on our[ **Skillslash** ](https://skillslash.com/)blogs and [ **Full-Stack Development courses** ](https://skillslash.com/full-stack-developer-course-in-bangalore) which guarantee you with **100% placement** opportunities and encourage you to grasp more concepts with ease and interest.

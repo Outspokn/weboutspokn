@@ -1,0 +1,351 @@
+.subscribeSection {
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  border-radius: 12px;
+  align-items: center;
+  padding: 60px;
+  margin: 20px 100px 60px 100px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.leftContent h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.leftContent p {
+  margin-bottom: 0;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightContent h4 {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 16px;
+}
+
+.subscription {
+  display: flex;
+  align-items: center;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
+  padding: 10px 10px;
+  margin: 0;
+  gap: 10px;
+  border-radius: 6px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.subscription input {
+  border: none;
+  background-color: transparent !important;
+  color: #fff;
+  width: 200px;
+}
+
+.subscription input::placeholder {
+  color: #fff;
+  font-size: 12px;
+}
+.subscription input:active {
+  border: 0;
+  outline: 0;
+}
+
+.subscription button {
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  color: #0a3d62;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  padding: 10px 30px;
+  width: 60%;
+  gap: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1281px) {
+  .subscribeSection {
+    padding: 50px;
+    margin: 20px 60px 40px 60px;
+  }
+
+  .leftContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .leftContent p {
+    font-size: 1.1rem;
+  }
+
+  .rightContent h4 {
+    font-size: 0.9rem;
+    margin-left: 2px;
+  }
+
+  .subscription {
+    gap: 10px;
+  }
+  .icon {
+    left: 20px;
+  }
+
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 50%;
+    gap: 10px;
+    border-radius: 15px;
+    margin-left: 2px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .subscribeSection {
+    padding: 40px;
+    margin: 20px 40px 40px 40px;
+  }
+
+  .leftContent h2 {
+    font-size: 1.6rem;
+  }
+
+  .leftContent p {
+    font-size: 1rem;
+  }
+
+  .rightContent h4 {
+    font-size: 0.8rem;
+    margin-left: 4px;
+  }
+
+  .subscription {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 961px) {
+  .subscribeSection {
+    padding: 30px;
+    margin: 20px 30px 40px 30px;
+  }
+
+  .leftContent h2 {
+    font-size: 1.4rem;
+  }
+
+  .leftContent p {
+    font-size: 0.9rem;
+  }
+
+  .rightContent h4 {
+    font-size: 0.7rem;
+    margin-left: 5px;
+  }
+
+  .subscription {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 641px) {
+  .subscribeSection {
+    padding: 20px;
+    margin: 20px 20px 30px 20px;
+  }
+
+  .leftContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .leftContent p {
+    font-size: 0.8rem;
+  }
+
+  .rightContent h4 {
+    font-size: 0.6rem;
+    margin-left: 5px;
+  }
+
+  .subscription input {
+    padding: 0;
+  }
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .subscription button {
+    font-size: 0.7rem;
+    padding: 10px 20px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin-left: 2px;
+  }
+}
+@media (max-width: 481px) {
+  .subscribeSection {
+    padding: 15px;
+    margin: 15px 10px 20px 10px;
+  }
+  .rightContent {
+    margin-left: 5px;
+    gap: 10px;
+  }
+  .subscription {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .leftContent h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .leftContent p {
+    font-size: 0.7rem;
+  }
+
+  .rightContent h4 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  .subscription input {
+    padding: 0;
+    width: 100px;
+  }
+  .inputWrapper {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    border-radius: 6px;
+  }
+  .subscription button {
+    padding: 6px 20px;
+    font-size: 0.8rem;
+    width: 50%;
+    margin: 0;
+  }
+
+  @media (max-width: 320px) {
+    .subscribeSection {
+      padding: 10px;
+      margin: 10px 5px 15px 5px;
+    }
+
+    .leftContent h2 {
+      font-size: 1rem;
+    }
+
+    .leftContent p {
+      font-size: 0.6rem;
+    }
+
+    .rightContent h4 {
+      font-size: 0.9rem;
+      margin-left: 12px;
+    }
+
+    .icon {
+      left: 12px;
+    }
+
+    .subscription input {
+      padding: 8px 10px 8px 25px;
+      width: 90%;
+    }
+
+    .subscription button {
+      padding: 5px 10px;
+      font-size: 0.6rem;
+      margin-top: 5px;
+      margin-left: 12px;
+      border-radius: 10px;
+      width: 35%;
+      white-space: nowrap;
+    }
+  }
+}

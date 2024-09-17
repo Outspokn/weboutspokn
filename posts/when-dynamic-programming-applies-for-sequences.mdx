@@ -1,0 +1,112 @@
+---
+title: When Dynamic Programming Applies for Sequences? - Skillslash
+desc: "In this article we discussed dynamic programming and how Advanced algorithms are important for cracking any job at a FAANG company as Full-Stack Developer."
+slug: home
+date: "Nov 23, 2022"
+tag: "Full Stack"
+author: "Skillslash"
+position: "Author"
+readTime: "3 mins"
+avatar: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/avatar-01.webp"
+headerImg: "https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Dynamic-Programming-23-11-2022.png"
+h1: " When Dynamic Programming Applies for Sequences ?"
+id: "when-dynamic-programming-applies-for-sequences"
+tableData:
+  [
+    Introduction,
+    What is Dynamic programming exactly?,
+    Diverse Sequence Finder Problems,
+    Sequence Finder Problem,
+    Solution For Sequence Finder Problem,
+    C++ Code For Sequence Finder,
+    Wrapping Up,
+  ]
+---
+
+## Introduction
+
+What comes to your mind when you hear about [**Dynamic Programming**](https://en.wikipedia.org/wiki/Dynamic_programming#:~:text=Dynamic%20programming%20is%20both%20a,from%20aerospace%20engineering%20to%20economics.)? Data Structures and Advanced Algorithms? Well, that is because computer programming is entirely about this. Be it branch and bound or greedy approach or dynamic programming, the choice is yours to decide from the different algorithms by analyzing the time and space complexities of each of them for different problems. In this article we are going to discuss about C++ or C dynamic programming and the questions on dynamic programming.
+
+## What is Dynamic programming exactly?
+
+Dynamic programming is a problem solving algorithm that solves the problem with **overlapping subproblems**. It is basically an optimization on a plain recursion. Which implies that usually these subproblems are created from a **recurrence relation** to the given problem's solution to the solutions of its further smaller subproblems. This algorithm can be applied wherever the same inputs are called repeatedly. This method stores the result of the subproblems in a tabular form to avoid solving them again and again wherever it is needed later to obtain the solution of the main problem, thus this algorithm **reduces the time complexity from exponential to polynomial time.**
+
+For example, we will get exponential time complexity if we try to solve the Fibonacci Series problem with a recursive algorithm. But if we solve it by storing the solutions of the subproblems as done in fibonacci series dynamic programming, the time complexity is decreased to linear. Some of the most popular problems are the problems of **longest common subsequence dynamic programming** and the **longest common sequence dynamic programming.**
+
+## Diverse Sequence Finder Problems
+
+There is a diverse range of sequence finder problems which can be solved using dynamic programming. A few of them are listed below:
+
+1. The problem where two integers m and n are given and the question is to find the **number of sequences** which are possible and are of length n such that each of the next element is greater than or equal to the twice of the preceding element but is less than or equal to the value of m.
+
+1. According to this question, the nth value of the sequence can be at most m and there can be only two cases of finding the nth element:
+1. If the nth element of the sequence is m then the (n-1)th element can at most have the value of m/2. Here m/2 and n-1 are recurred for. Otherwise, if the nth element is not m then its value can be at most m-1, so here m-1 and n are recurred for.
+1. The total number of sequences is the sum of the number of sequences including m and the number of sequences where m is not included. Thus the original problem of finding number of sequences of length n with max value m can be subdivided into independent subproblems of finding number of sequences of length n with max value m-1 and number of sequences of length n-1 with max value m/2.
+
+1. The **sequence comparison problem** is for finding the best alignment between a query sequence and a target sequence. For solving this problem we need an algorithm to scroll through the alignments and to find the alignment with the best score.
+
+1. The alignment score here is calculated with the use of a substitution matrix and gap penalties which makes dynamic programming the best suitable algorithm for this problem.
+1. For solving this problem, score a pairwise alignment which would require the substitution matrix and the gap penalties. Enter the (i,j) values in the dynamic programming matrix for storing the best scoring alignment up to that position and then fill in the matrix iteratively using a simple mathematical formula.
+
+1. **Dynamic programming sequence alignment** is one of the fundamental problems in the field of Biology which is popularly used for finding the similarity of two amino acid sequences. This makes it a significant problem for us humans as amino acids can derive essential information on evolution and development. Dynamic programming is used to solve this problem by introducing gaps into strings, to make the lengths of the amino acids equal as it can be proved easily that extra gap addition after equalizing the lengths will lead to increment of penalty.
+1. **Sequence similarity problem** is another problem which has its application in Biology. The difference between two word or character sequences can be described in numerous mathematical ways. The set of characters in both the strings can be looked upon or the order can be preserved and then examined as ordered sequences which will give different penalties for inserts and substitutions. This problem has its uses in DNA sequence comparison, spell checking and plagiarism. The spell checking problem can be solved by comparing the spelling with the closest word which has minimal edit distance. For speeding up the process of spell checking the edit distances of the different sub sequences can be stored in a dictionary or a matrix or a table which can be easily accessible while typing.
+1. For the problem of **optimal alignment of a sequence** , a memory efficient dynamic programming algorithm is required. This has its application again in Biology for analyzing the sequence to an RNA secondary structure. Probabilistic models of RNA secondary structure are covariance models which are analogous to the profile hidden Markov models of linear sequence. On applying dynamic programming for aligning a CM to a sequence of RNA of length N, the space complexity is O(N3) which implies that it can be possible and feasible only for small RNA strands.
+
+## Sequence Finder Problem
+
+In this problem, two arrays are given named A and B which are of equal size and it is asked to find if the following sequence is possible or not:
+
+![Dynamic Programming](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/sigma-equation-23-11-2022.jpeg)
+
+i.e for n=2, out of the following sequences :
+
+- A[0] + A[1]
+- A[0] – B[1]
+- – B[0] + A[1]
+- – B[0] – B[1]
+
+Whether a sequence with the value of 0 is possible or not.
+
+## Solution For Sequence Finder Problem
+
+The solution to this problem is not as tough as it seems at the beginning, to make it simpler the solution needs to be modeled or structured properly. For example, consider n=4 and the following sequence has the value zero,
+
+_A[0] – B[1] – B[2] + A[3] = 0_
+
+Then take all the B[] terms to RHS, which gives the following:
+
+_A[0] + A[3] = B[1] + B[2]_
+
+Now add the missing terms of A[] with same indices as of the terms of B[] to both sides
+
+_A[0] +_ _**A[1]**_ _+_ _**A[2]**_ _+ A[3] =_ _**A[1]**_ _+ B[1] +_ _**A[2]**_ _+ B[2]_
+
+Or
+
+_A[0] + A[1] + A[2] + A[3] =_ _**(**_ _A[1] + B[1]_ _**)**_ _+_ _**(**_ _A[2] + B[2]_ _**)**_
+
+Or
+
+_A[0] + A[1] + A[2] + A[3] = T[1] + T[2] (Here-_ _**T[i]=A[i]+B[i]**\_\_)_
+
+Or
+
+_Summation of A[] = Summation of some terms of T[]_
+
+Or
+
+_Summation of A[] ( \***\*CONSTANT\*\*** ) = Summation of_ _**a subset of T[]**_
+
+Thus, the complicated problem of **sequence finder** is now reduced to the **problem of sum of subsets** by just modeling it a little. Now it can be easily solved using dynamic programming.
+
+For implementing this problem it is required to find the summation of A[] in a variable, say **sum** and create an array T such that **T[i] = A[i] + B[i]**. The missing B[] terms can also be added in place of A[] terms, in that case we would be storing summation of B[] and T would be the same.
+
+## C++ Code For Sequence Finder
+
+| #include \<bits/stdc++.h\>#define ll int64_t#define MX 1000007#define MX1 1003using namespace std;int t[MX],dp[MX]; // Here t stores the set and dp stores whether ith element is possible or not i.e if dp[i]=1 then it is possible or notbool subset_sum(int n,int sum){ // this function is used to determine whether the subset with sum is possible or notdp[0]=1;for(int i=0;i\<n;i++){if(t[i]\<=sum) for(int j=sum;j\>=t[i];j--){dp[j]|=dp[j-t[i]];}}return dp[sum];}int main(){int n,sum=0;cin\>\>n;for(int i=0;i\<n;i++){ cin\>\>t[i]; // here we input array A sum+=t[i]; // and store its sum of elements}for(int i=0;i\<n;i++){ int a;cin\>\>a; // here we input array B and add it to existing array T i.e At[i]+=a;}(subset_sum(n,sum))?cout\<\<"Possible":cout\<\<"Not Possible";return 0;} |
+
+![Dymanic Programming](https://skillslash-cdn.s3.ap-south-1.amazonaws.com/static/blog/Dynamic-programming-1-23-11-2022.jpeg)
+
+## Wrapping Up
+
+In this article we discussed dynamic programming and how Advanced algorithms are important for cracking any job at a FAANG company as Full-Stack Developer. Then we further saw some **questions on dynamic programming** and how it is implemented in different subjects. These questions included **dynamic programming sequence alignment,** sequence comparison and sequence similarity, number of sequence problems, etc. Then we finally came to the sequence finder problem and saw how to solve it in detail by just modeling it correctly with an example and a C++ code. For more information on these topics of data structures and algorithms check out our previous and upcoming blogs at [**Skillslash**](https://blog.skillslash.com/). And for deeper learning you can also refer to our courses on [**Full-Stack Development**](https://skillslash.com/full-stack-developer-course-in-bangalore) and [**Data Structure and Algortihms**](https://skillslash.com/data-structures-&-algorithm-system-design) which are offered for working professionals based on their needs. The courses come with a **real-work experience certification** directly from the **MNCs or Start-up companies** and **unlimited job referrals** which will ensure your placement at any **product based company** you have been dreaming and aiming for.

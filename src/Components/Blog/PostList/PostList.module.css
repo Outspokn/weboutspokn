@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 40px 100px;
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.heading h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  margin-left: 12px;
+  font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 7px;
+}
+
+.pagination .active {
+  background: var(--primary-color);
+  color: white;
+  border-radius: 7px;
+}
+
+.pagination .ellipsis {
+  margin: 0 5px;
+  padding: 10px 15px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination .navButton {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+.navIcon {
+  font-size: 25px;
+}
+.pagination .navButton:disabled {
+  background: transparent;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1281px) {
+  .container {
+    padding: 30px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 961px) {
+  .container {
+    padding: 20px 40px;
+  }
+
+  .heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .pagination button {
+    padding: 7px 10px;
+    margin: 0 3px;
+  }
+}
+
+@media (max-width: 641px) {
+  .container {
+    padding: 20px 20px;
+  }
+
+  .heading h2 {
+    font-size: 1.4rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+  }
+
+  .pagination button {
+    padding: 6px 8px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 481px) {
+  .container {
+    padding: 20px;
+  }
+
+  .heading h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .navIcon {
+    font-size: 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 20px;
+  }
+
+  .pagination {
+    gap: 3px;
+  }
+  .pagination .active {
+    padding: 5px 9px;
+    border-radius: 6px;
+  }
+  .pagination button {
+    padding: 5px 9px;
+  }
+}

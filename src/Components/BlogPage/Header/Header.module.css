@@ -1,0 +1,152 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb;
+  padding: 10px 100px;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  margin-right: 5rem;
+}
+
+.dropdownSelect {
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.dropdown option {
+  cursor: pointer;
+  border: 0 !important;
+  border-radius: 0 0 8px 8px !important;
+  outline: none !important;
+}
+.navItems {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navItems li a {
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navItems li a:hover {
+  color: #1a202c;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    max-width: 95%;
+    padding: 8px 16px;
+  }
+
+  .dropdownSelect {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    margin-top: 4rem;
+  }
+
+  .dropdown {
+    margin-right: 3rem;
+  }
+
+  .dropdownSelect {
+    margin-top: 0;
+  }
+
+  .navItems {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 961px) {
+  .navbar {
+    padding: 8px 10px;
+    margin-top: 4rem;
+  }
+
+  .dropdown {
+    margin-right: 3rem;
+  }
+
+  .dropdownSelect {
+    font-size: 13px;
+    padding: 6px;
+    margin-top: 0;
+  }
+
+  .navItems {
+    gap: 15px;
+  }
+
+  .navItems li a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 641px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 8px;
+    margin-top: 4rem;
+  }
+
+  .dropdownSelect {
+    margin-top: 0;
+  }
+
+  .navItems {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .navItems li a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 481px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 8px;
+    margin-top: 4rem;
+  }
+
+  .dropdownSelect {
+    margin-top: 0;
+  }
+
+  .navItems {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navItems li a {
+    font-size: 14px;
+  }
+}
