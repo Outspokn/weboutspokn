@@ -177,7 +177,13 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  
 }
+
+.articleBody li {
+  margin-left: 15px;
+}
+
 
 .shareText {
   font-size: 14px;
@@ -222,6 +228,7 @@
   font-size: 24px;
   color: #2e2e2e;
   margin-bottom: 8px;
+  margin-top: 10px;
 }
 
 .articleBody p {
