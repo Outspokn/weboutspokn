@@ -10,7 +10,7 @@
   display: flex;
   height: 100%;
 } */
-
+/* 
 .sidebar {
   width: 100%;
   position: -webkit-sticky;
@@ -23,6 +23,32 @@
   display: flex;
   flex-direction: column;
   margin: 0px 0px 0px 10px;
+} */
+/* 
+.main {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 40px;
+  width: 80%;
+  margin-left: 1rem;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+} */
+
+.sidebar {
+  width: 15%;
+  position: fixed;
+  height: 50%;
+  margin-left: 7rem;
+  margin-top: 20px;
+  top: 50px;
+  left: 0;
+  gap: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -30,7 +56,7 @@
   grid-template-columns: 100%;
   gap: 40px;
   width: 80%;
-  margin-left: 1rem;
+  margin-left: 15rem;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -57,6 +83,10 @@
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 .article {
   display: flex;
   flex-flow: column;
@@ -64,6 +94,7 @@
 
 .tocList {
   list-style: none;
+  margin-top: 10px;
 }
 
 .iconTextContainer {
@@ -148,6 +179,12 @@
   align-items: center;
 }
 
+.shareText {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
 .articleIcon {
   cursor: pointer;
   font-size: 15px;
@@ -199,6 +236,7 @@
 .articleFooter {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 10px;
   margin-top: 20px;
   padding: 10px 0;
@@ -324,6 +362,9 @@
 }
 
 @media (max-width: 1024px) {
+  .sidebar {
+    margin-top: 16px;
+  }
   .container {
     padding: 40px 50px;
     margin-top: 2rem;
@@ -353,6 +394,15 @@
 }
 
 @media (max-width: 961px) {
+  .sidebar {
+    margin-left: 5rem;
+  }
+
+  .tocList {
+    list-style: none;
+    margin-top: 0;
+  }
+
   .container {
     padding: 20px 20px;
   }
@@ -405,9 +455,9 @@
     padding: 20px 20px;
   }
 
-  .sidebar {
+  /* .sidebar {
     margin: 0px;
-  }
+  } */
 
   .relatedTitle {
     font-size: 24px;

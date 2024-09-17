@@ -10,6 +10,8 @@ const MainContent = ({ post }) => {
   const contentRefs = useRef([]);
   const articleRef = useRef(null);
   const [shareUrls, setShareUrls] = useState({});
+  const tocRef = useRef(null);
+  const [isTocVisible, setIsTocVisible] = useState(true);
 
   useEffect(() => {
     if (post && typeof window !== "undefined") {
@@ -35,25 +37,66 @@ const MainContent = ({ post }) => {
     }
   }, [post]);
 
+  // const scrollToSection = (index) => {
+  //   const element = contentRefs.current[index + 1];
+  //   const articleElement = articleRef.current;
+
+  //   if (element && articleElement) {
+  //     articleElement.scrollTo({
+  //       top:
+  //         articleElement.scrollTop + element.getBoundingClientRect().top - 90,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
+
   const scrollToSection = (index) => {
-    const element = contentRefs.current[index + 1];
+    const element = contentRefs.current[index];
     const articleElement = articleRef.current;
 
     if (element && articleElement) {
+      const yOffset = -90;
+      const y =
+        element.getBoundingClientRect().top +
+        articleElement.scrollTop +
+        yOffset;
+
       articleElement.scrollTo({
-        top:
-          articleElement.scrollTop + element.getBoundingClientRect().top - 90,
+        top: y,
         behavior: "smooth",
       });
     }
   };
+
+  const handleScroll = () => {
+    const tocHeight = tocRef.current?.offsetHeight || 0;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > tocHeight) {
+      setIsTocVisible(false);
+    } else {
+      setIsTocVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   if (!post) return <p>Post not found!</p>;
 
   return (
     <div className={styles.container}>
       {/* <div className={styles.sideContainer}> */}
-      <div className={styles.sidebar}>
+      <div
+        // className={styles.sidebar}
+        ref={tocRef}
+        className={`${styles.sidebar} ${isTocVisible ? "" : styles.hidden}`}
+        // style={{ display: isTocVisible ? "block" : "none" }}
+      >
         <h3>Table of Contents</h3>
         <ul className={styles.tocList}>
           {post?.table?.map((item, index) => {
@@ -101,6 +144,7 @@ const MainContent = ({ post }) => {
                       <span className={styles.date}>{post.date}</span>
                     </div>
                     <div className={styles.articleIconContainer}>
+                    <span className={styles.shareText}>Share:</span>
                       {shareUrls.meta && (
                         <a
                           href={shareUrls.meta}
@@ -156,6 +200,8 @@ const MainContent = ({ post }) => {
                     />
                   </div>
                   <div className={styles.articleFooter}>
+                  <span className={styles.shareText}>Share:</span>
+                    
                     {shareUrls.meta && (
                       <a
                         href={shareUrls.meta}

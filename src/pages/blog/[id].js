@@ -8,39 +8,39 @@ import FaqSection from "@/Components/Blog/FaqSection/FaqSection";
 
 const BlogPage = ({ postData, posts }) => {
   const router = useRouter();
-  const { tag } = router.query;
+  // const { tag } = router.query;
   const [mainPost, setMainPost] = useState(postData);
-  const [relatedPosts, setRelatedPosts] = useState([]);
+  // const [relatedPosts, setRelatedPosts] = useState([]);
 
-  useEffect(() => {
-    if (tag) {
-      const relatedPosts = posts
-        .filter((post) => post.tag === tag && post.id !== mainPost.id)
-        .slice(0, 6);
-      setRelatedPosts(relatedPosts);
-    }
-  }, [tag, posts, mainPost.id]);
+  // useEffect(() => {
+  //   if (tag) {
+  //     const relatedPosts = posts
+  //       .filter((post) => post.tag === tag && post.id !== mainPost.id)
+  //       .slice(0, 6);
+  //     setRelatedPosts(relatedPosts);
+  //   }
+  // }, [tag, posts, mainPost.id]);
 
-  const handleRelatedPostClick = (clickedPost, index) => {
-    const updatedRelatedPosts = [...relatedPosts];
+  // const handleRelatedPostClick = (clickedPost, index) => {
+  //   const updatedRelatedPosts = [...relatedPosts];
 
-    updatedRelatedPosts[index] = mainPost;
+  //   updatedRelatedPosts[index] = mainPost;
 
-    if (updatedRelatedPosts.length > 6) {
-      updatedRelatedPosts.pop();
-    }
+  //   if (updatedRelatedPosts.length > 6) {
+  //     updatedRelatedPosts.pop();
+  //   }
 
-    setRelatedPosts(updatedRelatedPosts);
-    setMainPost(clickedPost);
+  //   setRelatedPosts(updatedRelatedPosts);
+  //   setMainPost(clickedPost);
 
-    router.push({
-      pathname: `/blog/${clickedPost.id}`,
-      query: { tag: clickedPost.tag },
-    });
-  };
+  //   router.push({
+  //     pathname: `/blog/${clickedPost.id}`,
+  //     query: { tag: clickedPost.tag },
+  //   });
+  // };
 
-  let singleCategoryPost = posts.map((post) => post.tag);
-  let categoryPostTag = Array.from(new Set(singleCategoryPost));
+  // let singleCategoryPost = posts.map((post) => post.tag);
+  // let categoryPostTag = Array.from(new Set(singleCategoryPost));
 
   return (
     <div>
@@ -54,8 +54,8 @@ const BlogPage = ({ postData, posts }) => {
       <MainContent
         key={mainPost.id}
         post={mainPost}
-        relatedPosts={relatedPosts}
-        onRelatedPostClick={handleRelatedPostClick}
+        // relatedPosts={relatedPosts}
+        // onRelatedPostClick={handleRelatedPostClick}
       />
       <FaqSection />
       <Footer />
