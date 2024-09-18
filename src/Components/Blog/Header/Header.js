@@ -13,7 +13,7 @@ const Header = ({ posts, onFilter }) => {
       "All",
       ...new Set(
         posts
-          .map((post) => post.tag.trim())
+          .map((post) => post.tag?.trim())
           .filter(
             (tag) =>
               tag &&

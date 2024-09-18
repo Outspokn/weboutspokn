@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const LatestPost = ({ posts }) => {
   const truncateText = (text, limit) => {
-    if (text.length > limit) {
-      return text.slice(0, limit) + "...";
+    if (text?.length > limit) {
+      return text?.slice(0, limit) + "...";
     }
     return text;
   };
@@ -54,9 +54,9 @@ const LatestPost = ({ posts }) => {
             </div>
           </Link>
         )}
-        {posts.length > 1 && (
+        {posts?.length > 1 && (
           <div className={styles.sidePosts}>
-            {posts.slice(1).map((post, index) => (
+            {posts?.slice(1).map((post, index) => (
               <Link
                 key={index}
                 href={{

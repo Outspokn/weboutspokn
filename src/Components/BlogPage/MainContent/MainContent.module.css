@@ -108,6 +108,54 @@
   flex-wrap: wrap;
 }
 
+.articleBody p {
+  margin-top: 10px;
+}
+
+.articleBody table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 20px; 
+}
+
+.articleBody th,
+.articleBody td {
+  padding: 12px 15px; 
+  text-align: left; 
+  border: 1px solid #ddd; 
+}
+
+.articleBody th {
+  background-color: #009879;
+  color: #ffffff;
+  font-weight: bold; 
+}
+
+.articleBody tr:nth-of-type(even) {
+  background-color: #f3f3f3; 
+}
+
+.articleBody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.articleBody td {
+  font-size: 16px; 
+  color: #333; 
+}
+
+.articleBody th {
+  font-size: 18px; 
+}
+
+.articleBody {
+  overflow-x: auto; 
+}
+
+.articleBody table {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
 .articleHeader {
   position: relative;
   height: 100%;

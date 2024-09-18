@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import { gfmHeadingId } from 'marked-gfm-heading-id';
+import { gfmHeadingId } from "marked-gfm-heading-id";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
