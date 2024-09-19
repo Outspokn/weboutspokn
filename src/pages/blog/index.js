@@ -40,7 +40,7 @@ const Index = ({ allPostsData }) => {
       {remainingPosts.length > 0 && <PostList posts={remainingPosts} />}
 
       <WhoIsOutspokn />
-      <FaqSection />
+      {/* <FaqSection /> */}
       <SubscribeSection />
       <Footer />
     </div>
