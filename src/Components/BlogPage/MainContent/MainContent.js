@@ -37,19 +37,6 @@ const MainContent = ({ post }) => {
     }
   }, [post]);
 
-  // const scrollToSection = (index) => {
-  //   const element = contentRefs.current[index + 1];
-  //   const articleElement = articleRef.current;
-
-  //   if (element && articleElement) {
-  //     articleElement.scrollTo({
-  //       top:
-  //         articleElement.scrollTop + element.getBoundingClientRect().top - 90,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
-
   const scrollToSection = (index) => {
     const element = contentRefs.current[index];
     const articleElement = articleRef.current;
@@ -90,22 +77,22 @@ const MainContent = ({ post }) => {
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.sideContainer}> */}
       <div
-        // className={styles.sidebar}
         ref={tocRef}
         className={`${styles.sidebar} ${isTocVisible ? "" : styles.hidden}`}
-        // style={{ display: isTocVisible ? "block" : "none" }}
       >
         <h3>Table of Contents</h3>
         <ul className={styles.tocList}>
           {post?.table?.map((item, index) => {
-            const removeSpecial = item.replace(
+            if (typeof item !== "string") {
+              return null;
+            }
+
+            const removeSpecial = item?.replace(
               /[&\/\\#,+()$~%.'":*?<>{}]/g,
               ""
             );
-
-            const uMake = removeSpecial.toLowerCase().replace(/\s+/g, "-");
+            const uMake = removeSpecial?.toLowerCase()?.replace(/\s+/g, "-");
             const url = `#${uMake}`;
 
             return (
@@ -121,8 +108,6 @@ const MainContent = ({ post }) => {
           })}
         </ul>
       </div>
-      {/* </div> */}
-
       <div className={styles.main} ref={articleRef}>
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
@@ -144,7 +129,7 @@ const MainContent = ({ post }) => {
                       <span className={styles.date}>{post.date}</span>
                     </div>
                     <div className={styles.articleIconContainer}>
-                    <span className={styles.shareText}>Share:</span>
+                      <span className={styles.shareText}>Share:</span>
                       {shareUrls.meta && (
                         <a
                           href={shareUrls.meta}
@@ -200,8 +185,8 @@ const MainContent = ({ post }) => {
                     />
                   </div>
                   <div className={styles.articleFooter}>
-                  <span className={styles.shareText}>Share:</span>
-                    
+                    <span className={styles.shareText}>Share:</span>
+
                     {shareUrls.meta && (
                       <a
                         href={shareUrls.meta}

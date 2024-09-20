@@ -8,9 +8,10 @@ const WhoIsOutspokn = () => {
         <div className={styles.description}>
           <h2>Who is Outspokn?</h2>
           <p>
-            Timiker.io is a collaborative, cloud-based time tracking service
-            that helps businesses of any size manage their projects, track
-            working times and measure productivity.
+            Outspokn is the fastest way to get fluent in English. Quickly and
+            easily become fluent in English through engaging conversations. Gain
+            the ability to speak fluently convincingly, so that you can
+            effortlessly engage any audience.
           </p>
         </div>
       </div>
