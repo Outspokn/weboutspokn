@@ -113,26 +113,30 @@
 }
 
 .articleBody table {
-  width: 100%; 
-  border-collapse: collapse; 
-  margin-bottom: 20px; 
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .articleBody th,
 .articleBody td {
-  padding: 12px 15px; 
-  text-align: left; 
-  border: 1px solid #ddd; 
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 .articleBody th {
-  background-color: #009879;
+  background-color: var(--primary-color);
   color: #ffffff;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .articleBody tr:nth-of-type(even) {
-  background-color: #f3f3f3; 
+  background-color: #f3f3f3;
 }
 
 .articleBody tr:hover {
@@ -140,20 +144,20 @@
 }
 
 .articleBody td {
-  font-size: 16px; 
-  color: #333; 
+  font-size: 16px;
+  color: #333;
 }
 
 .articleBody th {
-  font-size: 18px; 
+  font-size: 18px;
 }
 
 .articleBody {
-  overflow-x: auto; 
+  overflow-x: hidden;
 }
 
 .articleBody table {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .articleHeader {
@@ -225,13 +229,11 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  
 }
 
 .articleBody li {
   margin-left: 15px;
 }
-
 
 .shareText {
   font-size: 14px;
@@ -407,8 +409,9 @@
   }
 
   .sidebar {
-    margin-top: 0px;
+    margin-top: 1px;
     padding: 12px;
+    top: 78px;
   }
 
   .relatedTitle {
@@ -484,6 +487,7 @@
 
   .container {
     padding: 30px 25px;
+    margin-top: 3rem;
   }
 
   .iconRight {
@@ -509,10 +513,6 @@
     max-width: 100%;
     padding: 20px 20px;
   }
-
-  /* .sidebar {
-    margin: 0px;
-  } */
 
   .relatedTitle {
     font-size: 24px;
@@ -563,6 +563,7 @@
 @media (max-width: 641px) {
   .articleImage {
     height: 200px;
+    margin-top: 10px;
   }
 
   .main {
@@ -582,6 +583,16 @@
 
   .title {
     font-size: 26px;
+  }
+
+  .articleBody {
+    overflow-x: hidden;
+    padding: 0;
+  }
+
+  .articleBody table {
+    width: 100%;
+    display: block;
   }
 
   .articleBody h2 {
@@ -647,7 +658,7 @@
 @media (max-width: 481px) {
   .container {
     padding: 15px 12px;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .sidebar {
