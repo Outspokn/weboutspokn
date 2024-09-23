@@ -32,33 +32,6 @@ export function getSortedPostsData() {
   return allPostsData.sort((a, b) => (a.date < b.date ? -1 : 1));
 }
 
-// function extractHeadings(markdownContent) {
-//   const headingRegex = /##\s+(.*)/g;
-//   const headings = [];
-//   let match;
-
-//   while ((match = headingRegex.exec(markdownContent)) !== null) {
-//     headings.push(match[1]);
-//   }
-
-//   return headings;
-// }
-
-// function extractHeadings(markdownContent) {
-//   // Regex to match h2 and h3 headings
-//   const headingRegex = /^(##|###)\s+(.*)$/gm;
-//   const headings = [];
-//   let match;
-
-//   while ((match = headingRegex.exec(markdownContent)) !== null) {
-//     const level = match[1].length; // 2 for h2, 3 for h3
-//     const text = match[2];
-//     headings.push({ level, text });
-//   }
-
-//   return headings;
-// }
-
 export function getPostData(id) {
   const fullPath = path.join(postsDirectory, `${id}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -66,8 +39,6 @@ export function getPostData(id) {
   const { data, content } = matter(fileContents);
   marked.use(gfmHeadingId());
   const html = marked(content);
-
-  // const headings = extractHeadings(content);
 
   return {
     id,
@@ -83,6 +54,7 @@ export function getPostData(id) {
     table: data.tableData,
     avatar: data.avatar,
     body: html,
+    FAQ: data.FAQ || [],
     // table: headings,
   };
 }

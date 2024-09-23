@@ -59,9 +59,12 @@
 .faqAnswer {
   margin-top: 15px;
   color: #666;
-
   font-size: 16px;
   font-weight: 500;
+}
+
+.faqAnswer li {
+  margin-left: 15px;
 }
 
 @media (max-width: 1281px) {
