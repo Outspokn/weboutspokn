@@ -32,41 +32,41 @@ const Footer = () => {
           <div className={styles.followRow}>
             <h5>Follow us!</h5>
             <div className={styles.sIcon}>
-             <Link
+              <Link
                 href="https://www.facebook.com/profile.php?id=61561944704188"
                 target="_blank"
                 aria-label="Go to the facebook page of Outspokn"
               >
                 <FaMeta className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.instagram.com/outspokn.ai"
                 target="_blank"
                 aria-label="Go to the Instagram of Outspokn"
               >
                 <FaInstagram className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.youtube.com/@Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Youtube of Outspokn"
               >
                 <FaYoutube className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://x.com/Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Twitter Page of Outspokn"
               >
                 <FaXTwitter className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.linkedin.com/company/outspokn/"
                 target="_blank"
                 aria-label="Go to the Linkedin Page of Outspokn"
               >
                 <FaLinkedinIn className={styles.FIcon} />
-             </Link>
+              </Link>
             </div>
           </div>
         </div>
@@ -78,9 +78,9 @@ const Footer = () => {
           <Link href="/About">
             <p>About</p>
           </Link>
-         <Link href="/blog">
+          <Link href="/blog">
             <p>Blog</p>
-         </Link>
+          </Link>
           <Link href="/Contact-us">
             <p>Contact</p>
           </Link>
@@ -126,7 +126,9 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className={styles.rights}>© 2024 – Outspokn. All Rights Reserved.</p>
+      <p className={styles.rights}>
+        © 2024 – LinguaQuest Technology Private Limited. All Rights Reserved.
+      </p>
     </div>
   );
 };
