@@ -47,8 +47,6 @@ export async function getStaticProps({ params }) {
   const posts = getSortedPostsData();
   const postData = getPostData(params.id);
 
-  console.log("postData", postData.FAQ);
-
   return {
     props: {
       postData,
