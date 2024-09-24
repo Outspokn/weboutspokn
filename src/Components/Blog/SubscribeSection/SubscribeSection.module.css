@@ -67,6 +67,7 @@
   background-color: transparent !important;
   color: #fff;
   width: 200px;
+  outline: none;
 }
 
 .subscription input::placeholder {
