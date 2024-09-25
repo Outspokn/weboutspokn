@@ -1,7 +1,7 @@
 .container {
   background-color: #6e4765;
   border-radius: 20px;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   margin: 40px 100px;
@@ -60,10 +60,21 @@
   color: green;
 }
 
+.lottieAnimation {
+  width: 130px;
+  position: relative;
+  top: 20px;
+}
+
 @media (max-width: 1281px) {
   .container {
     padding: 30px;
     margin: 30px 80px;
+  }
+
+  .lottieAnimation {
+    width: 200px;
+    top: 10px;
   }
 
   .description h2 {
@@ -92,13 +103,24 @@
 
   .content {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .description {
     max-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
+    padding: 0 16px;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .description p {
+    font-size: 1.3rem;
+    line-height: 1.5;
   }
 
   .reviews {
@@ -108,14 +130,6 @@
 
   .reviewItem {
     width: 30%;
-  }
-
-  .description h2 {
-    font-size: 2rem;
-  }
-
-  .description p {
-    font-size: 1rem;
   }
 }
 
@@ -130,7 +144,7 @@
   }
 
   .description p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .reviewItem {
@@ -176,6 +190,11 @@
   .stars {
     font-size: 0.9rem;
   }
+
+  .lottieAnimation {
+    width: 190px;
+    top: 10px;
+  }
 }
 
 @media (max-width: 481px) {
@@ -184,12 +203,23 @@
     margin: 10px;
   }
 
+  .description {
+    margin: 0 10px 10px 0px;
+    padding: 0 10px;
+  }
+
   .description h2 {
-    font-size: 1.6rem;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .description p {
-    font-size: 0.9rem;
+    font-size: 12px;
+  }
+
+  .lottieAnimation {
+    width: 180px;
+    top: 8px;
   }
 
   .reviewItem {
