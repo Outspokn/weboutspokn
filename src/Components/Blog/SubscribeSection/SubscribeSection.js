@@ -59,7 +59,7 @@ const SubscribeSection = () => {
           <h2>Subscribe For New Content</h2>
           <p>
             By Becoming A Member Of Our Blog, You Have Access To Articles And
-            Content
+            Content.
           </p>
         </div>
         <div className={styles.rightContent}>
