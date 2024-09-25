@@ -39,7 +39,7 @@ const Index = ({ allPostsData }) => {
       />
       {remainingPosts.length > 0 && <PostList posts={remainingPosts} />}
 
-      <WhoIsOutspokn lottieUrl="https://outspokn-fr.s3.us-east-2.amazonaws.com/chat/age-screen-cat.json"/>
+      <WhoIsOutspokn lottieUrl="https://outspokn-fr.s3.us-east-2.amazonaws.com/chat/age-screen-cat.json" />
       {/* <FaqSection /> */}
       <SubscribeSection />
       <Footer />

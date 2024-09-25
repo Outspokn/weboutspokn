@@ -2,33 +2,16 @@ import React, { useState } from "react";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 import styles from "./FaqSection.module.css";
 
-const FaqSection = () => {
+const FaqSection = ({ faqData }) => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question:
-        "Is Timiker.io right for my company, and if so, how do we begin using it?",
-      answer:
-        "Timiker.io offers powerful tools and resources that can seamlessly scale your business...",
-    },
-    {
-      question:
-        "How much would I have to pay to use the services offered by Timiker.io?",
-      answer:
-        "The cost of using Timiker.io varies depending on your business needs...",
-    },
-    {
-      question:
-        "Wondering if Timiker.io is right for you? Here's why you should give it a try.",
-      answer:
-        "Revolutionize the way you manage your team with Timiker.io. Our all-in-one PEO solution...",
-    },
-  ];
 
   const toggleDropdown = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  if (!faqData || faqData.length === 0) {
+    return <p>No FAQs available for this post.</p>;
+  }
 
   return (
     <div className={styles.faqContainer}>
@@ -37,13 +20,10 @@ const FaqSection = () => {
         <button className={styles.helpCenterButton}>Visit help center</button>
       </div>
       <p className={styles.description}>
-        Our websites had a list of questions and answers that aim to provide
-        clarity on a particular subject.
-        <br />
         If you need assistance, feel free to check out our FAQs.
       </p>
       <div className={styles.faqList}>
-        {faqs.map((faq, index) => (
+        {faqData.map((faq, index) => (
           <div className={styles.faqItem} key={index}>
             <div
               className={styles.faqQuestion}
@@ -55,7 +35,10 @@ const FaqSection = () => {
               </div>
             </div>
             {openIndex === index && (
-              <div className={styles.faqAnswer}>{faq.answer}</div>
+              <div
+                className={styles.faqAnswer}
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              ></div>
             )}
           </div>
         ))}
