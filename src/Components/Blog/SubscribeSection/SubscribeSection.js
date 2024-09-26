@@ -57,10 +57,10 @@ const SubscribeSection = () => {
     <div className={styles.subscribeSection}>
       <div className={styles.container}>
         <div className={styles.leftContent}>
-          <h2>Subscribe For New Content</h2>
+          <h2>Subscribe for new content</h2>
           <p>
-            By Becoming A Member Of Our Blog, You Have Access To Articles And
-            Content.
+            By becoming a member of our blog, you have access to articles and
+            content
           </p>
         </div>
         <div className={styles.rightContent}>
