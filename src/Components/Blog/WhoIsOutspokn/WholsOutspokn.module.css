@@ -55,15 +55,6 @@
   .description p {
     font-size: 1.1rem;
   }
-
-  .reviews {
-    width: 55%;
-  }
-
-  .reviewItem {
-    padding: 18px;
-    width: 32%;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -76,6 +67,7 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    margin-left: 10px;
   }
 
   .description {
@@ -94,13 +86,9 @@
     line-height: 1.5;
   }
 
-  .reviews {
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .reviewItem {
-    width: 30%;
+  .lottieAnimation {
+    left: 1px;
+    top: 2px;
   }
 }
 
@@ -110,6 +98,14 @@
     margin: 20px 40px;
   }
 
+  .content {
+    margin-left: 1px;
+  }
+
+  .lottieAnimation {
+    left: 2px;
+  }
+
   .description h2 {
     font-size: 1.8rem;
   }
@@ -117,20 +113,18 @@
   .description p {
     font-size: 1.2rem;
   }
-
-  .reviewItem {
-    padding: 15px;
-  }
-
-  .reviewItem img {
-    width: 100px;
-  }
 }
 
 @media (max-width: 641px) {
   .container {
     padding: 15px;
     margin: 15px 20px;
+  }
+
+  .content {
+    width: 100%;
+    margin-left: 1px;
+    margin-top: 0px;
   }
 
   .description h2 {
@@ -141,30 +135,9 @@
     font-size: 0.95rem;
   }
 
-  .reviews {
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .reviewItem {
-    width: 50%;
-    padding: 12px;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-
-  .reviewItem img {
-    width: 90px;
-  }
-
-  .stars {
-    font-size: 0.9rem;
-  }
-
   .lottieAnimation {
-    width: 190px;
-    top: 10px;
+    width: 200px;
+    top: 18px;
   }
 }
 
@@ -174,9 +147,15 @@
     margin: 10px;
   }
 
+  .content {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
   .description {
-    margin: 0 10px 10px 0px;
-    padding: 0 10px;
+    margin: 0px 10px 10px 0px;
+    padding: 0px 5px;
+    max-width: 100%;
   }
 
   .description h2 {
@@ -186,25 +165,12 @@
 
   .description p {
     font-size: 12px;
+    width: 107%;
   }
 
   .lottieAnimation {
     width: 180px;
     top: 8px;
-  }
-
-  .reviewItem {
-    width: 50%;
-    padding: 12px;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-
-  .reviewItem img {
-    width: 50px;
-  }
-
-  .stars {
-    font-size: 0.8rem;
+    left: 1px;
   }
 }
