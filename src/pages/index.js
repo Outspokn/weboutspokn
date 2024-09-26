@@ -21,12 +21,13 @@ export default function Home() {
         lottieUrl="https://outspokn-fr.s3.us-east-2.amazonaws.com/chat/login-cat.json"
       />
       <Values
-        title="Instant detailed feedback to quickly boost your English!"
-        desc="Feedback is essential for achieving fluency in English. With Outspokn, you receive valuable feedback on everything you say, helping you improve and gain confidence in your language skills. Let Outspokn guide you on your journey to becoming fluent!"
-        src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Feature1.png"
+        title="Master Interviews with Confidence!"
+        desc="Practice realistic interview scenarios and get personalized feedback to improve your skills. Outspokn helps you prepare with confidence for real-world opportunities!"
+        src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Interview.png"
       />
       <Values
         inverted={true}
+        imageChange = {true}
         title="Instant detailed feedback to quickly boost your English!"
         desc="Feedback is essential for achieving fluency in English. With Outspokn, you receive valuable feedback on everything you say, helping you improve and gain confidence in your language skills. Let Outspokn guide you on your journey to becoming fluent!"
         src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Feature1.png"

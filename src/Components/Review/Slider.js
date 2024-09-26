@@ -10,30 +10,9 @@ import "swiper/css";
 
 const Slider = () => {
   const reviewArray = [
-    {
-      id: 1,
-      desc: '"As a non-native English speaker, mastering the language has always been a challenge for me. Outspokn has been a game changer! been a game changer! "',
-      name: "Sarah J.",
-      role: "College Student",
-      src: "https://outspokn-fr.s3.us-east-2.amazonaws.com/Login/2.png",
-    },
-    {
-      id: 2,
-      desc: '"Outspokn is not just another language learning app—its a gift. The daily challenges keep me motivated, and putting myself. motivated, and putting myself"',
-      name: "Luisa M.",
-      role: "Travel Blogger",
-      src: "https://outspokn-fr.s3.us-east-2.amazonaws.com/Login/3.png",
-    },
-    {
-      id: 3,
-      desc: '"As a non-native English speaker, mastering the language has always been a challenge for me. Outspokn has been a game changer! been a game changer!"',
-      name: "David K.",
-      role: "Marketing Manager",
-      src: "https://outspokn-fr.s3.us-east-2.amazonaws.com/Login/profile-dum1.png",
-    },
-    {
+        {
       id: 4,
-      desc: "“I used to dread interviews due to my shaky English, but Outspokn has completely turned that around. Now, I walk into interviews with confidence, fully able to express myself and impress my potential employers.”",
+      desc: "“I used to dread interviews due to my shaky English, but Outspokn has completely turned that around. Now, I walk into interviews with confidence, able to express myself and impress potential employers.”",
       name: "HARINI",
       role: "Engineering Student",
       src: "https://outspoknweb.s3.us-east-2.amazonaws.com/review/harini.webp",

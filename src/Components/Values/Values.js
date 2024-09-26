@@ -8,7 +8,7 @@ const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
 });
 
-const Values = ({ title, desc, src, inverted, lottieUrl }) => {
+const Values = ({ title, desc, src, inverted, lottieUrl, imageChange }) => {
   const [animationData, setAnimationData] = useState(null);
   useEffect(() => {
     if (inverted) {
@@ -46,7 +46,7 @@ const Values = ({ title, desc, src, inverted, lottieUrl }) => {
         <h2 className={styles.valueHeading}>{title}</h2>
         <p className={styles.valueDesc}>{desc}</p>
       </div>
-      {inverted && (
+      {inverted && !imageChange && (
         <div className={styles.leftValueInverted}>
           <div className={styles.imgWrapperInverted}>
             <Image src={src} alt="feature-1" fill />
@@ -56,7 +56,19 @@ const Values = ({ title, desc, src, inverted, lottieUrl }) => {
           </div>
         </div>
       )}
+{inverted && imageChange && (
+        <div className={styles.leftValue}>
+          <div className={styles.imgWrapper}>
+            <Image src={src} alt="feature-1" fill />
+            <div className={styles.lottieAnimation}>
+              <Lottie animationData={animationData} loop={true} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
+     
+  
   );
 };
 

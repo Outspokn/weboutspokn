@@ -95,11 +95,13 @@ const Footer = () => {
         </div>
         <div className={styles.FApp}>
           <div className={styles.googlePlayStore}>
-            <Image
-              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
-              alt="Download from play store"
-              fill
-            />
+            <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+              <Image
+                src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
+                alt="Download from play store"
+                fill
+              />
+            </Link>
           </div>
           <div className={styles.googlePlayStore}>
             <Image
