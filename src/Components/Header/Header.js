@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Link from "next/link";
+
 const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
 });
@@ -36,12 +38,14 @@ const Header = ({ lottieUrl }) => {
         </p>
         <div className={styles.headerContentImages}>
           <div className={styles.googlePlayStore}>
+          <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
               alt="Download from play store"
               fill
               priority
             />
+            </Link>
           </div>
           <div className={styles.googlePlayStore}>
             <Image
