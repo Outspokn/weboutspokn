@@ -11,8 +11,8 @@ const Features = () => {
           The quickest path to learning english with insightful feedback
         </h2>
         <p className={styles.desc}>
-          Gain the ability to speak fluently and convincingly and effortlessly
-          engage any audience
+          Gain the ability to speak fluently and convincingly. <br />
+          Effortlessly engage any audience
         </p>
       </div>
       <div className={styles.featureContent}>

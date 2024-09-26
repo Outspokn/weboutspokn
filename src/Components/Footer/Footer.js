@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaMeta, FaXTwitter } from "react-icons/fa6";
 import { MdMail, MdCall } from "react-icons/md";
-import { FaAndroid } from "react-icons/fa";
+// import { FaAndroid } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -72,16 +72,10 @@ const Footer = () => {
         </div>
         <div className={styles.fPages}>
           <h5>Pages</h5>
-          <Link href="/event">
-            <p>Events</p>
-          </Link>
-          <Link href="/About">
-            <p>About</p>
-          </Link>
           <Link href="/blog">
             <p>Blog</p>
           </Link>
-          <Link href="/Contact-us">
+          <Link href="mailto:support@outspokn.co">
             <p>Contact</p>
           </Link>
         </div>

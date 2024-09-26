@@ -25,6 +25,12 @@ export default function Home() {
         desc="Feedback is essential for achieving fluency in English. With Outspokn, you receive valuable feedback on everything you say, helping you improve and gain confidence in your language skills. Let Outspokn guide you on your journey to becoming fluent!"
         src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Feature1.png"
       />
+      <Values
+        inverted={true}
+        title="Instant detailed feedback to quickly boost your English!"
+        desc="Feedback is essential for achieving fluency in English. With Outspokn, you receive valuable feedback on everything you say, helping you improve and gain confidence in your language skills. Let Outspokn guide you on your journey to becoming fluent!"
+        src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Feature1.png"
+      />
 
       <Review />
       <ThirdSection />
