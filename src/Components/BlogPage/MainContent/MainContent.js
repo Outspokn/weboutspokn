@@ -7,7 +7,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Link from "next/link";
 
 const MainContent = ({ post }) => {
-  const contentRefs = useRef([]);
   const articleRef = useRef(null);
   const [shareUrls, setShareUrls] = useState({});
   const tocRef = useRef(null);
@@ -37,19 +36,16 @@ const MainContent = ({ post }) => {
     }
   }, [post]);
 
-  const scrollToSection = (index) => {
-    const element = contentRefs.current[index];
-    const articleElement = articleRef.current;
+  const handleAnchorClick = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      const offset = 80;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + articleRef.current.scrollTop - offset;
 
-    if (element && articleElement) {
-      const yOffset = -90;
-      const y =
-        element.getBoundingClientRect().top +
-        articleElement.scrollTop +
-        yOffset;
-
-      articleElement.scrollTo({
-        top: y,
+      articleRef.current.scrollTo({
+        top: offsetPosition,
         behavior: "smooth",
       });
     }
@@ -96,14 +92,18 @@ const MainContent = ({ post }) => {
             const url = `#${uMake}`;
 
             return (
-              <Link href={url} key={index}>
-                <li
-                  className={styles.tocItem}
-                  onClick={() => scrollToSection(index)}
+              <li className={styles.tocItem}>
+                <Link
+                  href={url}
+                  scroll={false}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleAnchorClick(uMake);
+                  }}
                 >
                   {item}
-                </li>
-              </Link>
+                </Link>
+              </li>
             );
           })}
         </ul>
