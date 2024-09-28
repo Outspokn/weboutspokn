@@ -41,6 +41,7 @@ const SubscribeSection = () => {
       if (response.ok) {
         if (data.message === "Email already subscribed.") {
           setSubscriptionStatus("alreadySubscribed");
+          setEmail("");
         } else {
           setSubscriptionStatus("subscribed");
         }

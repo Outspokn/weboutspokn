@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ThirdSection.module.css";
 import Image from "next/image";
 import { MdOutlineMic } from "react-icons/md";
+import Link from "next/link";
 
 const ThirdSection = () => {
   return (
@@ -15,11 +16,13 @@ const ThirdSection = () => {
         </p>
         <div className={styles.PlayStore}>
           <div className={styles.googlePlayStore}>
-            <Image
-              src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/get-it-on-google-play-logo-white.png"
-              alt="Download from play store"
-              fill
-            />
+            <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+              <Image
+                src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/get-it-on-google-play-logo-white.png"
+                alt="Download from play store"
+                fill
+              />
+            </Link>
           </div>
           <div className={styles.googlePlayStore}>
             <Image

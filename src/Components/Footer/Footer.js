@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaMeta, FaXTwitter } from "react-icons/fa6";
 import { MdMail, MdCall } from "react-icons/md";
-import { FaAndroid } from "react-icons/fa";
+// import { FaAndroid } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,56 +32,50 @@ const Footer = () => {
           <div className={styles.followRow}>
             <h5>Follow us!</h5>
             <div className={styles.sIcon}>
-             <Link
+              <Link
                 href="https://www.facebook.com/profile.php?id=61561944704188"
                 target="_blank"
                 aria-label="Go to the facebook page of Outspokn"
               >
                 <FaMeta className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.instagram.com/outspokn.ai"
                 target="_blank"
                 aria-label="Go to the Instagram of Outspokn"
               >
                 <FaInstagram className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.youtube.com/@Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Youtube of Outspokn"
               >
                 <FaYoutube className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://x.com/Outspokn_app"
                 target="_blank"
                 aria-label="Go to the Twitter Page of Outspokn"
               >
                 <FaXTwitter className={styles.FIcon} />
-             </Link>
-             <Link
+              </Link>
+              <Link
                 href="https://www.linkedin.com/company/outspokn/"
                 target="_blank"
                 aria-label="Go to the Linkedin Page of Outspokn"
               >
                 <FaLinkedinIn className={styles.FIcon} />
-             </Link>
+              </Link>
             </div>
           </div>
         </div>
         <div className={styles.fPages}>
           <h5>Pages</h5>
-          <Link href="/event">
-            <p>Events</p>
-          </Link>
-          <Link href="/About">
-            <p>About</p>
-          </Link>
-         <Link href="/blog">
+          <Link href="/blog">
             <p>Blog</p>
-         </Link>
-          <Link href="/Contact-us">
+          </Link>
+          <Link href="mailto:support@outspokn.co">
             <p>Contact</p>
           </Link>
         </div>
@@ -101,11 +95,13 @@ const Footer = () => {
         </div>
         <div className={styles.FApp}>
           <div className={styles.googlePlayStore}>
-            <Image
-              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
-              alt="Download from play store"
-              fill
-            />
+            <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+              <Image
+                src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
+                alt="Download from play store"
+                fill
+              />
+            </Link>
           </div>
           <div className={styles.googlePlayStore}>
             <Image
@@ -126,7 +122,9 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className={styles.rights}>© 2024 – Outspokn. All Rights Reserved.</p>
+      <p className={styles.rights}>
+        © 2024 – LinguaQuest Technology Private Limited. All Rights Reserved.
+      </p>
     </div>
   );
 };
