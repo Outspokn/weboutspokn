@@ -92,7 +92,7 @@ const MainContent = ({ post }) => {
             const url = `#${uMake}`;
 
             return (
-              <li className={styles.tocItem}>
+              <li key={index} className={styles.tocItem}>
                 <Link
                   href={url}
                   scroll={false}
