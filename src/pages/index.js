@@ -27,7 +27,7 @@ export default function Home() {
       />
       <Values
         inverted={true}
-        imageChange = {true}
+        imageChange={true}
         title="Instant detailed feedback to quickly boost your English!"
         desc="Feedback is essential for achieving fluency in English. With Outspokn, you receive valuable feedback on everything you say, helping you improve and gain confidence in your language skills. Let Outspokn guide you on your journey to becoming fluent!"
         src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/Feature1.png"
@@ -36,6 +36,7 @@ export default function Home() {
       <Review />
       <ThirdSection />
       <Footer />
+
       {/* <Navbar />
       <Header lottieUrl="https://outspokn-fr.s3.us-east-2.amazonaws.com/chat/age-screen-cat.json" />
       <Values
