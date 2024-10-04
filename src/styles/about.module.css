@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
   padding: 40px 20px;
-  margin-top: 0px;
+  margin-top: 2rem;
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
@@ -89,7 +89,7 @@
     grid-template-columns: 1fr 1fr;
     padding: 30px 50px;
     gap: 30px;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .leftContainer {
@@ -202,7 +202,7 @@
 @media (max-width: 961px) {
   .mainContainer {
     padding: 25px;
-    margin-top: 3rem;
+    margin-top: 3.2rem;
     justify-items: center;
   }
 
@@ -299,7 +299,7 @@
 @media (max-width: 481px) {
   .mainContainer {
     padding: 15px 20px;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 0px;
   }
 
