@@ -66,7 +66,16 @@ const Contact = () => {
           </p>
         </div>
         <div className={styles.locationSection}>
-          <div className={styles.mapPlaceholder}></div>
+          <div className={styles.mapPlaceholder}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8533047427787!2d77.64115477499841!3d12.935036190876825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14530e4f7f71%3A0x9ac0147f0d4600fc!2sLearnBay%20-%20Data%20Science%20and%20AI%20Course%20Training%20Institute!5e0!3m2!1sen!2sin!4v1696487485562!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: "0" }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
           <div className={styles.locationInfo}>
             <h2>Our Location</h2>
             <h1>Connecting Near and Far</h1>
@@ -83,7 +92,6 @@ const Contact = () => {
                 <br />
                 United States
               </p>
-              <a href="#">Open Google Maps</a>
             </div>
           </div>
         </div>
