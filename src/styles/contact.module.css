@@ -211,7 +211,6 @@
 .headquartersInfo p {
   font-size: 16px;
 }
-
 .headquartersInfo a {
   color: #007bff;
   text-decoration: underline;
@@ -243,38 +242,31 @@
     max-width: 1000px;
     padding: 30px;
   }
-
   .contactForm {
     width: 100%;
   }
-
   .supportLinks div {
     width: 48%;
   }
   .mapPlaceholder {
     height: 220px;
   }
-
   .locationInfo h1 {
     margin-left: -28px;
     font-size: 32px;
   }
-
   .locationInfo h2 {
     margin-left: -28px;
     font-size: 20px;
     margin-top: 8px;
   }
-
   .headquartersInfo {
     margin-left: -28px;
   }
-
   .headquartersInfo h3 {
     font-size: 22px;
     font-weight: bold;
   }
-
   .headquartersInfo p {
     font-size: 20px;
   }
@@ -286,29 +278,23 @@
     max-width: 900px;
     padding: 30px;
   }
-
   .contactForm {
     width: 100%;
   }
-
   .supportLinks {
     flex-direction: column;
     gap: 20px;
   }
-
   .mapPlaceholder {
     height: 200px;
   }
-
   .locationInfo h1 {
     margin-left: -30px;
     font-size: 32px;
   }
-
   .locationInfo h2 {
     margin-left: -29px;
   }
-
   .headquartersInfo {
     margin-left: -29px;
   }
@@ -320,6 +306,23 @@
     padding: 0px;
     margin-top: 4rem;
     max-width: 90%;
+  }
+  .nameFields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .supportLinks {
+    gap: 10px;
+  }
+  .supportLinks div {
+    width: 100%;
+  }
+  .mapPlaceholder {
+    height: 180px;
+  }
+  .contactForm {
+    width: 100%;
   }
   .supportLinks {
     gap: 10px;
