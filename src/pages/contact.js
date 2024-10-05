@@ -15,7 +15,7 @@ const Contact = () => {
             messaging problem.
           </p>
           <p>
-            <strong>info@snappyapp.io</strong>
+            <strong>info@outspokn.io</strong>
           </p>
           <p>321-231-231</p>
           <a href="#">Customer Support</a>
@@ -31,14 +31,14 @@ const Contact = () => {
               <h3>Feedback and Suggestions</h3>
               <p>
                 We value your feedback and are constantly working to improve
-                Snappy. Your input is crucial in shaping the future of Snappy.
+                Outspokn. Your input is crucial in shaping the future of Snappy.
               </p>
             </div>
             <div>
               <h3>Media Inquiries</h3>
               <p>
                 For media-related questions or press inquiries, please contact
-                us at outspokn@gmail.com.
+                us at outspokn@gmail.com
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ const Contact = () => {
             <div className={styles.headquartersInfo}>
               <h3>Headquarters</h3>
               <p>
-                Snappy Inc.
+                Outspokn Inc.
                 <br />
                 San Francisco, USA
                 <br />
