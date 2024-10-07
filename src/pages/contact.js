@@ -31,7 +31,8 @@ const Contact = () => {
               <h3>Feedback and Suggestions</h3>
               <p>
                 We value your feedback and are constantly working to improve
-                Outspokn. Your input is crucial in shaping the future of Outspokn.
+                Outspokn. Your input is crucial in shaping the future of
+                Outspokn.
               </p>
             </div>
             <div>
@@ -77,10 +78,10 @@ const Contact = () => {
             ></iframe>
           </div>
           <div className={styles.locationInfo}>
-            <h2>Our Location</h2>
-            <h1>Connecting Near and Far</h1>
+            <h3>Our Location</h3>
+            <h2>Connecting Near and Far</h2>
             <div className={styles.headquartersInfo}>
-              <h3>Headquarters</h3>
+              <h4>Headquarters</h4>
               <p>
                 Outspokn Inc.
                 <br />
