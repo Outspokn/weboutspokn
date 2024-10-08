@@ -15,9 +15,8 @@ const Contact = () => {
             messaging problem.
           </p>
           <p>
-            <strong>info@outspokn.io</strong>
+            <strong>support@outspokn.co</strong>
           </p>
-          <p>321-231-231</p>
           <a href="#">Customer Support</a>
           <div className={styles.supportLinks}>
             <div>
@@ -39,7 +38,7 @@ const Contact = () => {
               <h3>Media Inquiries</h3>
               <p>
                 For media-related questions or press inquiries, please contact
-                us at outspokn@gmail.com
+                us at support@outspokn.co
               </p>
             </div>
           </div>
@@ -69,7 +68,7 @@ const Contact = () => {
         <div className={styles.locationSection}>
           <div className={styles.mapPlaceholder}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8533047427787!2d77.64115477499841!3d12.935036190876825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14530e4f7f71%3A0x9ac0147f0d4600fc!2sLearnBay%20-%20Data%20Science%20and%20AI%20Course%20Training%20Institute!5e0!3m2!1sen!2sin!4v1696487485562!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.8533047427787!2d77.64115477499841!3d12.935036190876825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14530e4f7f71%3A0x9ac0147f0d4600fc!2sOutspokn%20Inc.!5e0!3m2!1sen!2sin!4v1696487485562!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: "0" }}
@@ -85,13 +84,13 @@ const Contact = () => {
               <p>
                 Outspokn Inc.
                 <br />
-                San Francisco, USA
+                No 224, 3rd Flr, 80/3,
                 <br />
-                123 Tech Boulevard, Suite 456
+                Oldmadras Road, Doorvaninagar,
                 <br />
-                San Francisco, CA 12345
+                Bangalore North Bengaluru
                 <br />
-                United States
+                Karnataka 560016
               </p>
             </div>
           </div>
