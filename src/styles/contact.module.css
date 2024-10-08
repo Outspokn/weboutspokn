@@ -137,7 +137,7 @@
 }
 
 .contactForm button {
-  background-color: #007bff;
+  background-color: var(--primary-color);
   color: white;
   padding: 15px;
   border: none;
