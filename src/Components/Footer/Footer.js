@@ -72,10 +72,13 @@ const Footer = () => {
         </div>
         <div className={styles.fPages}>
           <h5>Pages</h5>
+          <Link href="/about">
+            <p>About</p>
+          </Link>
           <Link href="/blog">
             <p>Blog</p>
           </Link>
-          <Link href="mailto:support@outspokn.co">
+          <Link href="/contact">
             <p>Contact</p>
           </Link>
         </div>
