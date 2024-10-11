@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: -0.05rem;
+}
+
+.businessLink {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
