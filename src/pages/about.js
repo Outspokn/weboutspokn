@@ -10,19 +10,18 @@ const about = () => {
       <Navbar />
       <div className={styles.mainContainer}>
         <div className={styles.leftContainer}>
-          <h2>How It Started</h2>
-          <h1>
-            Our Dream is <br /> Global Learning Transformation
-          </h1>
+          <h2>Outspokn</h2>
+          <h1>Empowering Your Journey in Language Mastery</h1>
           <p>
-            Kawruh was founded by Robert Anderson, a passionate lifelong
-            learner, and Maria Sanchez, a visionary educator. Their shared dream
-            was to create a digital haven of knowledge accessible to all. United
-            by their belief in the transformational power of education, they
-            embarked on a journey to build Kawruh. With relentless dedication,
-            they gathered a team of experts and launched this innovative
-            platform, creating a global community of eager learners, all
-            connected by the desire to explore, learn, and grow.
+            Communication: the first, fundamental skill we master in life. In
+            the vibrant tapestry of today’s global village, fluency in English
+            is not just an asset but a necessity, bridging cultures and
+            fostering collaborations across continents. At the heart of our
+            mission, we stand as your trusted guide in mastering English,
+            transforming basic skills into confident, fluent expression akin to
+            that of a native speaker. Our innovative digital solutions are
+            designed to accelerate your learning journey, making fluency
+            attainable, enjoyable, and profoundly impactful.
           </p>
         </div>
         <div className={styles.rightContainer}>
@@ -37,20 +36,20 @@ const about = () => {
 
           <div className={styles.lowerContainer}>
             <div className={styles.statItem}>
-              <h3>3.5</h3>
-              <p>Years Experience</p>
+              <h3>5,000+</h3>
+              <p>Total registered users</p>
             </div>
             <div className={styles.statItem}>
-              <h3>23</h3>
-              <p>Project Challenge</p>
+              <h3>80%</h3>
+              <p>Course Completion Rate</p>
             </div>
             <div className={styles.statItem}>
-              <h3>830+</h3>
-              <p>Positive Reviews</p>
+              <h3>30 minutes</h3>
+              <p>Average Daily Session Length</p>
             </div>
             <div className={styles.statItem}>
-              <h3>100K</h3>
-              <p>Trusted Students</p>
+              <h3>100+</h3>
+              <p>Native language support</p>
             </div>
           </div>
         </div>

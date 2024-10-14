@@ -11,8 +11,8 @@ const Contact = () => {
         <div className={styles.contactInfo}>
           <h1>Contact Us</h1>
           <p>
-            Email, call, or complete the form to learn how Snappy can solve your
-            messaging problem.
+            If you are facing any problem with accessing the mobile app, please
+            reach out to us at
           </p>
           <p>
             <strong>support@outspokn.co</strong>
