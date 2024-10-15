@@ -1,0 +1,10 @@
+.businessWrapper {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #303030, #1a1a1a);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
