@@ -7,6 +7,10 @@
   padding: 30px 40px;
   color: #ffffff;
   background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
