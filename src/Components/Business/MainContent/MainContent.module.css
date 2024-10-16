@@ -18,7 +18,7 @@
 .textContent h1 {
   font-size: 2.9rem;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--background-color-light);
   font-weight: 800;
 }
 
@@ -26,13 +26,13 @@
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: #fff;
+  color: var(--background-color-light);
   font-weight: 600;
 }
 
 .ctaButton {
   padding: 15px 30px;
-  background-color: #ffffff;
+  background-color: var(--background-color-light);
   color: #1a1a1a;
   border: none;
   border-radius: 15px;
@@ -53,7 +53,7 @@
 }
 
 .loginText a {
-  color: #ffffff;
+  color: var(--background-color-light);
   text-decoration: none;
   font-weight: 800;
 }

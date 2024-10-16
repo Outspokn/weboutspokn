@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   gap: 2rem;
   flex-wrap: nowrap;
@@ -19,11 +19,11 @@
   border-radius: 15px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   padding: 2.5rem;
-  background-color: white;
+  background-color: var(--dark-white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: auto; 
+  height: auto;
 }
 
 .planHeader {
@@ -42,7 +42,7 @@
 .memberCount {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #999;
+  color:var(--light-font-desc);
 }
 
 .planContent {
@@ -80,8 +80,10 @@
 .contact {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-top: 10px;
   margin-bottom: 20px;
+}
+.contact a {
+  color: var(--check-mark)
 }
 
 .horizontalLine {
@@ -109,8 +111,8 @@
   content: "✔";
   position: absolute;
   left: 0;
-  background-color: blue;
-  color: white;
+  background-color: var(--check-mark);
+  color: var(--dark-white);
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -121,7 +123,7 @@
 }
 
 .getStartedButton {
-  background-color: white;
+  background-color: var(--dark-white);
   border: 2px solid black;
   padding: 0.8rem 1.5rem;
   font-size: 1.2rem;

@@ -22,7 +22,7 @@ const PricingSection = () => {
           </div>
           <div className={styles.horizontalLine}></div>
           <ul className={styles.features}>
-            <li>Unlimited Loora access</li>
+            <li>Unlimited Outspokn access</li>
             <li>Custom role-playing</li>
             <li>Management console</li>
             <li>Customer support</li>
@@ -41,7 +41,7 @@ const PricingSection = () => {
           </div>
           <div className={styles.horizontalLine}></div>
           <ul className={styles.features}>
-            <li>Unlimited Loora access</li>
+            <li>Unlimited Outspokn access</li>
             <li>Custom role-playing</li>
             <li>Management console</li>
             <li>Customer support</li>

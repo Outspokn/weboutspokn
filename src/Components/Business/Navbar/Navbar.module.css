@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  color: #ffffff;
+  color: var(--background-color-light);
   position: fixed;
   top: 0;
   width: 100%;
