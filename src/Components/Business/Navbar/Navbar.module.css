@@ -6,11 +6,13 @@
   align-items: center;
   padding: 30px 40px;
   color: #ffffff;
-  background-color: var(--primary-color);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  background:linear-gradient(135deg, #2F2F3F, #3A3A5B, #48485F, #4E4E70, #5D5D80); 
+  background-size: 400% 400%; 
+ 
 }
 
 .logo {
