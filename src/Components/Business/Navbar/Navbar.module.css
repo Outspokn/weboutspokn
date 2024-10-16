@@ -10,9 +10,15 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background:linear-gradient(135deg, #2F2F3F, #3A3A5B, #48485F, #4E4E70, #5D5D80); 
-  background-size: 400% 400%; 
- 
+  background: linear-gradient(
+    135deg,
+    #2f2f3f,
+    #3a3a5b,
+    #48485f,
+    #4e4e70,
+    #5d5d80
+  );
+  background-size: 400% 400%;
 }
 
 .logo {
@@ -25,4 +31,55 @@
 .businessLink {
   font-weight: bold;
   font-size: 0.95rem;
+}
+
+@media (max-width: 1281px) {
+  .navbar {
+    padding: 25px 40px;
+  }
+  .logo {
+    font-size: 1.9rem;
+  }
+  .businessLink {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 35px;
+  }
+  .logo {
+    font-size: 1.9rem;
+  }
+  .businessLink {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 961px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+  .businessLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 481px) {
+  .businessLink {
+    display: 0.75rem;
+  }
 }
