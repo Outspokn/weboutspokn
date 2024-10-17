@@ -1,9 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/contact.module.css";
 import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [charCount, setCharCount] = useState(0);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+      newsletter_passkey: process.env.NEXT_PUBLIC_API_KEY,
+    });
+
+    if (name === "message") {
+      setCharCount(value.length);
+    }
+  };
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formData);
+
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}users/web_contact_us/`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        // Handle success (e.g., show a success message or redirect)
+        alert("Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        // Handle error (e.g., show an error message)
+        alert("There was an error submitting the form.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An unexpected error occurred.");
+    }
+  };
+
   return (
     <div>
       <Navbar />
@@ -46,17 +103,44 @@ const Contact = () => {
         <div className={styles.contactForm}>
           <h2>Get in Touch</h2>
           <p className={styles.contactFormHeading}>You can reach us anytime</p>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.nameFields}>
-              <input type="text" placeholder="First name" required />
-              <input type="text" placeholder="Last name" required />
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
-            <input type="email" placeholder="Your email" required />
-            <input type="text" placeholder="Phone number" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Phone number"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
 
             <div className={styles.textareaContainer}>
-              <textarea placeholder="How can we help?" required></textarea>
-              <span className={styles.charCounter}>0/100</span>{" "}
+              <textarea
+                name="message"
+                placeholder="How can we help?"
+                value={formData.message}
+                onChange={handleChange}
+                maxLength="100"
+                required
+              ></textarea>
+              <span className={styles.charCounter}>{charCount}/100</span>{" "}
             </div>
             <button type="submit">Submit</button>
           </form>
@@ -82,7 +166,7 @@ const Contact = () => {
             <div className={styles.headquartersInfo}>
               <h4>Headquarters</h4>
               <p>
-                Outspokn Inc.
+                LinguaQuest Technology Private Limited
                 <br />
                 No 224, 3rd Flr, 80/3,
                 <br />
