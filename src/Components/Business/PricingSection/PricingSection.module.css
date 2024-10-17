@@ -26,6 +26,10 @@
   height: auto;
 }
 
+.pricingContainer .plan {
+  border-radius: 30px;
+}
+
 .planHeader {
   display: flex;
   justify-content: space-between;
@@ -42,7 +46,7 @@
 .memberCount {
   font-size: 1.5rem;
   font-weight: bold;
-  color:var(--light-font-desc);
+  color: var(--light-font-desc);
 }
 
 .planContent {
@@ -50,6 +54,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.planContent .contact {
+  margin-top: 2rem;
 }
 
 .planContent p {
@@ -83,7 +91,7 @@
   margin-bottom: 20px;
 }
 .contact a {
-  color: var(--check-mark)
+  color: var(--check-mark);
 }
 
 .horizontalLine {
@@ -131,8 +139,254 @@
   cursor: pointer;
   border-radius: 8px;
   margin-top: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .getStartedButton:hover {
   background-color: #f0f0f0;
+}
+
+@media (max-width: 1281px) {
+  .pricingContainer {
+    max-width: 1000px;
+    gap: 1.5rem;
+  }
+
+  .plan {
+    flex-basis: 47%;
+    padding: 2rem;
+  }
+
+  .plan h3 {
+    font-size: 1.8rem;
+  }
+
+  .memberCount {
+    font-size: 1.4rem;
+  }
+
+  .price {
+    font-size: 2.7rem;
+  }
+
+  .currency {
+    font-size: 2.7rem;
+  }
+
+  .perMonth {
+    font-size: 1.4rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+
+  .contact {
+    font-size: 1.4rem;
+  }
+
+  .features li {
+    font-size: 0.95rem;
+  }
+
+  .getStartedButton {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pricingContainer {
+    max-width: 900px;
+    gap: 1.2rem;
+  }
+
+  .plan {
+    flex-basis: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .plan h3 {
+    font-size: 1.6rem;
+  }
+
+  .memberCount {
+    font-size: 1.3rem;
+  }
+
+  .price {
+    font-size: 2.5rem;
+  }
+
+  .currency {
+    font-size: 2.5rem;
+  }
+
+  .perMonth {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .contact {
+    font-size: 1.3rem;
+  }
+
+  .features li {
+    font-size: 0.9rem;
+  }
+
+  .getStartedButton {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 961px) {
+  .pricingContainer {
+    max-width: 850px;
+    margin: 0 auto; 
+    padding: 0 2rem;
+  }
+
+  .plan {
+    flex-basis: 100%;
+    padding: 1.8rem;
+  }
+
+  .plan h3 {
+    font-size: 1.5rem;
+  }
+
+  .memberCount {
+    font-size: 1.2rem;
+    margin-left: 5rem;
+  }
+
+  .price {
+    font-size: 2.3rem;
+  }
+
+  .currency {
+    font-size: 2.3rem;
+  }
+
+  .perMonth {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+
+  .planContent .contact {
+    margin-top: 2rem;
+  }
+  .contact {
+    font-size: 1.4rem;
+  }
+
+  .features li {
+    font-size: 1.1rem;
+  }
+
+  .getStartedButton {
+    font-size: 1rem;
+    padding: 0.6rem 1.1rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .pricingContainer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .plan {
+    padding: 1.5rem;
+    margin: 0 auto;
+    width: 100%; 
+    max-width: 600px; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: var(--dark-white);
+  }
+
+  .planHeader {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .plan h3 {
+    font-size: 1.8rem;
+  }
+
+  .memberCount {
+    font-size: 1.7rem;
+    margin-left: 0px;
+    margin-top: 0.1rem; /
+  }
+
+  .price {
+    font-size: 2.2rem;
+  }
+
+  .currency {
+    font-size: 2.2rem;
+  }
+
+  .perMonth {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .contact {
+    font-size: 2rem;
+  }
+
+  .features li {
+    font-size: 1.2rem;
+  }
+
+  .getStartedButton {
+    font-size: 1.4rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 481px) {
+  .memberCount {
+    font-size: 1.4rem;
+    margin-top: 0.1rem; 
+  }
+
+  .perMonth {
+    font-size: 1.1rem;
+  }
+
+  .contact {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .planContent .contact {
+    margin-top: 15px;
+  }
+
+  .pricingContainer .plan {
+    border-radius: 25px;
+  }
+
+  .features li {
+    font-size: 1.1rem;
+  }
 }
