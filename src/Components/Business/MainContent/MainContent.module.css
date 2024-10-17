@@ -48,7 +48,6 @@
 
 .loginText {
   font-size: 0.875rem;
-  color: #b0b0b0;
   margin-top: 25px;
 }
 
@@ -81,4 +80,257 @@
 
 .image:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 1281px) {
+  .mainContent {
+    padding: 30px;
+    gap: 40px;
+  }
+
+  .textContent p {
+    font-size: 20px;
+  }
+
+  .ctaButton {
+    padding: 15px 30px;
+    font-size: 22px;
+  }
+
+  .mainContent .loginText {
+    font-size: 22px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .textContent {
+    flex: 1.3;
+    max-width: 500px;
+  }
+
+  .textContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .textContent p {
+    font-size: 17px;
+  }
+
+  .ctaButton {
+    padding: 12px 25px;
+  }
+
+  .imagesContent {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .imageLeft {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .imageStacked {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 200px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .imageLeft img,
+  .imageStacked img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 961px) {
+  .mainContent {
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 960px;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .textContent {
+    flex: 1.2;
+  }
+
+  .imagesContent {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .imageLeft {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .imageStacked {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 200px;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .imageLeft img,
+  .imageStacked img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 641px) {
+  .mainContent {
+    padding: 15px;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: flex-start;
+  }
+
+  .imagesContent {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .textContent {
+    order: 2;
+    text-align: center;
+  }
+  .textContent h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .textContent h1,
+  .textContent p {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .textContent p {
+    font-size: 18px;
+    margin: 0 auto;
+    word-wrap: break-word;
+    max-width: 90%;
+  }
+
+  .ctaButton {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+
+  .image {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .imageLeft img,
+  .imageStacked img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .loginText {
+    text-align: center;
+  }
+
+  .mainContent .loginText {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 481px) {
+  .mainContent {
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .imagesContent {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .textContent {
+    order: 2;
+  }
+
+  .textContent h1 {
+    font-size: 2.1rem;
+  }
+
+  .ctaButton {
+    padding: 12px 15px;
+    font-size: 1.35rem;
+  }
+
+  .mainContent .loginText {
+    font-size: 18px;
+  }
+  .loginText a {
+    font-size: 17px;
+  }
+
+  .imageStacked {
+    gap: 15px;
+  }
+
+  .image {
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+  }
+
+  .imageLeft img,
+  .imageStacked img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }
