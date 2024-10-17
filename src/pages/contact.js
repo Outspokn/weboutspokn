@@ -17,7 +17,7 @@ const Contact = () => {
     setFormData({
       ...formData,
       [name]: value,
-      newsletter_passkey: process.env.EXT_PUBLIC_API_KEY1,
+      newsletter_passkey: process.env.NEXT_PUBLIC_API_KEY1,
     });
 
     if (name === "message") {
