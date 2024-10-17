@@ -1,8 +1,6 @@
-import FaqSection from "@/Components/Blog/FaqSection/FaqSection";
 import Header from "@/Components/Blog/Header/Header";
 import LatestPost from "@/Components/Blog/LatestPost/LatestPost";
 import PostList from "@/Components/Blog/PostList/PostList";
-import Slider from "@/Components/Blog/Slider/Slider";
 import SubscribeSection from "@/Components/Blog/SubscribeSection/SubscribeSection";
 import WhoIsOutspokn from "@/Components/Blog/WhoIsOutspokn/WhoIsOutspokn";
 import Footer from "@/Components/Footer/Footer";
@@ -40,7 +38,6 @@ const Index = ({ allPostsData }) => {
       {remainingPosts.length > 0 && <PostList posts={remainingPosts} />}
 
       <WhoIsOutspokn lottieUrl="https://outspokn-fr.s3.us-east-2.amazonaws.com/chat/age-screen-cat.json" />
-      {/* <FaqSection /> */}
       <SubscribeSection />
       <Footer />
     </div>

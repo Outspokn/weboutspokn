@@ -1,0 +1,396 @@
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 3rem auto;
+}
+
+.upperSection {
+  background-color: #f8f9fb;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.contactInfo {
+  color: #333;
+}
+
+.contactInfo h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contactInfo p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
+
+.contactInfo a {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.supportLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.supportLinks div {
+  flex-basis: 30%;
+}
+
+.supportLinks h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.supportLinks p {
+  font-size: 16px;
+  max-width: 340px;
+  line-height: 1.5em;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contactForm {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contactForm h2 {
+  font-size: 28px;
+}
+
+.contactForm p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.nameFields {
+  display: flex;
+  gap: 12px;
+}
+
+.nameFields input {
+  flex: 1;
+}
+
+.contactForm input {
+  font-size: 14px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.contactForm input::placeholder {
+  color: var(--light-font-desc);
+}
+
+.textareaContainer {
+  position: relative;
+  width: 100%;
+}
+
+.contactForm textarea {
+  font-size: 14px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  height: 150px;
+  width: 100%;
+  resize: none;
+  line-height: 1.5em;
+  padding-right: 60px;
+}
+
+.charCounter {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  color: var(--light-font-desc);
+  font-size: 12px;
+  pointer-events: none;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.contactForm button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contactForm .buttonText {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 60%;
+}
+
+.contactForm a {
+  color: black;
+  font-weight: bold;
+}
+
+.contactForm .contactFormHeading {
+  text-align: start;
+  margin-left: 2px;
+  margin-bottom: 10px;
+}
+
+.contactForm button:hover {
+  background-color: #3c4e61;
+}
+
+.locationSection {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.mapPlaceholder {
+  width: 50%;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.locationInfo {
+  padding-left: 30px;
+  color: #333;
+  flex-grow: 1;
+}
+
+.locationInfo h3 {
+  color: #555;
+  margin-bottom: 1px;
+  font-size: 16px;
+}
+
+.locationInfo h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.headquartersInfo h4 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.headquartersInfo {
+  font-size: 16px;
+}
+
+.headquartersInfo p {
+  font-size: 16px;
+}
+.headquartersInfo a {
+  color: #007bff;
+  text-decoration: underline;
+  margin-top: 15px;
+  display: block;
+}
+
+@media (max-width: 1281px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    padding: 0px;
+    margin-top: 4rem;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .supportLinks div {
+    width: 45%;
+  }
+  .locationSection {
+    flex-direction: column;
+  }
+  .mapPlaceholder {
+    width: 100%;
+    height: 250px;
+  }
+  .locationInfo h3 {
+    margin-left: -28px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .locationInfo h2 {
+    margin-left: -30px;
+  }
+  .headquartersInfo h4 {
+    font-size: 18px;
+  }
+  .headquartersInfo {
+    font-size: 16px;
+    margin-left: -29px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    padding: 30px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .supportLinks div {
+    width: 48%;
+  }
+  .mapPlaceholder {
+    height: 220px;
+  }
+  .locationInfo h2 {
+    margin-left: -29px;
+    font-size: 32px;
+  }
+  .locationInfo h3 {
+    margin-left: -28px;
+    font-size: 20px;
+    margin-top: 8px;
+  }
+  .headquartersInfo {
+    margin-left: -28px;
+  }
+  .headquartersInfo p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 961px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    padding: 30px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .supportLinks {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mapPlaceholder {
+    height: 200px;
+  }
+  .locationInfo h2 {
+    margin-left: -30px;
+  }
+  .locationInfo h3 {
+    margin-left: -29px;
+  }
+  .headquartersInfo {
+    margin-left: -29px;
+  }
+  .contactForm .buttonText {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 641px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding: 0px;
+    margin-top: 4rem;
+    max-width: 90%;
+  }
+  .nameFields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .supportLinks {
+    gap: 10px;
+  }
+  .supportLinks div {
+    width: 100%;
+  }
+  .mapPlaceholder {
+    height: 180px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .supportLinks {
+    gap: 10px;
+  }
+  .supportLinks div {
+    width: 100%;
+  }
+  .mapPlaceholder {
+    height: 180px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 481px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+  .supportLinks {
+    gap: 3px;
+  }
+  .supportLinks div {
+    width: 100%;
+  }
+  .mapPlaceholder {
+    height: 150px;
+  }
+  .contactForm {
+    width: 100%;
+  }
+  .locationInfo h3 {
+    margin-left: -19px;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+  .locationInfo h2 {
+    margin-left: -20px;
+    font-size: 24px;
+  }
+  .locationInfo {
+    padding-left: 15px;
+  }
+  .headquartersInfo {
+    margin-left: -18px;
+  }
+  .contactForm .buttonText {
+    max-width: 90%;
+  }
+}

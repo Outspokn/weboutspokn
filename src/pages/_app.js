@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Nunito_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import "dotenv/config";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
