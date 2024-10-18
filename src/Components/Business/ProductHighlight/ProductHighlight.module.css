@@ -40,3 +40,131 @@
   border-radius: 20px;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 1281px) {
+  .mainContainer {
+    max-width: 1116px;
+    padding: 0;
+    margin-top: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .textSection {
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .textSection h2 {
+    font-size: 32px;
+    margin-left: 0;
+  }
+
+  .textSection p {
+    font-size: 18px;
+    max-width: 50%;
+  }
+
+  .chatImage {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    max-width: 900px;
+    padding: 1rem 0;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .textSection {
+    padding-right: 0;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .textSection h2 {
+    font-size: 30px;
+  }
+
+  .imageSection {
+    justify-content: center;
+  }
+
+  .chatImage {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 961px) {
+  .mainContainer {
+    max-width: 850px;
+    padding: 1rem 5%;
+    flex-direction: column;
+  }
+
+  .textSection {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    padding-right: 0;
+  }
+
+  .textSection h2 {
+    font-size: 28px;
+  }
+
+  .textSection p {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .imageSection {
+    justify-content: center;
+  }
+
+  .chatImage {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 641px) {
+  .mainContainer {
+    padding: 1rem 5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textSection h2 {
+    font-size: 26px;
+  }
+
+  .textSection p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .chatImage {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 481px) {
+  .mainContainer {
+    padding: 0.5rem 10%;
+  }
+
+  .textSection h2 {
+    font-size: 19px;
+  }
+
+  .textSection p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .chatImage {
+    max-width: 280px;
+  }
+}
