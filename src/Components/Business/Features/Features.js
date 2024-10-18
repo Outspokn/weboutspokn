@@ -13,9 +13,9 @@ const Features = () => {
         </div>
         <h3>Daily lessons</h3>
         <p>
-          Engage in English everyday, about anything. Daily lessons will
-          provide structure for a gradual improvement in talking English
-          fluently - with confidence.
+          Engage in English everyday, about anything. Daily lessons will provide
+          structure for a gradual improvement in talking English fluently - with
+          confidence.
         </p>
       </div>
 
