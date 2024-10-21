@@ -40,7 +40,7 @@ const PricingSection = () => {
             </p>
           </div>
           <div className={styles.horizontalLine}></div>
-          <ul className={styles.features}>
+          <ul className={`${styles.features} ${styles.secondCardFeatures}`}>
             <li>Unlimited Outspokn access</li>
             <li>Custom role-playing</li>
             <li>Management console</li>

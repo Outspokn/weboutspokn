@@ -50,14 +50,13 @@
 }
 
 .planContent {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .planContent .contact {
-  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .planContent p {
@@ -87,8 +86,9 @@
 
 .contact {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
 }
+
 .contact a {
   color: var(--check-mark);
 }
@@ -107,7 +107,7 @@
 }
 
 .features li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   text-align: left;
   padding-left: 40px;
   position: relative;
@@ -143,6 +143,10 @@
 
 .getStartedButton:hover {
   background-color: #f0f0f0;
+}
+
+.secondCardFeatures {
+  transform: translateY(-22px);
 }
 
 @media (max-width: 1281px) {
@@ -234,6 +238,10 @@
     font-size: 1.3rem;
   }
 
+  .planContent .contact {
+    font-size: 19px;
+  }
+
   .features li {
     font-size: 0.9rem;
   }
@@ -295,6 +303,9 @@
   .getStartedButton {
     font-size: 1rem;
     padding: 0.6rem 1.1rem;
+  }
+  .secondCardFeatures {
+    transform: translateY(-5px);
   }
 }
 
