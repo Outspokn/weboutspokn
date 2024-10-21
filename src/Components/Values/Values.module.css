@@ -14,11 +14,11 @@
 }
 @media (min-width: 1650px) {
   .valuesWrapper {
-    padding: 80px 300px;
+    padding: 80px 180px;
   }
 
   .valuesWrapperInverted {
-    padding: 40px 300px;
+    padding: 40px 180px;
   }
 }
 
@@ -92,7 +92,6 @@
     gap: 30px;
     padding: 50px 20px;
     text-align: center;
-  
   }
   .valuesWrapperInverted {
     flex-flow: column;
@@ -114,6 +113,6 @@
   }
   .valueHeading {
     font-size: var(--h2-font-size-mobile);
-        width: 99%;
+    width: 99%;
   }
 }

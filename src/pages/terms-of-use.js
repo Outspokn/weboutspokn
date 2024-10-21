@@ -13,9 +13,9 @@ const TermsAndConditions = () => {
       <p>Last updated June 17, 2024</p>
       <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
       <p>
-        We are Outspokn Pvt. Ltd., doing business as Outspokn (`Company,` `we,`
-        `us,` `our`), a company registered in India at 9th MAIN, 7th SECTOR, HSR
-        LAYOUT, Bangalore, Karnataka 560102.
+        We are LinguaQuest Technology Pvt. Ltd., doing business as Outspokn
+        (`Company,` `we,` `us,` `our`), a company registered in India at 9th
+        MAIN, 7th SECTOR, HSR LAYOUT, Bangalore, Karnataka 560102.
       </p>
       <p>
         We operate the website outspokn.co (the `Site`), the mobile application
@@ -872,9 +872,9 @@ const TermsAndConditions = () => {
       <h2 id="governing-law">19. GOVERNING LAW</h2>
       <p>
         These Legal Terms shall be governed by and defined following the laws of
-        India. Outspokn Pvt. Ltd. and yourself irrevocably consent that the
-        courts of India shall have exclusive jurisdiction to resolve any dispute
-        which may arise in connection with these Legal Terms.
+        India. LinguaQuest Technology Pvt. Ltd. and yourself irrevocably consent
+        that the courts of India shall have exclusive jurisdiction to resolve
+        any dispute which may arise in connection with these Legal Terms.
       </p>
 
       <h2 id="dispute-resolution">20. DISPUTE RESOLUTION</h2>
@@ -1077,7 +1077,7 @@ const TermsAndConditions = () => {
         In order to resolve a complaint regarding the Services or to receive
         further information regarding use of the Services, please contact us at:
       </p>
-      <p>Outspokn Pvt. Ltd.</p>
+      <p>LinguaQuest Technology Pvt. Ltd.</p>
       <p>
         #1207/343 , 9th MAIN, 7th SECTOR, HSR LAYOUT, BANGALORE, KARNATAKA
         560102 India

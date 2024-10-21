@@ -12,8 +12,8 @@ const PrivacyPolicy = () => {
       <h1>PRIVACY POLICY</h1>
       <p>Last updated June 10, 2024</p>
       <p>
-        This privacy notice for Outspokn Pvt. Ltd. (doing business as
-        Outspokn.co) (`we,` `us,` or `our`), describes how and why we might
+        This privacy notice for LinguaQuest Technology Pvt. Ltd. (doing business
+        as Outspokn.co) (`we,` `us,` or `our`), describes how and why we might
         collect, store, use, and/or share (`process`) your information when you
         use our services (`Services`), such as when you:
       </p>
@@ -1094,7 +1094,7 @@ const PrivacyPolicy = () => {
         <a href="mailto:privacy@outspokn.co">privacy@outspokn.co</a>, or contact
         us by post at:
       </p>
-      <p>Outspokn Pvt Ltd</p>
+      <p>LinguaQuest Technology Pvt Ltd</p>
       <p>Data Protection Officer</p>
       <p>#1207/343 , 9th MAIN, 7th SECTOR , HSR LAYOUT</p>
       <p>Bangalore, Karnataka 560102</p>
