@@ -18,7 +18,6 @@ const MainSection = () => {
           Already have an account? <Link href="/login">Log in</Link>
         </p>
       </div>
-
       <div className={styles.imagesContent}>
         <div className={styles.imageLeft}>
           <Image
@@ -30,20 +29,23 @@ const MainSection = () => {
           />
         </div>
 
-        <div className={styles.imageStacked}>
+        <div className={styles.imageRightTop}>
           <Image
             src="/assets/business2.jpg"
             alt="Image 2"
             className={styles.image}
-            width={200}
-            height={200}
+            width={300}
+            height={300}
           />
+        </div>
+
+        <div className={styles.imageRightBottom}>
           <Image
             src="/assets/business3.png"
             alt="Image 3"
             className={styles.image}
-            width={200}
-            height={200}
+            width={300}
+            height={300}
           />
         </div>
       </div>
