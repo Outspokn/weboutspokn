@@ -126,6 +126,10 @@
     font-size: 26px;
   }
 
+  .imageSection {
+    margin-top: 1.5rem;
+  }
+
   .chatImage {
     max-width: 300px;
     max-height: 350px;
