@@ -10,13 +10,11 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  transition: background 0.3s;
   background: linear-gradient(
-    135deg,
-    #2f2f3f,
-    #3a3a5b,
-    #48485f,
-    #4e4e70,
-    #5d5d80
+    to right,
+    rgb(45, 45, 45),
+    #4a90e2
   );
   background-size: 400% 400%;
 }
