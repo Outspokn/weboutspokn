@@ -271,6 +271,7 @@
     left: 104px;
   }
 }
+
 @media (max-width: 481px) {
   .mainContent {
     padding: 0 15px;
@@ -334,5 +335,27 @@
   .mainContent .loginText {
     margin-top: 10px;
     font-size: 17px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imageLeft {
+    top: 122px;
+    left: -15px;
+  }
+
+  .imageRightTop {
+    top: -164px;
+    left: 70px;
+  }
+
+  .imageRightBottom {
+    top: -216px;
+    left: 49px;
+  }
+
+  .textContent {
+    padding-top: 0;
+    margin-top: -220px;
   }
 }
