@@ -9,7 +9,7 @@ const Features = () => {
     <section className={styles.features}>
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <MdCalendarToday size={50} />
+          <MdCalendarToday />
         </div>
         <h3>Daily lessons</h3>
         <p>
@@ -21,7 +21,7 @@ const Features = () => {
 
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <FaComments size={50} />
+          <FaComments />
         </div>
         <h3>Custom scenarios</h3>
         <p>
@@ -33,7 +33,7 @@ const Features = () => {
 
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <BsStarFill size={50} />
+          <BsStarFill />
         </div>
         <h3>Real-time feedback</h3>
         <p>
