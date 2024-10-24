@@ -1,7 +1,7 @@
 import React from "react";
-import { MdCalendarToday } from "react-icons/md";
-import { FaComments } from "react-icons/fa";
-import { BsStarFill } from "react-icons/bs";
+import { FaRegCalendarCheck } from "react-icons/fa";
+import { LuMessagesSquare } from "react-icons/lu";
+import { PiFolderSimpleStarFill } from "react-icons/pi";
 import styles from "./Features.module.css";
 
 const Features = () => {
@@ -9,7 +9,7 @@ const Features = () => {
     <section className={styles.features}>
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <MdCalendarToday />
+          <FaRegCalendarCheck />
         </div>
         <h3>Daily lessons</h3>
         <p>
@@ -21,7 +21,7 @@ const Features = () => {
 
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <FaComments />
+          <LuMessagesSquare />
         </div>
         <h3>Custom scenarios</h3>
         <p>
@@ -33,7 +33,7 @@ const Features = () => {
 
       <div className={styles.featureItem}>
         <div className={styles.icon}>
-          <BsStarFill />
+          <PiFolderSimpleStarFill />
         </div>
         <h3>Real-time feedback</h3>
         <p>

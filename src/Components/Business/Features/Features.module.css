@@ -30,7 +30,7 @@
 
 .icon {
   font-size: 50px;
-  color: var(--check-mark);
+  color: #27187e;
 }
 
 @media (max-width: 1281px) {
