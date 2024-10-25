@@ -11,10 +11,15 @@
   width: 100%;
   z-index: 1000;
   transition: background 0.3s;
+  background: linear-gradient(to right, rgb(45, 45, 45), #4a90e2);
+  background-size: 400% 400%;
+}
+
+.navbarScrolled {
   background: linear-gradient(
     to right,
-    rgb(45, 45, 45),
-    #4a90e2
+    rgb(16, 16, 16),
+    #2a6fb1
   );
   background-size: 400% 400%;
 }
