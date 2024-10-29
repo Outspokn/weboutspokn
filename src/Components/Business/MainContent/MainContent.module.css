@@ -181,20 +181,20 @@
   .imageLeft {
     width: 220px;
     height: 220px;
-    top: -125px;
+    top: -200px;
     left: -140px;
   }
   .imageRightTop {
     width: 220px;
     height: 220px;
     top: -289px;
-    left: 80px;
+    left: 50px;
   }
   .imageRightBottom {
     width: 220px;
     height: 220px;
-    top: -16px;
-    left: 56px;
+    top: -40px;
+    left: 18px;
   }
 }
 
@@ -296,22 +296,22 @@
 
   .imageLeft {
     top: 110px;
-    left: -15px;
+    left: -30px;
   }
 
   .imageRightTop {
     top: -147px;
-    left: 125px;
+    left: 148px;
   }
 
   .imageRightBottom {
-    top: -227px;
+    top: -210px;
     left: 87px;
   }
 
   .textContent {
     padding-top: 0;
-    margin-top: -235px;
+    margin-top: -216px;
   }
 
   .textContent h1 {
@@ -346,16 +346,16 @@
 
   .imageRightTop {
     top: -164px;
-    left: 70px;
+    left: 97px;
   }
 
   .imageRightBottom {
-    top: -216px;
-    left: 49px;
+    top: -200px;
+    left: 59px;
   }
 
   .textContent {
     padding-top: 0;
-    margin-top: -220px;
+    margin-top: -203px;
   }
 }
