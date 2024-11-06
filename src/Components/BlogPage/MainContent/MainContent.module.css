@@ -43,6 +43,10 @@
   font-size: 16px;
 }
 
+.tocItem a {
+  color: var(--desc-font-color);
+}
+
 .tocItem:hover {
   color: var(--hover-color);
 }
