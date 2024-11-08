@@ -25,11 +25,13 @@ const ThirdSection = () => {
             </Link>
           </div>
           <div className={styles.googlePlayStore}>
-            <Image
-              src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/AppStore_white.png"
-              alt="Download from App store"
-              fill
-            />
+            <Link href="https://apps.apple.com/us/app/outspokn/id6737053468">
+              <Image
+                src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/AppStore_white.png"
+                alt="Download from App store"
+                fill
+              />
+            </Link>
           </div>
         </div>
       </div>
