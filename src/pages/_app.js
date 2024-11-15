@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { Nunito_Sans } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "dotenv/config";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
     <main className={nunitoSans.className}>
       <SpeedInsights />
       <Component {...pageProps} />
+      <GoogleTagManager gtmId="G-4WWJJDRN34" />
     </main>
   );
 }
