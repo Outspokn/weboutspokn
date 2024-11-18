@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
     <main className={nunitoSans.className}>
       <SpeedInsights />
       <Component {...pageProps} />
-      <GoogleTagManager gtmId="G-4WWJJDRN34" />
+      <GoogleTagManager gtmId="G-F1PNKZRHQH" />
     </main>
   );
 }
