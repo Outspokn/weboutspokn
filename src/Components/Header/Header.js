@@ -38,7 +38,10 @@ const Header = ({ lottieUrl }) => {
         </p>
         <div className={styles.headerContentImages}>
           <div className={styles.googlePlayStore}>
-            <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.outspokn"
+              id="ps-1"
+            >
               <Image
                 src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
                 alt="Download from play store"
@@ -48,7 +51,10 @@ const Header = ({ lottieUrl }) => {
             </Link>
           </div>
           <div className={styles.googlePlayStore}>
-            <Link href="https://apps.apple.com/us/app/outspokn/id6737053468">
+            <Link
+              href="https://apps.apple.com/us/app/outspokn/id6737053468"
+              id="as-1"
+            >
               <Image
                 src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/appStore_new.png"
                 alt="Download from app store"

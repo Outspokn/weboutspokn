@@ -37,7 +37,10 @@ const Navbar = () => {
       </div>
       <div className={styles.PlayStore}>
         <div className={styles.googlePlayStore}>
-          <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+          <Link
+            href="https://play.google.com/store/apps/details?id=com.outspokn"
+            id="ps-h"
+          >
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/GooglePlayStore.png"
               alt="Download from play store"
@@ -46,7 +49,10 @@ const Navbar = () => {
           </Link>
         </div>
         <div className={styles.googlePlayStore}>
-          <Link href="https://apps.apple.com/us/app/outspokn/id6737053468">
+          <Link
+            href="https://apps.apple.com/us/app/outspokn/id6737053468"
+            id="as-h"
+          >
             <Image
               src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/appStore_new.png"
               alt="Download from app store"

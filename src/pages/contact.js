@@ -54,7 +54,7 @@ const Contact = () => {
         alert("There was an error submitting the form.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Error submitting form please try gain:", error);
       alert("An unexpected error occurred.");
     }
   };
