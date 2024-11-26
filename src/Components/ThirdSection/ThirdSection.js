@@ -16,7 +16,10 @@ const ThirdSection = () => {
         </p>
         <div className={styles.PlayStore}>
           <div className={styles.googlePlayStore}>
-            <Link href="https://play.google.com/store/apps/details?id=com.outspokn">
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.outspokn"
+              id="ps-2"
+            >
               <Image
                 src="https://outspoknweb.s3.us-east-2.amazonaws.com/Feature/get-it-on-google-play-logo-white.png"
                 alt="Download from play store"
@@ -25,7 +28,10 @@ const ThirdSection = () => {
             </Link>
           </div>
           <div className={styles.googlePlayStore}>
-            <Link href="https://apps.apple.com/us/app/outspokn/id6737053468">
+            <Link
+              href="https://apps.apple.com/us/app/outspokn/id6737053468"
+              id="as-2"
+            >
               <Image
                 src="https://outspoknweb.s3.us-east-2.amazonaws.com/header/AppStore_white.png"
                 alt="Download from App store"
