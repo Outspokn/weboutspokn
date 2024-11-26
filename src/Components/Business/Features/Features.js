@@ -14,7 +14,7 @@ const Features = () => {
         <h3>Daily lessons</h3>
         <p>
           Engage in English everyday, about anything. Daily lessons will provide
-          structure for a gradual improvement in talking English fluently - with
+          structure for a gradual improvement in talking English fluently — with
           confidence.
         </p>
       </div>
@@ -26,8 +26,8 @@ const Features = () => {
         <h3>Custom scenarios</h3>
         <p>
           Practice any scenario—be it business meetings, job interviews, or
-          friendly chats—and witness your employees' fluency thrive where it
-          truly matters: for you.
+          friendly chats—and witness your employees&apos; fluency thrive where
+          it truly matters: for you.
         </p>
       </div>
 

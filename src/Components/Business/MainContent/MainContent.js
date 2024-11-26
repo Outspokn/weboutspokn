@@ -7,10 +7,10 @@ const MainSection = () => {
   return (
     <section className={styles.mainContent}>
       <div className={styles.textContent}>
-        <h1>Unlock your team's English potential</h1>
+        <h1>Unlock your team&apos;s English potential</h1>
         <p>
-          Outspokn is here to boost your team's success in any field by
-          polishing their everyday and business English skills. We've got
+          Outspokn is here to boost your team&apos;s success in any field by
+          polishing their everyday and business English skills. We&apos;ve got
           special plans tailored for different businesses. Get started today!
         </p>
         <button className={styles.ctaButton}>See plans</button>
