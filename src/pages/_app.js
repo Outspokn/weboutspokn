@@ -12,12 +12,10 @@ const nunitoSans = Nunito_Sans({
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <main className={nunitoSans.className}>
-        <SpeedInsights />
-        <Component {...pageProps} />
-        <GoogleTagManager gtmId="GTM-WSGWSB2W" />
-      </main>
-    </>
+    <main className={nunitoSans.className}>
+      <SpeedInsights />
+      <Component {...pageProps} />
+      <GoogleTagManager gtmId="GTM-WSGWSB2W" />
+    </main>
   );
 }
