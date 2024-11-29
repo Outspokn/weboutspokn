@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.outspokn",
       "sha256_cert_fingerprints": [
-        "17:F2:08:CD:A3:FD:ED:57:81:30:B4:37:F8:64:AC:C0:B4:63:C0:AB:00:D1:4E:5F:36:E2:81:60:A4:E5:09:CD"
+        "17:F2:08:CD:A3:FD:ED:57:81:30:B4:37:F8:64:AC:C0:B4:63:C0:AB:00:D1:4E:5F:36:E2:81:60:A4:E5:09:CD",
+        "12:8d:0c:6a:21:2d:79:04:97:bf:4e:ff:78:57:b3:82:43:2a:58:95:b7:43:2b:da:46:71:73:a0:2e:57:17:62"
       ]
     }
   }
