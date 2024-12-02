@@ -1,0 +1,161 @@
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+  padding: 50px 20px;
+  max-width: 1130px;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 350px;
+}
+
+.featureItem h3 {
+  font-size: 1.9rem;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.featureItem p {
+  font-size: 20px;
+  color: var(--desc-font-color);
+  line-height: 1.5;
+  max-width: 95%;
+}
+
+.icon {
+  font-size: 50px;
+  color: #27187e;
+}
+
+@media (max-width: 1281px) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 5%;
+    max-width: 100%;
+  }
+
+  .featureItem {
+    max-width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .featureItem h3 {
+    font-size: 1.8rem;
+  }
+
+  .featureItem p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 5%;
+  }
+
+  .featureItem {
+    max-width: 32%;
+    margin-bottom: 30px;
+  }
+
+  .featureItem h3 {
+    font-size: 1.7rem;
+  }
+
+  .featureItem p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 961px) {
+  .features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 30px 5%;
+    max-width: 100%;
+  }
+
+  .featureItem {
+    max-width: 30%;
+    margin-bottom: 0;
+  }
+
+  .featureItem h3 {
+    font-size: 1.7rem;
+  }
+
+  .featureItem p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 641px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 5%;
+  }
+
+  .featureItem {
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .icon {
+    margin-bottom: 2px;
+  }
+
+  .featureItem h3 {
+    font-size: 1.5rem;
+    margin-top: 0px;
+  }
+
+  .featureItem p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 481px) {
+  .features {
+    padding: 20px 10%;
+    align-items: center;
+  }
+
+  .featureItem {
+    max-width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .icon {
+    margin-bottom: 2px;
+    font-size: 35px;
+  }
+
+  .featureItem h3 {
+    font-size: 1.4rem;
+  }
+
+  .featureItem p {
+    font-size: 14px;
+  }
+}

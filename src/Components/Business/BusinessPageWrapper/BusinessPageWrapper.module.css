@@ -1,0 +1,11 @@
+.businessWrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(45, 45, 45), #4a90e2);
+  /* background: linear-gradient(135deg, #2F2F3F, #3A3A5B, #4E4E70, #5D5D80); */
+  background-size: 400% 400%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
