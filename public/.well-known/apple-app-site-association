@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "43CY7HYNUY.com.outspokn",
+        "paths": [
+          "/app/*"
+        ]
+      }
+    ]
+  }
+}
