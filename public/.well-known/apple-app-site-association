@@ -9,6 +9,22 @@
           {
             "/": "/app/*",
             "comment": "Matches any URL with a path that starts with /app/."
+          },
+          {
+            "/": "/JobScreen",
+            "comment": "Supports direct navigation to JobScreen."
+          },
+          {
+            "/": "/AiCategory",
+            "comment": "Supports direct navigation to AiCategory."
+          },
+          {
+            "/": "/UploadResume",
+            "comment": "Supports direct navigation to UploadResume."
+          },
+          {
+            "/": "/Home",
+            "comment": "Supports direct navigation to Home."
           }
         ]
       }
