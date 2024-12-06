@@ -1,11 +1,15 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appID": "43CY7HYNUY.com.outspokn",
-        "paths": [
-          "/app/*"
+        "appIDs": [
+          "43CY7HYNUY.com.outspokn"
+        ],
+        "components": [
+          {
+            "/": "/app/*",
+            "comment": "Matches any URL with a path that starts with /app/."
+          }
         ]
       }
     ]
