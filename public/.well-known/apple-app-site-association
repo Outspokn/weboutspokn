@@ -2,30 +2,20 @@
   "applinks": {
     "details": [
       {
-        "appIDs": [
-          "43CY7HYNUY.com.outspokn"
-        ],
+        "appIDs": "43CY7HYNUY.com.outspokn",
         "components": [
           {
-            "/": "/app/*",
-            "comment": "Matches any URL with a path that starts with /app/."
+            "/": "/*",
+            "comment": "Matches any URL whose path starts with URL_PATH and instructs the system not to open it as a universal link"
           },
           {
-            "/": "app/JobScreen",
-            "comment": "Supports direct navigation to JobScreen."
-          },
-          {
-            "/": "/app/AiCategory",
-            "comment": "Supports direct navigation to AiCategory."
-          },
-          {
-            "/": "/UploadResume",
-            "comment": "Supports direct navigation to UploadResume."
-          },
-          {
-            "/": "/Home",
-            "comment": "Supports direct navigation to Home."
+            "/": "*",
+            "comment": "Matches any URL whose path starts with URL_PATH and instructs the system not to open it as a universal link"
           }
+        ],
+        "paths": [
+          "*",
+          "/"
         ]
       }
     ]
