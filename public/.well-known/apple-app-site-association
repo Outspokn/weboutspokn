@@ -2,20 +2,14 @@
   "applinks": {
     "details": [
       {
-        "appIDs": "43CY7HYNUY.com.outspokn",
+        "appIDs": [
+          "43CY7HYNUY.com.outspokn"
+        ],
         "components": [
           {
-            "/": "/*",
-            "comment": "Matches any URL whose path starts with URL_PATH and instructs the system not to open it as a universal link"
-          },
-          {
-            "/": "*",
-            "comment": "Matches any URL whose path starts with URL_PATH and instructs the system not to open it as a universal link"
+            "/": "/app/*",
+            "comment": "Matches any URL whose path starts with /app/"
           }
-        ],
-        "paths": [
-          "*",
-          "/"
         ]
       }
     ]
