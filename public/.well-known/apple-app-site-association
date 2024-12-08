@@ -11,11 +11,11 @@
             "comment": "Matches any URL with a path that starts with /app/."
           },
           {
-            "/": "/JobScreen",
+            "/": "app/JobScreen",
             "comment": "Supports direct navigation to JobScreen."
           },
           {
-            "/": "/AiCategory",
+            "/": "/app/AiCategory",
             "comment": "Supports direct navigation to AiCategory."
           },
           {
