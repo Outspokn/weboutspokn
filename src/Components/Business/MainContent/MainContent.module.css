@@ -1,0 +1,361 @@
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 40px;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 6rem auto 5px;
+}
+
+.textContent {
+  max-width: 50%;
+  flex: 1;
+}
+
+.textContent h1 {
+  font-size: 2.9rem;
+  margin-bottom: 20px;
+  color: var(--background-color-light);
+  font-weight: 800;
+}
+
+.textContent p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: var(--background-color-light);
+  font-weight: 500;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  background-color: var(--background-color-light);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: #f0f0f0;
+}
+
+.loginText {
+  font-size: 0.875rem;
+  margin-top: 25px;
+}
+
+.loginText a {
+  color: var(--background-color-light);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.imagesContent {
+  position: relative;
+  width: 50%;
+  height: 431px;
+}
+
+.imageLeft {
+  position: absolute;
+  top: 42px;
+  z-index: 1;
+  left: 1px;
+  width: 300px;
+  height: 300px;
+}
+
+.imageRightTop {
+  position: absolute;
+  top: 0px;
+  right: 11px;
+  width: 300px;
+  height: 300px;
+}
+
+.imageRightBottom {
+  position: absolute;
+  top: 150px;
+  right: 58px;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+.image {
+  border-radius: 10px;
+  filter: brightness(0.85);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1281px) {
+  .mainContent {
+    margin-top: 5rem;
+  }
+  .imageLeft {
+    top: 80px;
+    left: 0px;
+  }
+  .imageRightBottom {
+    top: 123px;
+    right: 17px;
+  }
+  .imageRightTop {
+    top: 0px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-top: 2.5rem;
+  }
+  .textContent {
+    margin-left: 1.2rem;
+  }
+  .textContent h1 {
+    margin-top: 20px;
+  }
+
+  .textContent p {
+    max-width: 80%;
+  }
+
+  .imageRightTop {
+    top: -15px;
+    right: 15px;
+  }
+
+  .imageLeft {
+    left: -67px;
+  }
+  .imageRightBottom {
+    top: 196px;
+    right: 46px;
+  }
+  .mainContent .loginText {
+    max-width: 83%;
+  }
+}
+
+@media (max-width: 961px) {
+  .mainContent {
+    padding: 20px;
+    gap: 30px;
+    margin: 3rem 2rem;
+  }
+
+  .textContent {
+    max-width: 30%;
+    margin-top: 1rem;
+    margin-left: -1rem;
+  }
+  .textContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .textContent p {
+    font-size: 17px;
+  }
+
+  .ctaButton {
+    padding: 12px 25px;
+  }
+
+  .imagesContent {
+    height: auto;
+    margin-left: 10px;
+  }
+
+  .imageLeft {
+    width: 220px;
+    height: 220px;
+    top: -200px;
+    left: -140px;
+  }
+  .imageRightTop {
+    width: 220px;
+    height: 220px;
+    top: -289px;
+    left: 50px;
+  }
+  .imageRightBottom {
+    width: 220px;
+    height: 220px;
+    top: -40px;
+    left: 18px;
+  }
+}
+
+@media (max-width: 641px) {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 1.5rem;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .imagesContent {
+    position: relative;
+    width: 100%;
+    height: auto;
+    order: 1;
+    margin-bottom: 0.1rem;
+  }
+
+  .textContent {
+    order: 2;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 0.5rem;
+    margin-top: -312px;
+  }
+
+  .textContent h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .textContent p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: auto;
+    max-width: 78%;
+  }
+
+  .ctaButton {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .mainContent .loginText {
+    font-size: 20px;
+  }
+
+  .imageLeft,
+  .imageRightTop,
+  .imageRightBottom {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .imageLeft {
+    top: 173px;
+    left: -20px;
+  }
+  .imageRightTop {
+    top: -245px;
+    left: 142px;
+  }
+  .imageRightBottom {
+    top: -315px;
+    left: 104px;
+  }
+}
+
+@media (max-width: 481px) {
+  .mainContent {
+    padding: 0 15px;
+    margin-top: 1.5rem;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .imagesContent {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.2rem;
+  }
+
+  .imageLeft img,
+  .imageRightTop img,
+  .imageRightBottom img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .imageLeft {
+    top: 110px;
+    left: -30px;
+  }
+
+  .imageRightTop {
+    top: -147px;
+    left: 148px;
+  }
+
+  .imageRightBottom {
+    top: -210px;
+    left: 87px;
+  }
+
+  .textContent {
+    padding-top: 0;
+    margin-top: -216px;
+  }
+
+  .textContent h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: auto;
+    text-align: center;
+  }
+
+  .ctaButton {
+    padding: 18px 20px;
+    font-size: 20px;
+    margin: 1.5rem 0px;
+  }
+  .mainContent .loginText {
+    margin-top: 10px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imageLeft {
+    top: 122px;
+    left: -15px;
+  }
+
+  .imageRightTop {
+    top: -164px;
+    left: 97px;
+  }
+
+  .imageRightBottom {
+    top: -200px;
+    left: 59px;
+  }
+
+  .textContent {
+    padding-top: 0;
+    margin-top: -203px;
+  }
+}

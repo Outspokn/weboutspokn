@@ -43,7 +43,6 @@ const Contact = () => {
       );
 
       if (response.ok) {
-        // Handle success (e.g., show a success message or redirect)
         alert("Form submitted successfully!");
         setFormData({
           name: "",
@@ -52,7 +51,6 @@ const Contact = () => {
           message: "",
         });
       } else {
-        // Handle error (e.g., show an error message)
         alert("There was an error submitting the form.");
       }
     } catch (error) {
