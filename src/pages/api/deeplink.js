@@ -10,7 +10,7 @@ export default function handler(req, res) {
   const playStoreUrl =
     "https://play.google.com/store/apps/details?id=com.outspokn";
 
-  // Detect platform
+  // Detect platform on os
   const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
   const isAndroid = /Android/i.test(userAgent);
 
