@@ -6,7 +6,7 @@ export default function handler(req, res) {
   const deepLink = `outspokn://app/${screen || ""}`;
 
   // Store URLs
-  const appStoreUrl = "https://apps.apple.com/us/app/outspokn/6737053468";
+  const appStoreUrl = "https://apps.apple.com/us/app/outspokn/id6737053468";
   const playStoreUrl =
     "https://play.google.com/store/apps/details?id=com.outspokn";
 
