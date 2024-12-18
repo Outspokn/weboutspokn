@@ -11,6 +11,7 @@ export default function handler(req, res) {
   }).toString();
 
   const deepLink = `outspokn://app/${screen || ""}?${queryParams}`;
+  console.log(deepLink, "deeplink");
 
   // Store URLs
   const appStoreUrl = "https://apps.apple.com/us/app/outspokn/id6737053468";
@@ -34,7 +35,7 @@ export default function handler(req, res) {
           <script>
             setTimeout(() => {
               window.location.href = "${appStoreUrl}";
-            }, 1000);
+            }, 2000);
           </script>
         </body>
       </html>
@@ -49,7 +50,7 @@ export default function handler(req, res) {
           <script>
             setTimeout(() => {
               window.location.href = "${playStoreUrl}";
-            }, 1000);
+            }, 2000);
           </script>
         </body>
       </html>
