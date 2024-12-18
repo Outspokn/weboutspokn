@@ -10,6 +10,8 @@ const AppPage = () => {
 
     const screen = slug ? slug.join("/") : "";
     // 1. Trigger Google Analytics Event
+    // console.log(screen, "which screen");
+
     sendGAEvent({
       event: "user_redirect",
       category: "DeepLink",
@@ -19,9 +21,13 @@ const AppPage = () => {
       utm_source: utm_source || "unknown",
       utm_campaign: utm_campaign || "default",
     });
-    window.location.href = `/api/deeplink?screen=${screen}`;
+    // 2. Redirect to backend with query parameters
+    window.location.href = `/api/deeplink?screen=${screen}&utm_source=${
+      utm_source || "unknown"
+    }&utm_campaign=${utm_campaign || "default"}&utm_medium=${
+      utm_medium || "unknown"
+    }`;
   }, [router.query]);
-
   return (
     <div>
       <h1>Redirecting...</h1>
