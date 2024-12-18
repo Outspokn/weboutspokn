@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const AppPage = () => {
   const router = useRouter();
@@ -10,24 +10,14 @@ const AppPage = () => {
 
     const screen = slug ? slug.join("/") : "";
     // 1. Trigger Google Analytics Event
-    // sendGTMEvent({
-    //   event: "user_redirect",
-    //   category: "DeepLink",
-    //   label: "App Redirection",
-    //   data: {
-    //     type: type || "home",
-    //     source: source || "unknown",
-    //     campaignName: campaignName || "default",
-    //   },
-    // });
-    window.gtag("event", "user_redirect", {
+    sendGAEvent({
+      event: "user_redirect",
       category: "DeepLink",
       label: "App Redirection",
       type: type || "home",
       source: source || "unknown",
       campaignName: campaignName || "default",
     });
-
     window.location.href = `/api/deeplink?screen=${screen}`;
   }, [router.query]);
 
