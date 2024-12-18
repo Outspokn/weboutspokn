@@ -6,7 +6,7 @@ const AppPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const { slug, source, campaignName, type } = router.query;
+    const { slug, utm_source, type, utm_medium, utm_campaign } = router.query;
 
     const screen = slug ? slug.join("/") : "";
     // 1. Trigger Google Analytics Event
@@ -15,8 +15,9 @@ const AppPage = () => {
       category: "DeepLink",
       label: "App Redirection",
       type: type || "home",
-      source: source || "unknown",
-      campaignName: campaignName || "default",
+      utm_medium: utm_medium || "unknown",
+      utm_source: utm_source || "unknown",
+      utm_campaign: utm_campaign || "default",
     });
     window.location.href = `/api/deeplink?screen=${screen}`;
   }, [router.query]);
