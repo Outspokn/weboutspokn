@@ -28,7 +28,7 @@ export default function handler(req, res) {
     res.send(`
       <html>
         <head>
-          <meta http-equiv="refresh" content="1;url=${universalLink}" />
+          <meta http-equiv="refresh" content="1;url=${deepLink}" />
         </head>
         <body>
           <script>
