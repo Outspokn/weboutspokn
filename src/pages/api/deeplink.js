@@ -15,25 +15,21 @@ export default function handler(req, res) {
   const isAndroid = /Android/i.test(userAgent);
 
   if (isIOS) {
-    // Attempt to open the app for iOS
-    res.setHeader(
-      "Content-Security-Policy",
-      `default-src *; connect-src *; script-src * 'unsafe-eval'; style-src * 'unsafe-inline';`
-    );
+    const universalLink = `https://www.outspokn.ai/app/${screen || ""}`;
     res.send(`
-        <html>
-          <head>
-            <meta http-equiv="refresh" content="1;url=${deepLink}" />
-          </head>
-          <body>
-            <script>
-              setTimeout(() => {
-                window.location.href = "${appStoreUrl}";
-              }, 2000);
-            </script>
-          </body>
-        </html>
-      `);
+      <html>
+        <head>
+          <meta http-equiv="refresh" content="1;url=${universalLink}" />
+        </head>
+        <body>
+          <script>
+            setTimeout(() => {
+              window.location.href = "${appStoreUrl}";
+            }, 2000);
+          </script>
+        </body>
+      </html>
+    `);
   } else if (isAndroid) {
     // Attempt to open the app for Android
     res.send(`
