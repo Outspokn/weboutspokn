@@ -23,9 +23,9 @@ const AppPage = () => {
     window.gtag("event", "user_redirect", {
       category: "DeepLink",
       label: "App Redirection",
-      screen: screen || "home",
-      utm_source: utm_source || "unknown",
-      utm_campaign: utm_campaign || "default",
+      type: type || "home",
+      source: source || "unknown",
+      campaignName: campaignName || "default",
     });
 
     window.location.href = `/api/deeplink?screen=${screen}`;
