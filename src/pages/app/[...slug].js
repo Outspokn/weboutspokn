@@ -6,20 +6,28 @@ const AppPage = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const { slug, utm_source, utm_campaign } = router.query;
+    const { slug, source, campaignName, type } = router.query;
 
     const screen = slug ? slug.join("/") : "";
     // 1. Trigger Google Analytics Event
-    sendGTMEvent({
-      event: "user_redirect",
+    // sendGTMEvent({
+    //   event: "user_redirect",
+    //   category: "DeepLink",
+    //   label: "App Redirection",
+    //   data: {
+    //     type: type || "home",
+    //     source: source || "unknown",
+    //     campaignName: campaignName || "default",
+    //   },
+    // });
+    window.gtag("event", "user_redirect", {
       category: "DeepLink",
       label: "App Redirection",
-      data: {
-        screen: screen || "home",
-        utm_source: utm_source || "unknown",
-        utm_campaign: utm_campaign || "default",
-      },
+      screen: screen || "home",
+      utm_source: utm_source || "unknown",
+      utm_campaign: utm_campaign || "default",
     });
+
     window.location.href = `/api/deeplink?screen=${screen}`;
   }, [router.query]);
 
