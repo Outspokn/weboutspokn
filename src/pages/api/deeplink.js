@@ -14,9 +14,14 @@ export default function handler(req, res) {
   console.log(deepLink, "deeplink");
 
   // Store URLs
-  const appStoreUrl = "https://apps.apple.com/us/app/outspokn/id6737053468";
-  const playStoreUrl =
-    "https://play.google.com/store/apps/details?id=com.outspokn";
+
+  const playStoreUrl = `https://play.google.com/store/apps/details?id=com.outspokn&referrer=utm_source=${
+    utm_source || "unknown"
+  }&utm_campaign=${utm_campaign || "default"}&utm_medium=${
+    utm_medium || "unknown"
+  }`;
+  const appStoreUrl = `https://apps.apple.com/us/app/outspokn/id6737053468`;
+  console.log(playStoreUrl, "playStoreUrl");
 
   // Detect platform on OS
   const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
