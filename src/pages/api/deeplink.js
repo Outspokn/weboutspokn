@@ -21,6 +21,7 @@ export default function handler(req, res) {
     utm_medium || "unknown"
   }`;
   const appStoreUrl = `https://apps.apple.com/us/app/outspokn/id6737053468`;
+  console.log(playStoreUrl, "playStoreUrl");
 
   // Detect platform on OS
   const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
