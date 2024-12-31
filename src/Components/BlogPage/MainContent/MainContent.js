@@ -11,6 +11,7 @@ const MainContent = ({ post }) => {
   const [shareUrls, setShareUrls] = useState({});
   const tocRef = useRef(null);
   const [isTocVisible, setIsTocVisible] = useState(true);
+  console.log(post.img, "post");
 
   useEffect(() => {
     if (post && typeof window !== "undefined") {
@@ -112,7 +113,7 @@ const MainContent = ({ post }) => {
         <article className={styles.article}>
           <div className={styles.imgWrapper}>
             <Image
-              src={post.headerImg || "/assets/blog3.png"}
+              src={post.img || "/assets/blog3.png"}
               alt={post.title}
               width={600}
               height={400}
