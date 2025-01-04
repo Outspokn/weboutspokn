@@ -11,7 +11,7 @@ export default function handler(req, res) {
   }).toString();
 
   const deepLink = `outspokn://app/${screen || ""}?${queryParams}`;
-  console.log(deepLink, "deeplink");
+  // console.log(deepLink, "deeplink");
 
   // Store URLs
 
@@ -21,7 +21,7 @@ export default function handler(req, res) {
     utm_medium || "unknown"
   }`;
   const appStoreUrl = `https://apps.apple.com/us/app/outspokn/id6737053468`;
-  console.log(playStoreUrl, "playStoreUrl");
+  // console.log(playStoreUrl, "playStoreUrl");
 
   // Detect platform on OS
   const isIOS = /iPhone|iPad|iPod/i.test(userAgent);

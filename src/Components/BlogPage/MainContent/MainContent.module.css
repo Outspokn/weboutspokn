@@ -193,7 +193,7 @@
 .articleContent {
   padding: 30px 40px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   width: 95%;
   margin-top: -130px;
   border-radius: 12px;

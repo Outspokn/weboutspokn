@@ -32,11 +32,12 @@ const LatestPost = ({ posts }) => {
             href={`/blog/${posts[0].id}`}
             className={styles.imageLink}
           >
+            {console.log(posts[0].headerImg, "post")}
             <div className={styles.mainPost}>
               <div className={styles.imageContainer}>
                 <div className={styles.imageWrapper}>
                   <Image
-                    src="/assets/blog.jpg"
+                    src={posts[0].headerImg || "/assets/blog.jpg"}
                     alt={posts[0].title}
                     className={styles.postImage}
                     fill
@@ -69,7 +70,7 @@ const LatestPost = ({ posts }) => {
                 <div className={styles.sidePost} key={index}>
                   <div className={styles.sideImageWrapper}>
                     <Image
-                      src="/assets/blog1.jpg"
+                      src={post.headerImg || "/assets/blog1.jpg"}
                       alt={post.title}
                       className={styles.sidePostImage}
                       fill
