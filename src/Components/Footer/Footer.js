@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.FApp}>
-          <div className={styles.googlePlayStore}>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
               id="ps-f"
@@ -108,8 +108,8 @@ const Footer = () => {
                 fill
               />
             </Link>
-          </div>
-          <div className={styles.googlePlayStore}>
+          </button>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
               id="as-f"
@@ -120,7 +120,7 @@ const Footer = () => {
                 fill
               />
             </Link>
-          </div>
+          </button>
           <Link
             href="mailto:support@outspokn.co"
             aria-label="mail your queries"

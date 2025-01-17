@@ -24,7 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -41,4 +40,8 @@ body {
 }
 a {
   text-decoration: none;
+}
+button {
+  outline: none;
+  border: 0;
 }

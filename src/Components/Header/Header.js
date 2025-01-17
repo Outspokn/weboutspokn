@@ -37,7 +37,7 @@ const Header = ({ lottieUrl }) => {
           conversations!
         </p>
         <div className={styles.headerContentImages}>
-          <div className={styles.googlePlayStore}>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
               id="ps-1"
@@ -49,8 +49,8 @@ const Header = ({ lottieUrl }) => {
                 priority
               />
             </Link>
-          </div>
-          <div className={styles.googlePlayStore}>
+          </button>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
               id="as-1"
@@ -61,7 +61,7 @@ const Header = ({ lottieUrl }) => {
                 fill
               />
             </Link>
-          </div>
+          </button>
         </div>
       </div>
       <div className={styles.headerRight}>
