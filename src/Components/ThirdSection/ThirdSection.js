@@ -15,7 +15,7 @@ const ThirdSection = () => {
           Accelerate your english learning by downloading the outspokn app now
         </p>
         <div className={styles.PlayStore}>
-          <div className={styles.googlePlayStore}>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
               id="ps-2"
@@ -26,8 +26,8 @@ const ThirdSection = () => {
                 fill
               />
             </Link>
-          </div>
-          <div className={styles.googlePlayStore}>
+          </button>
+          <button className={styles.googlePlayStore}>
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
               id="as-2"
@@ -38,7 +38,7 @@ const ThirdSection = () => {
                 fill
               />
             </Link>
-          </div>
+          </button>
         </div>
       </div>
 

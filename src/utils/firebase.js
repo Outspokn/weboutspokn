@@ -9,7 +9,7 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_APP_ID,
   databaseURL: process.env.databaseURL,
 };
-console.log(process.env.NEXT_PUBLIC_API_KEY, "key");
+console.log(process.env.NEXT_PUBLIC_API_KEY1, "key");
 
 let app;
 
