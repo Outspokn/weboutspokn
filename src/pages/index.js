@@ -6,8 +6,14 @@ import ThirdSection from "@/Components/ThirdSection/ThirdSection";
 import Review from "@/Components/Review/Review";
 import Footer from "@/Components/Footer/Footer";
 import Values from "@/Components/Values/Values";
+import react, { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof window.fbq !== "function") {
+      console.warn("Facebook Pixel is not initialized.");
+    }
+  }, []);
   return (
     <div>
       <Navbar />

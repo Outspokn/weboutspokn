@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { handleAppStoreClick, handlePlayStoreClick } from "@/lib/fbEvent";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +22,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div
       className={`${styles.navWrapper} ${isScrolled ? styles.scrolled : ""}`}
@@ -36,7 +38,10 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={styles.PlayStore}>
-        <button className={styles.googlePlayStore}>
+        <button
+          className={styles.googlePlayStore}
+          onClick={handlePlayStoreClick}
+        >
           <Link
             href="https://play.google.com/store/apps/details?id=com.outspokn"
             id="ps-h"
@@ -48,7 +53,10 @@ const Navbar = () => {
             />
           </Link>
         </button>
-        <button className={styles.googlePlayStore}>
+        <button
+          className={styles.googlePlayStore}
+          onClick={handleAppStoreClick}
+        >
           <Link
             href="https://apps.apple.com/us/app/outspokn/id6737053468"
             id="as-h"
