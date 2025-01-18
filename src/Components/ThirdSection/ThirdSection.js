@@ -3,6 +3,7 @@ import styles from "./ThirdSection.module.css";
 import Image from "next/image";
 import { MdOutlineMic } from "react-icons/md";
 import Link from "next/link";
+import { handleAppStoreClick, handlePlayStoreClick } from "@/lib/fbEvent";
 
 const ThirdSection = () => {
   return (
@@ -15,7 +16,10 @@ const ThirdSection = () => {
           Accelerate your english learning by downloading the outspokn app now
         </p>
         <div className={styles.PlayStore}>
-          <button className={styles.googlePlayStore}>
+          <button
+            className={styles.googlePlayStore}
+            onClick={handlePlayStoreClick}
+          >
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
               id="ps-2"
@@ -27,7 +31,10 @@ const ThirdSection = () => {
               />
             </Link>
           </button>
-          <button className={styles.googlePlayStore}>
+          <button
+            className={styles.googlePlayStore}
+            onClick={handleAppStoreClick}
+          >
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
               id="as-2"
