@@ -1,6 +1,6 @@
 export const handlePlayStoreClick = () => {
   if (typeof window.fbq === "function") {
-    window.fbq("track", "PlayStore", {
+    window.fbq("track", "PlayAppStore", {
       buttonName: "App_install_Android",
       pageCategory: "homepage",
     });
@@ -12,7 +12,7 @@ export const handlePlayStoreClick = () => {
 
 export const handleAppStoreClick = () => {
   if (typeof window.fbq === "function") {
-    window.fbq("track", "AppStore", {
+    window.fbq("track", "PlayAppStore", {
       buttonName: "App_install_iOS",
       pageCategory: "homepage",
     });
