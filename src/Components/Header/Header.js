@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { handleAppStoreClick, handlePlayStoreClick } from "@/lib/fbEvent";
 
 const Lottie = dynamic(() => import("lottie-react"), {
   ssr: false,
@@ -37,7 +38,10 @@ const Header = ({ lottieUrl }) => {
           conversations!
         </p>
         <div className={styles.headerContentImages}>
-          <button className={styles.googlePlayStore}>
+          <button
+            className={styles.googlePlayStore}
+            onClick={handlePlayStoreClick}
+          >
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
               id="ps-1"
@@ -50,7 +54,10 @@ const Header = ({ lottieUrl }) => {
               />
             </Link>
           </button>
-          <button className={styles.googlePlayStore}>
+          <button
+            className={styles.googlePlayStore}
+            onClick={handleAppStoreClick}
+          >
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
               id="as-1"
