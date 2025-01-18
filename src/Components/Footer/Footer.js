@@ -100,7 +100,7 @@ const Footer = () => {
         <div className={styles.FApp}>
           <button
             className={styles.googlePlayStore}
-            onClick={handleAppStoreClick}
+            onClick={handlePlayStoreClick}
           >
             <Link
               href="https://play.google.com/store/apps/details?id=com.outspokn"
@@ -115,7 +115,7 @@ const Footer = () => {
           </button>
           <button
             className={styles.googlePlayStore}
-            onClick={handlePlayStoreClick}
+            onClick={handleAppStoreClick}
           >
             <Link
               href="https://apps.apple.com/us/app/outspokn/id6737053468"
