@@ -10,44 +10,48 @@ const TermsAndConditions = () => {
       }}
     >
       <h1>TERMS AND CONDITIONS</h1>
-      <p>Last updated June 17, 2024</p>
+      <p>Last updated Feb 18, 2025</p>
+
       <h2>AGREEMENT TO OUR LEGAL TERMS</h2>
       <p>
-        We are LinguaQuest Technology Pvt. Ltd., doing business as Outspokn
-        (`Company,` `we,` `us,` `our`), a company registered in India at 9th
-        MAIN, 7th SECTOR, HSR LAYOUT, Bangalore, Karnataka 560102.
+        We are LinguaQuest Technology Pvt. Ltd., doing business as Outspokn (
+        <code>Company</code>, <code>we</code>, <code>us</code>, <code>our</code>
+        ), a company registered in India at No 224, 3rd Flr, 80/3, Oldmadras
+        Road, Doorvaninagar Bangalore North Bengaluru, Karnataka 560016 India.
       </p>
       <p>
-        We operate the website outspokn.co (the `Site`), the mobile application
-        outspokn (the `App`), as well as any other related products and services
-        that refer or link to these legal terms (the `Legal Terms`)
-        (collectively, the `Services`).
+        We operate the website outspokn.co (the <code>Site</code>), the mobile
+        application outspokn (the <code>App</code>), as well as any other
+        related products and services that refer or link to these legal terms
+        (the <code>Legal Terms</code>) (collectively, the <code>Services</code>
+        ).
       </p>
       <p>
-        You can contact us by email at
+        You can contact us by email at{" "}
         <a href="mailto:privacy@outspokn.co">privacy@outspokn.co</a>
       </p>
       <p>
         These Legal Terms constitute a legally binding agreement made between
-        you, whether personally or on behalf of an entity (`you`), and Outspokn
-        Pvt. Ltd., concerning your access to and use of the Services. You agree
-        that by accessing the Services, you have read, understood, and agreed to
-        be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF
-        THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE
-        SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
+        you, whether personally or on behalf of an entity (<code>you</code>),
+        and Outspokn Pvt. Ltd., concerning your access to and use of the
+        Services. You agree that by accessing the Services, you have read,
+        understood, and agreed to be bound by all of these Legal Terms. IF YOU
+        DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY
+        PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE
+        IMMEDIATELY.
       </p>
       <p>
         Supplemental terms and conditions or documents that may be posted on the
         Services from time to time are hereby expressly incorporated herein by
         reference. We reserve the right, in our sole discretion, to make changes
         or modifications to these Legal Terms from time to time. We will alert
-        you about any changes by updating the `Last updated` date of these Legal
-        Terms, and you waive any right to receive specific notice of each such
-        change. It is your responsibility to periodically review these Legal
-        Terms to stay informed of updates. You will be subject to, and will be
-        deemed to have been made aware of and to have accepted, the changes in
-        any revised Legal Terms by your continued use of the Services after the
-        date such revised Legal Terms are posted.
+        you about any changes by updating the <code>Last updated</code> date of
+        these Legal Terms, and you waive any right to receive specific notice of
+        each such change. It is your responsibility to periodically review these
+        Legal Terms to stay informed of updates. You will be subject to, and
+        will be deemed to have been made aware of and to have accepted, the
+        changes in any revised Legal Terms by your continued use of the Services
+        after the date such revised Legal Terms are posted.
       </p>
       <p>
         The Services are intended for users who are at least 18 years old.
@@ -186,8 +190,9 @@ const TermsAndConditions = () => {
         We are the owner or the licensee of all intellectual property rights in
         our Services, including all source code, databases, functionality,
         software, website designs, audio, video, text, photographs, and graphics
-        in the Services (collectively, the `Content`), as well as the
-        trademarks, service marks, and logos contained therein (the `Marks`).
+        in the Services (collectively, the <code>Content</code>), as well as the
+        trademarks, service marks, and logos contained therein (the{" "}
+        <code>Marks</code>).
       </p>
       <p>
         Our Content and Marks are protected by copyright and trademark laws (and
@@ -195,20 +200,20 @@ const TermsAndConditions = () => {
         and treaties in the United States and around the world.
       </p>
       <p>
-        The Content and Marks are provided in or through the Services `AS IS`
-        for your personal, non-commercial use only.
+        The Content and Marks are provided in or through the Services{" "}
+        <code>AS IS</code> for your personal, non-commercial use only.
       </p>
       <h3>Your use of our Services</h3>
       <p>
-        Subject to your compliance with these Legal Terms, including the
-        `PROHIBITED ACTIVITIES` section below, we grant you a non-exclusive,
-        non-transferable, revocable license to:
+        Subject to your compliance with these Legal Terms, including the{" "}
+        <code>PROHIBITED ACTIVITIES</code> section below, we grant you a
+        non-exclusive, non-transferable, revocable license to:
       </p>
       <ul>
         <li>access the Services; and</li>
         <li>
           download or print a copy of any portion of the Content to which you
-          have properly gained access. solely for your personal, non-commercial
+          have properly gained access, solely for your personal, non-commercial
           use.
         </li>
       </ul>
@@ -242,29 +247,30 @@ const TermsAndConditions = () => {
       </p>
       <h3>Your submissions and contributions</h3>
       <p>
-        Please review this section and the `PROHIBITED ACTIVITIES` section
-        carefully prior to using our Services to understand the (a) rights you
-        give us and (b) obligations you have when you post or upload any content
-        through the Services.
+        Please review this section and the <code>PROHIBITED ACTIVITIES</code>{" "}
+        section carefully prior to using our Services to understand the (a)
+        rights you give us and (b) obligations you have when you post or upload
+        any content through the Services.
       </p>
       <p>
-        Submissions: By directly sending us any question, comment, suggestion,
-        idea, feedback, or other information about the Services (`Submissions`),
-        you agree to assign to us all intellectual property rights in such
-        Submission. You agree that we shall own this Submission and be entitled
-        to its unrestricted use and dissemination for any lawful purpose,
-        commercial or otherwise, without acknowledgment or compensation to you.
+        <strong>Submissions:</strong> By directly sending us any question,
+        comment, suggestion, idea, feedback, or other information about the
+        Services (<code>Submissions</code>), you agree to assign to us all
+        intellectual property rights in such Submission. You agree that we shall
+        own this Submission and be entitled to its unrestricted use and
+        dissemination for any lawful purpose, commercial or otherwise, without
+        acknowledgment or compensation to you.
       </p>
       <p>
-        Contributions: The Services may invite you to chat, contribute to, or
-        participate in blogs, message boards, online forums, and other
-        functionality during which you may create, submit, post, display,
-        transmit, publish, distribute, or broadcast content and materials to us
-        or through the Services, including but not limited to text, writings,
-        video, audio, photographs, music, graphics, comments, reviews, rating
-        suggestions, personal information, or other material (`Contributions`).
-        Any Submission that is publicly posted shall also be treated as a
-        Contribution.
+        <strong>Contributions:</strong> The Services may invite you to chat,
+        contribute to, or participate in blogs, message boards, online forums,
+        and other functionality during which you may create, submit, post,
+        display, transmit, publish, distribute, or broadcast content and
+        materials to us or through the Services, including but not limited to
+        text, writings, video, audio, photographs, music, graphics, comments,
+        reviews, rating suggestions, personal information, or other material (
+        <code>Contributions</code>). Any Submission that is publicly posted
+        shall also be treated as a Contribution.
       </p>
       <p>
         You understand that Contributions may be viewable by other users of the
@@ -301,12 +307,13 @@ const TermsAndConditions = () => {
       </p>
       <ul>
         <li>
-          confirm that you have read and agree with our `PROHIBITED ACTIVITIES`
-          and will not post, send, publish, upload, or transmit through the
-          Services any Submission nor post any Contribution that is illegal,
-          harassing, hateful, harmful, defamatory, obscene, bullying, abusive,
-          discriminatory, threatening to any person or group, sexually explicit,
-          false, inaccurate, deceitful, or misleading;
+          confirm that you have read and agree with our{" "}
+          <code>PROHIBITED ACTIVITIES</code> and will not post, send, publish,
+          upload, or transmit through the Services any Submission nor post any
+          Contribution that is illegal, harassing, hateful, harmful, defamatory,
+          obscene, bullying, abusive, discriminatory, threatening to any person
+          or group, sexually explicit, false, inaccurate, deceitful, or
+          misleading;
         </li>
         <li>
           to the extent permissible by applicable law, waive any and all moral
@@ -343,8 +350,8 @@ const TermsAndConditions = () => {
       <p>
         We respect the intellectual property rights of others. If you believe
         that any material available on or through the Services infringes upon
-        any copyright you own or control, please immediately refer to the
-        `COPYRIGHT INFRINGEMENTS` section below.
+        any copyright you own or control, please immediately refer to the{" "}
+        <code>COPYRIGHT INFRINGEMENTS</code> section below.
       </p>
 
       <h2 id="user-representations">3. USER REPRESENTATIONS</h2>
@@ -390,12 +397,13 @@ const TermsAndConditions = () => {
         <li>Mastercard</li>
         <li>American Express</li>
         <li>PayPal</li>
+        <li>UPI</li>
       </ul>
       <p>
         You agree to provide current, complete, and accurate purchase and
         account information for all purchases made via the Services. You further
-        agree to promptly update account and payment information, including
-        email address, payment method, and payment card expiration date, so that
+        agree to promptly update account and payment information—including your
+        email address, payment method, and payment card expiration date—so that
         we can complete your transactions and contact you as needed. Sales tax
         will be added to the price of purchases as deemed required by us. We may
         change prices at any time. All payments shall be in local currency.
@@ -424,7 +432,7 @@ const TermsAndConditions = () => {
         You consent to our charging your payment method on a recurring basis
         without requiring your prior approval for each recurring charge, until
         such time as you cancel the applicable order. The length of your billing
-        cycle is same as initial plan chosen .
+        cycle is the same as the initial plan chosen.
       </p>
       <h3>Cancellation</h3>
       <p>
@@ -441,23 +449,23 @@ const TermsAndConditions = () => {
       </p>
 
       <h2 id="refunds-policy">8. REFUNDS POLICY</h2>
-      <p>All sales are final and no refund will be issued.</p>
+      <p>All sales are final, and we do not process refunds.</p>
 
       <h2 id="software">9. SOFTWARE</h2>
       <p>
         We may include software for use in connection with our Services. If such
-        software is accompanied by an end user license agreement (`EULA`), the
-        terms of the EULA will govern your use of the software. If such software
-        is not accompanied by a EULA, then we grant to you a non-exclusive,
-        revocable, personal, and non-transferable license to use such software
-        solely in connection with our services and in accordance with these
-        Legal Terms. Any software and any related documentation is provided `AS
-        IS` without warranty of any kind, either express or implied, including,
-        without limitation, the implied warranties of merchantability, fitness
-        for a particular purpose, or non-infringement. You accept any and all
-        risk arising out of use or performance of any software. You may not
-        reproduce or redistribute any software except in accordance with the
-        EULA or these Legal Terms.
+        software is accompanied by an end user license agreement (
+        <code>EULA</code>), the terms of the EULA will govern your use of the
+        software. If such software is not accompanied by a EULA, then we grant
+        to you a non-exclusive, revocable, personal, and non-transferable
+        license to use such software solely in connection with our Services and
+        in accordance with these Legal Terms. Any software and any related
+        documentation is provided <code>AS IS</code> without warranty of any
+        kind, either express or implied, including, without limitation, the
+        implied warranties of merchantability, fitness for a particular purpose,
+        or non-infringement. You accept any and all risk arising out of use or
+        performance of any software. You may not reproduce or redistribute any
+        software except in accordance with the EULA or these Legal Terms.
       </p>
 
       <h2 id="prohibited-activities">10. PROHIBITED ACTIVITIES</h2>
@@ -527,9 +535,10 @@ const TermsAndConditions = () => {
           Upload or transmit (or attempt to upload or to transmit) any material
           that acts as a passive or active information collection or
           transmission mechanism, including without limitation, clear graphics
-          interchange formats (`gifs`), 1×1 pixels, web bugs, cookies, or other
-          similar devices (sometimes referred to as `spyware` or `passive
-          collection mechanisms` or `pcms`).
+          interchange formats (<code>gifs</code>), 1×1 pixels, web bugs,
+          cookies, or other similar devices (sometimes referred to as{" "}
+          <code>spyware</code> or <code>passive collection mechanisms</code> or{" "}
+          <code>pcms</code>).
         </li>
         <li>
           Interfere with, disrupt, or create an undue burden on the Services or
@@ -544,7 +553,7 @@ const TermsAndConditions = () => {
           restrict access to the Services, or any portion of the Services.
         </li>
         <li>
-          Copy or adapt the Services` software, including but not limited to
+          Copy or adapt the Services’ software, including but not limited to
           Flash, PHP, HTML, JavaScript, or other code.
         </li>
         <li>
@@ -590,11 +599,12 @@ const TermsAndConditions = () => {
         transmit, perform, publish, distribute, or broadcast content and
         materials to us or on the Services, including but not limited to text,
         writings, video, audio, photographs, graphics, comments, suggestions, or
-        personal information or other material (collectively, `Contributions`).
-        Contributions may be viewable by other users of the Services and through
-        third-party websites. As such, any Contributions you transmit may be
-        treated as non-confidential and non-proprietary. When you create or make
-        available any Contributions, you thereby represent and warrant that:
+        personal information or other material (collectively,{" "}
+        <code>Contributions</code>). Contributions may be viewable by other
+        users of the Services and through third-party websites. As such, any
+        Contributions you transmit may be treated as non-confidential and
+        non-proprietary. When you create or make available any Contributions,
+        you thereby represent and warrant that:
       </p>
       <ul>
         <li>
@@ -743,11 +753,11 @@ const TermsAndConditions = () => {
       <h3>Apple and Android Devices</h3>
       <p>
         The following terms apply when you use the App obtained from either the
-        Apple Store or Google Play (each an `App Distributor`) to access the
-        Services: (1) the license granted to you for our App is limited to a
-        non-transferable license to use the application on a device that
-        utilizes the Apple iOS or Android operating systems, as applicable, and
-        in accordance with the usage rules set forth in the applicable App
+        Apple Store or Google Play (each an <code>App Distributor</code>) to
+        access the Services: (1) the license granted to you for our App is
+        limited to a non-transferable license to use the application on a device
+        that utilizes the Apple iOS or Android operating systems, as applicable,
+        and in accordance with the usage rules set forth in the applicable App
         Distributor’s terms of service; (2) we are responsible for providing any
         maintenance and support services with respect to the App as specified in
         the terms and conditions of this mobile application license contained in
@@ -762,18 +772,18 @@ const TermsAndConditions = () => {
         warranty obligation whatsoever with respect to the App; (4) you
         represent and warrant that (i) you are not located in a country that is
         subject to a US government embargo, or that has been designated by the
-        US government as a `terrorist supporting` country and (ii) you are not
-        listed on any US government list of prohibited or restricted parties;
-        (5) you must comply with applicable third-party terms of agreement when
-        using the App, e.g., if you have a VoIP application, then you must not
-        be in violation of their wireless data service agreement when using the
-        App; and (6) you acknowledge and agree that the App Distributors are
-        third-party beneficiaries of the terms and conditions in this mobile
-        application license contained in these Legal Terms, and that each App
-        Distributor will have the right (and will be deemed to have accepted the
-        right) to enforce the terms and conditions in this mobile application
-        license contained in these Legal Terms against you as a third-party
-        beneficiary thereof.
+        US government as a <code>terrorist supporting</code> country and (ii)
+        you are not listed on any US government list of prohibited or restricted
+        parties; (5) you must comply with applicable third-party terms of
+        agreement when using the App, e.g., if you have a VoIP application, then
+        you must not be in violation of their wireless data service agreement
+        when using the App; and (6) you acknowledge and agree that the App
+        Distributors are third-party beneficiaries of the terms and conditions
+        in this mobile application license contained in these Legal Terms, and
+        that each App Distributor will have the right (and will be deemed to
+        have accepted the right) to enforce the terms and conditions in this
+        mobile application license contained in these Legal Terms against you as
+        a third-party beneficiary thereof.
       </p>
 
       <h2 id="services-management">14. SERVICES MANAGEMENT</h2>
@@ -796,12 +806,18 @@ const TermsAndConditions = () => {
       <h2 id="privacy-policy">15. PRIVACY POLICY</h2>
       <p>
         We care about data privacy and security. Please review our{" "}
-        <a href="https://outspokn.co/privacy">Privacy Policy</a>. By using the
-        Services, you agree to be bound by our Privacy Policy, which is
-        incorporated into these Legal Terms. Please be advised the Services are
-        hosted in India. If you access the Services from any other region of the
-        world with laws or other requirements governing personal data
-        collection, use, or disclosure that differ from applicable laws in
+        <a
+          href="https://outspokn.co/privacy-statement"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Privacy Policy
+        </a>
+        . By using the Services, you agree to be bound by our Privacy Policy,
+        which is incorporated into these Legal Terms. Please be advised the
+        Services are hosted in India. If you access the Services from any other
+        region of the world with laws or other requirements governing personal
+        data collection, use, or disclosure that differ from applicable laws in
         India, then through your continued use of the Services, you are
         transferring your data to India, and you expressly consent to have your
         data transferred to and processed in India.
@@ -812,8 +828,8 @@ const TermsAndConditions = () => {
         We respect the intellectual property rights of others. If you believe
         that any material available on or through the Services infringes upon
         any copyright you own or control, please immediately notify us using the
-        contact information provided below (a `Notification`). A copy of your
-        Notification will be sent to the person who posted or stored the
+        contact information provided below (a <code>Notification</code>). A copy
+        of your Notification will be sent to the person who posted or stored the
         material addressed in the Notification. Please be advised that pursuant
         to applicable law you may be held liable for damages if you make
         material misrepresentations in a Notification. Thus, if you are not sure
@@ -881,26 +897,25 @@ const TermsAndConditions = () => {
       <h3>Informal Negotiations</h3>
       <p>
         To expedite resolution and control the cost of any dispute, controversy,
-        or claim related to these Legal Terms (each a `Dispute` and
-        collectively, the `Disputes`) brought by either you or us (individually,
-        a `Party` and collectively, the `Parties`), the Parties agree to first
-        attempt to negotiate any Dispute (except those Disputes expressly
-        provided below) informally for at least thirty (30) days before
-        initiating arbitration. Such informal negotiations commence upon written
-        notice from one Party to the other Party.
+        or claim related to these Legal Terms (each a <code>Dispute</code> and
+        collectively, the <code>Disputes</code>) brought by either you or us
+        (individually, a <code>Party</code> and collectively, the{" "}
+        <code>Parties</code>), the Parties agree to first attempt to negotiate
+        any Dispute (except those Disputes expressly provided below) informally
+        for at least thirty (30) days before initiating arbitration. Such
+        informal negotiations commence upon written notice from one Party to the
+        other Party.
       </p>
       <h3>Binding Arbitration</h3>
       <p>
         Any dispute arising out of or in connection with these Legal Terms,
         including any question regarding its existence, validity, or
-        termination, shall be referred to and finally resolved by the
-        International Commercial Arbitration Court under the European
-        Arbitration Chamber (Belgium, Brussels, Avenue Louise, 146) according to
-        the Rules of this ICAC, which, as a result of referring to it, is
-        considered as the part of this clause. The number of arbitrators shall
-        be three (3). The seat, or legal place, or arbitration shall be
-        Bangalore, India. The language of the proceedings shall be Kannada. The
-        governing law of these Legal Terms shall be substantive law of India.
+        termination, shall be finally resolved by arbitration administered in
+        accordance with the Arbitration and Conciliation Act, 1996 (as amended)
+        and the applicable rules. The arbitral tribunal shall consist of three
+        (3) arbitrators. The seat of arbitration shall be Bangalore, India, and
+        the proceedings shall be conducted in Kannada. The substantive law of
+        India shall govern these Legal Terms.
       </p>
       <h3>Restrictions</h3>
       <p>
@@ -916,12 +931,12 @@ const TermsAndConditions = () => {
       <h3>Exceptions to Informal Negotiations and Arbitration</h3>
       <p>
         The Parties agree that the following Disputes are not subject to the
-        above provisions concerning informal negotiations binding arbitration:
-        (a) any Disputes seeking to enforce or protect, or concerning the
-        validity of, any of the intellectual property rights of a Party; (b) any
-        Dispute related to, or arising from, allegations of theft, piracy,
-        invasion of privacy, or unauthorized use; and (c) any claim for
-        injunctive relief. If this provision is found to be illegal or
+        above provisions concerning informal negotiations and binding
+        arbitration: (a) any Disputes seeking to enforce or protect, or
+        concerning the validity of, any of the intellectual property rights of a
+        Party; (b) any Dispute related to, or arising from, allegations of
+        theft, piracy, invasion of privacy, or unauthorized use; and (c) any
+        claim for injunctive relief. If this provision is found to be illegal or
         unenforceable, then neither Party will elect to arbitrate any Dispute
         falling within that portion of this provision found to be illegal or
         unenforceable and such Dispute shall be decided by a court of competent
@@ -946,7 +961,7 @@ const TermsAndConditions = () => {
         IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT
         LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
         PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR
-        REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES`
+        REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES’
         CONTENT OR THE CONTENT OF ANY WEBSITES OR MOBILE APPLICATIONS LINKED TO
         THE SERVICES AND WE WILL ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY
         (1) ERRORS, MISTAKES, OR INACCURACIES OF CONTENT AND MATERIALS, (2)
@@ -1077,10 +1092,10 @@ const TermsAndConditions = () => {
         In order to resolve a complaint regarding the Services or to receive
         further information regarding use of the Services, please contact us at:
       </p>
-      <p>LinguaQuest Technology Pvt. Ltd.</p>
+      <p>LINGUAQUEST TECHNOLOGY PRIVATE LIMITED</p>
       <p>
-        #1207/343 , 9th MAIN, 7th SECTOR, HSR LAYOUT, BANGALORE, KARNATAKA
-        560102 India
+        No 224, 3rd Flr, 80/3, Oldmadras Road, Doorvaninagar Bangalore North
+        Bengaluru, Karnataka 560016 India
       </p>
       <p>
         <a href="mailto:support@outspokn.co">support@outspokn.co</a>
