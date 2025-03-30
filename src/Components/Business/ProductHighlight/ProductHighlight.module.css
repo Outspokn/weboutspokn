@@ -1,0 +1,158 @@
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1130px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  flex-direction: row;
+}
+
+.textSection {
+  flex: 1;
+  padding-right: 3rem;
+  max-width: 600px;
+}
+
+.textSection h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1b1d28;
+}
+
+.textSection p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--desc-font-color);
+}
+
+.imageSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatImage {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+  border-radius: 20px;
+}
+
+@media (max-width: 1281px) {
+  .mainContainer {
+    max-width: 1116px;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .textSection {
+    padding-right: 1rem;
+    max-width: 50%;
+  }
+
+  .chatImage {
+    max-width: 400px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContainer {
+    max-width: 900px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .textSection {
+    padding-right: 1rem;
+    max-width: 50%;
+  }
+
+  .textSection h2 {
+    font-size: 30px;
+  }
+
+  .chatImage {
+    max-width: 350px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 961px) {
+  .mainContainer {
+    max-width: 850px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 5%;
+  }
+
+  .textSection {
+    padding-right: 1rem;
+    max-width: 50%;
+  }
+
+  .textSection h2 {
+    font-size: 28px;
+  }
+
+  .chatImage {
+    max-width: 350px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 641px) {
+  .mainContainer {
+    padding: 1rem 5%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textSection {
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .textSection h2 {
+    font-size: 26px;
+  }
+
+  .imageSection {
+    margin-top: 1.5rem;
+  }
+
+  .chatImage {
+    max-width: 300px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 481px) {
+  .mainContainer {
+    padding: 0.5rem 10%;
+  }
+
+  .textSection h2 {
+    font-size: 19px;
+  }
+
+  .textSection p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .chatImage {
+    max-width: 280px;
+    max-height: 330px;
+    margin-top: 20px;
+  }
+}

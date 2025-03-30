@@ -5,8 +5,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  color: #ffffff;
-  background-color: var(--primary-color);
+  color: var(--background-color-light);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s;
+  background: linear-gradient(to right, rgb(45, 45, 45), #4a90e2);
+  background-size: 400% 400%;
+}
+
+.navbarScrolled {
+  background: linear-gradient(
+    to right,
+    rgb(16, 16, 16),
+    #2a6fb1
+  );
+  background-size: 400% 400%;
 }
 
 .logo {
@@ -19,4 +34,55 @@
 .businessLink {
   font-weight: bold;
   font-size: 0.95rem;
+}
+
+@media (max-width: 1281px) {
+  .navbar {
+    padding: 25px 40px;
+  }
+  .logo {
+    font-size: 1.9rem;
+  }
+  .businessLink {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px 35px;
+  }
+  .logo {
+    font-size: 1.9rem;
+  }
+  .businessLink {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 961px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 641px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+  .businessLink {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 481px) {
+  .businessLink {
+    display: 0.75rem;
+  }
 }

@@ -6,37 +6,6 @@
   position: relative;
 }
 
-/* .sideContainer {
-  display: flex;
-  height: 100%;
-} */
-/* 
-.sidebar {
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  height: 50%;
-  top: 50px;
-  left: 0;
-  gap: 30px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  margin: 0px 0px 0px 10px;
-} */
-/* 
-.main {
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 40px;
-  width: 80%;
-  margin-left: 1rem;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  scrollbar-width: none;
-} */
-
 .sidebar {
   width: 15%;
   position: fixed;
@@ -72,6 +41,10 @@
   padding: 5px 0;
   color: var(--primary-color);
   font-size: 16px;
+}
+
+.tocItem a {
+  color: var(--desc-font-color);
 }
 
 .tocItem:hover {
