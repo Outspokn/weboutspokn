@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import fetch from "node-fetch";
+import os from "os";
 
 export default async function handler(req, res) {
   // Add CORS headers for React Native
@@ -53,13 +53,12 @@ export default async function handler(req, res) {
       });
     }
 
-    // Create temp directory if it doesn't exist
-    const tempDir = path.join(process.cwd(), "temp");
-    if (!fs.existsSync(tempDir)) {
-      fs.mkdirSync(tempDir, { recursive: true });
-    }
-
-    const tempAudioFile = path.join(tempDir, `audio_${Date.now()}.wav`);
+    // Use system temp directory (works in serverless environments)
+    const tempDir = os.tmpdir();
+    const tempAudioFile = path.join(
+      tempDir,
+      `audio_${Date.now()}_${Math.random().toString(36).substr(2, 9)}.wav`
+    );
 
     try {
       // Download audio file with timeout
@@ -70,8 +69,9 @@ export default async function handler(req, res) {
         );
       }
 
-      const audioBuffer = await audioResponse.buffer();
-      fs.writeFileSync(tempAudioFile, audioBuffer);
+      const audioBuffer = await audioResponse.arrayBuffer();
+      const bufferData = Buffer.from(audioBuffer);
+      fs.writeFileSync(tempAudioFile, bufferData);
 
       // Analyze frequencies
       const analysisResult = await analyzeAudioFrequencies(

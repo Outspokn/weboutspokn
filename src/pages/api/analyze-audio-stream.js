@@ -1,4 +1,44 @@
-import { FFT } from "fft-js";
+// Simple FFT implementation for real-time pitch detection
+function simpleFFT(real, imag = null) {
+  const N = real.length;
+  if (imag === null) {
+    imag = new Array(N).fill(0);
+  }
+
+  // Bit-reverse permutation
+  for (let i = 1, j = 0; i < N; i++) {
+    let bit = N >> 1;
+    for (; j & bit; bit >>= 1) {
+      j ^= bit;
+    }
+    j ^= bit;
+    if (i < j) {
+      [real[i], real[j]] = [real[j], real[i]];
+      [imag[i], imag[j]] = [imag[j], imag[i]];
+    }
+  }
+
+  // FFT computation
+  for (let len = 2; len <= N; len <<= 1) {
+    const angle = (-2 * Math.PI) / len;
+    for (let i = 0; i < N; i += len) {
+      for (let j = 0; j < len / 2; j++) {
+        const index1 = i + j;
+        const index2 = i + j + len / 2;
+        const cosVal = Math.cos(angle * j);
+        const sinVal = Math.sin(angle * j);
+        const tempReal = real[index2] * cosVal - imag[index2] * sinVal;
+        const tempImag = real[index2] * sinVal + imag[index2] * cosVal;
+        real[index2] = real[index1] - tempReal;
+        imag[index2] = imag[index1] - tempImag;
+        real[index1] += tempReal;
+        imag[index1] += tempImag;
+      }
+    }
+  }
+
+  return real.map((r, i) => [r, imag[i]]);
+}
 
 export const config = {
   api: {
@@ -205,7 +245,7 @@ function performRealtimeAnalysis(samples, sampleRate, frequencyBands, options) {
   });
 
   // Perform FFT
-  const fftResult = FFT(windowed);
+  const fftResult = simpleFFT(windowed);
 
   // Extract magnitude spectrum
   const magnitudes = fftResult.map((complex) =>
